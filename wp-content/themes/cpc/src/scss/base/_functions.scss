@@ -1,0 +1,7 @@
+@function scale-animation($multiplier, $timing) {
+  @return $multiplier * $timing;
+}
+
+@function grow-animation($growth) {
+  @return $growth + $animation-base;
+}

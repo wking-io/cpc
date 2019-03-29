@@ -1,0 +1,23 @@
+// Responsive Breakpoints
+$sm: '576px';
+$md: '768px';
+$lg: '992px';
+$xl: '1200px';
+
+$black: #273444;
+$grey: #c9ccd0;
+$white: #ffffff;
+$green: #16a9a9;
+$yellow: #f9a02d;
+$red: #ed3e37;
+
+$animation-base: 0.2s;
+
+$base: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+$sans: 'Century Gothic', $base;
+$display: 'League Spartan', $sans;
+$thin: 'Oswald', $display;
+$serif: 'Libre Baskerville', 'Constantia', 'Lucida Bright', 'Lucidabright',
+  'Lucida Serif', 'Lucida', 'DejaVu Serif', 'Bitstream Vera Serif',
+  'Liberation Serif', 'Georgia', serif;

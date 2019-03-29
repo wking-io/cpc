@@ -1,0 +1,42 @@
+[data-popup] {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background-color: rgba($black, 0.9);
+  z-index: 9999;
+}
+
+[data-popup-hidden='true'] {
+  display: none;
+}
+
+[data-popup-hidden='false'] {
+  display: block;
+}
+
+.popup-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.popup-dialogue {
+  position: fixed;
+  width: 80vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#purpose-popup .popup-dialogue {
+  max-width: 900px;
+
+  & video {
+    width: 100%;
+  }
+}

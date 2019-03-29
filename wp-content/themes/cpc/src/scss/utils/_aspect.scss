@@ -1,0 +1,27 @@
+@responsive {
+  .aspect-none {
+    &:before {
+      display: none;
+    }
+  }
+
+  .aspect-3\:1 {
+    @include aspect-ratio(3, 1);
+  }
+
+  .aspect-2\:1 {
+    @include aspect-ratio(2, 1);
+  }
+
+  .aspect-16\:9 {
+    @include aspect-ratio(16, 9);
+  }
+
+  .aspect-5\:3 {
+    @include aspect-ratio(5, 3);
+  }
+
+  .aspect-4\:3 {
+    @include aspect-ratio(4, 3);
+  }
+}

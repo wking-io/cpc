@@ -1,0 +1,475 @@
+.header {
+  @apply px-6 py-4;
+  background-color: transparent;
+
+  &[data-header-fixed='false'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    [data-theme='white'] &.header {
+      background-color: $black;
+    }
+  }
+
+  &[data-header-fixed='true'] {
+    position: fixed;
+    top: 0;
+    background-color: $white;
+  }
+
+  .logo-name__fill {
+    fill: $black;
+  }
+
+  .nav {
+    height: 3.5rem;
+
+    & .menu-wrapper {
+      z-index: -1;
+      transform: translateX(100%);
+    }
+  }
+
+  &[data-menu-open='true'] .nav .menu-wrapper {
+    @apply z-30;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .menu-item {
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    padding: 0 0 10rem 0;
+  }
+
+  .menu-item .dropdown-icon {
+    display: none;
+    fill: $black;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 2rem;
+  }
+
+  .menu-item > a,
+  .menu-item > span {
+    color: $white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .menu-item--cta > a {
+    color: $black;
+    background-color: $white;
+  }
+
+  .menu-item > a:hover .contact-icon__fill {
+    fill: $black;
+  }
+
+  .sub-menu {
+    list-style-type: none;
+    padding: 3rem 0 0 0;
+  }
+
+  .sub-menu-item {
+    font-size: 4rem;
+    font-weight: normal;
+    padding: 3rem 0 0 0;
+  }
+
+  .sub-menu-item a:hover {
+    color: $yellow;
+  }
+
+  .sub-menu-item:first-child a:hover {
+    color: $green;
+  }
+
+  .sub-menu-item:last-child a:hover {
+    color: $red;
+  }
+}
+
+[data-style='background'] {
+  &[data-theme='green'] {
+    .header[data-header-fixed='true'] {
+      background-color: $green;
+    }
+  }
+
+  &[data-theme='yellow'] {
+    .header[data-header-fixed='true'] {
+      background-color: $yellow;
+    }
+  }
+
+  &[data-theme='red'] {
+    .header[data-header-fixed='true'] {
+      background-color: $red;
+    }
+  }
+
+  &[data-theme='white'] {
+    .header[data-header-fixed='true'] {
+      background-color: $black;
+    }
+  }
+}
+
+body .header[data-menu-open='true'] {
+  & .logo-icon__fill,
+  & .logo-name__fill {
+    fill: $white;
+  }
+}
+
+[data-theme='green'] {
+  .header {
+    .logo-icon__fill,
+    .contact-icon__fill {
+      fill: $green;
+    }
+  }
+}
+
+[data-theme='yellow'] {
+  .header {
+    .logo-icon__fill,
+    .contact-icon__fill {
+      fill: $yellow;
+    }
+  }
+}
+
+[data-theme='red'] {
+  .header {
+    .logo-icon__fill,
+    .contact-icon__fill {
+      fill: $red;
+    }
+  }
+}
+
+[data-theme='white'] {
+  .header {
+    .logo-icon__fill,
+    .contact-icon__fill {
+      fill: $white;
+    }
+  }
+}
+
+[data-style='border'] {
+  .header {
+    .logo-name__fill {
+      fill: $black;
+    }
+  }
+}
+
+[data-style='background'] {
+  .header {
+    .logo-icon__fill,
+    .contact-icon__fill,
+    .logo-name__fill {
+      fill: $white;
+    }
+
+    .menu-item--contact > a:hover .contact-icon__fill {
+      fill: $white;
+      opacity: 0.75;
+    }
+
+    .menu-toggle span {
+      background-color: $white;
+    }
+  }
+}
+
+@include media('<#{$sm}') {
+  .nav {
+    & .menu-wrapper {
+      padding-top: 26rem;
+    }
+  }
+}
+
+@include media('>=#{$sm}') {
+  .header {
+    .menu-item {
+      padding: 0 0 12rem 0;
+    }
+
+    .sub-menu {
+      padding: 3rem 0 0 0;
+    }
+
+    .sub-menu-item {
+      padding: 3rem 0 0 0;
+    }
+  }
+}
+
+@include media('>=#{$lg}') {
+  .header {
+    .branding .logo-icon {
+      margin-right: calc(10vw - 11rem);
+    }
+
+    .nav {
+      height: auto;
+
+      .menu-wrapper {
+        z-index: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .menu-item {
+      padding: 0 16rem 0 0;
+      font-size: 3.5rem;
+      position: relative;
+    }
+
+    .menu-item--contact {
+      padding: 0;
+      width: calc(10vw - 5rem);
+    }
+
+    .menu-item .dropdown-icon {
+      display: initial;
+    }
+
+    .menu-item > a,
+    .menu-item > span {
+      color: $black;
+    }
+
+    .menu-item > a:hover .contact-icon__fill {
+      fill: $black;
+    }
+
+    .menu-item--cta > a {
+      color: $white;
+      background-color: $black;
+    }
+
+    .menu-item--cta > a:hover {
+      color: $white;
+      background-color: $green;
+    }
+
+    .menu-item:hover .sub-menu,
+    .menu-item:focus .sub-menu {
+      visibility: visible;
+    }
+
+    .sub-menu {
+      visibility: hidden;
+      padding: 6rem;
+      position: absolute;
+      background-color: $black;
+      text-align: left;
+      top: calc(100% + 5rem);
+      left: 0;
+      border-radius: 1rem;
+      box-shadow: 0.5rem 1rem 5rem rgba($black, 0.3);
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: -4rem;
+        left: 0;
+        height: 0;
+        border-top: 4rem solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 4rem solid transparent;
+        border-left: 4rem solid $black;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: -6rem;
+        left: 0;
+        height: 6rem;
+        width: 100%;
+      }
+    }
+
+    .sub-menu-item {
+      padding: 0 0 3rem 0;
+
+      &:last-child {
+        padding: 0;
+      }
+    }
+
+    .sub-menu-item > a {
+      color: $white;
+    }
+  }
+
+  [data-theme='green'] {
+    .header {
+      .menu-item--cta > a:hover {
+        background-color: $green;
+        color: $white;
+      }
+    }
+  }
+
+  [data-theme='yellow'] {
+    .header {
+      .menu-item--cta > a:hover {
+        background-color: $yellow;
+        color: $white;
+      }
+    }
+  }
+
+  [data-theme='red'] {
+    .header {
+      .menu-item--cta > a:hover {
+        background-color: $red;
+        color: $white;
+      }
+    }
+  }
+
+  [data-style='background'] {
+    .header {
+      .menu-item > a,
+      .menu-item > span {
+        color: $white;
+      }
+
+      .menu-item .dropdown-icon {
+        fill: $white;
+      }
+
+      .menu-item--cta > a {
+        background-color: $white;
+        color: $black;
+      }
+
+      .menu-item--cta > a:hover {
+        color: $white;
+        background-color: $black;
+      }
+
+      .sub-menu-item a:hover {
+        color: $yellow;
+      }
+
+      .sub-menu-item:first-child a:hover {
+        color: $green;
+      }
+
+      .sub-menu-item:last-child a:hover {
+        color: $red;
+      }
+    }
+
+    &[data-theme='green'] {
+      .header {
+        .menu-item--cta > a {
+          color: $green;
+        }
+
+        .menu-item--cta > a:hover {
+          background-color: $green;
+          color: $white;
+        }
+      }
+    }
+
+    &[data-theme='yellow'] {
+      .header {
+        .menu-item--cta > a {
+          color: $yellow;
+        }
+
+        .menu-item--cta > a:hover {
+          background-color: $yellow;
+          color: $white;
+        }
+      }
+    }
+
+    &[data-theme='red'] {
+      .header {
+        .menu-item--cta > a {
+          color: $red;
+        }
+
+        .menu-item--cta > a:hover {
+          background-color: $red;
+          color: $white;
+        }
+      }
+    }
+
+    &[data-theme='white'] {
+      .header {
+        .menu-item > a:hover .contact-icon__fill {
+          fill: $green;
+        }
+
+        .sub-menu {
+          background-color: $white;
+          box-shadow: 0.5rem 1rem 5rem rgba($black, 0.3);
+
+          &:before {
+            border-left: 4rem solid $white;
+          }
+        }
+
+        .sub-menu-item > a {
+          color: $black;
+        }
+
+        .sub-menu-item a:hover {
+          color: $yellow;
+        }
+
+        .sub-menu-item:first-child a:hover {
+          color: $green;
+        }
+
+        .sub-menu-item:last-child a:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+/* Border Specific Styles */
+[data-style='border'] {
+  .header {
+    width: calc(100% - 4rem);
+    margin: 2rem 2rem 0 2rem;
+
+    &[data-header-fixed='true'] {
+      background-color: $white;
+      margin: 0;
+    }
+  }
+}
+
+@include media('>=#{$lg}') {
+  [data-style='border'] {
+    .header {
+      width: calc(100% - 8rem);
+      margin: 4rem 4rem 0 4rem;
+
+      &[data-header-fixed='true'] {
+        margin: 0;
+      }
+    }
+  }
+}

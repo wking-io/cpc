@@ -1,0 +1,23 @@
+@responsive {
+  .columns {
+    columns: 1;
+  }
+  .columns-2 {
+    columns: 2;
+  }
+  .column-gap-2 {
+    column-gap: 2rem;
+  }
+  .column-gap-3 {
+    column-gap: 3rem;
+  }
+  .column-gap-4 {
+    column-gap: 4rem;
+  }
+  .column-gap-6 {
+    column-gap: 6rem;
+  }
+  .column-gap-8 {
+    column-gap: 8rem;
+  }
+}

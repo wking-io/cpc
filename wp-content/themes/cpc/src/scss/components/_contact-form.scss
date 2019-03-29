@@ -1,0 +1,124 @@
+.connect-form {
+  & .gform_body {
+    & .connect-form__input {
+      width: 100%;
+      position: relative;
+      margin: 0 0 6rem 0;
+
+      & > label {
+        position: absolute;
+        bottom: 2rem;
+        left: 0rem;
+        color: $white;
+        font-size: 4rem;
+        opacity: 0.5;
+        transition: all 0.2s ease-in;
+        transform-origin: bottom left;
+
+        &.label-hide {
+          display: none;
+        }
+      }
+
+      &.connect-form__textarea > label {
+        bottom: 2.75rem;
+      }
+
+      &.connect-form__input--active > label {
+        transform: scale(0.75) translateY(-11rem);
+      }
+
+      &
+        .ginput_container
+        input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba($white, 0.5);
+        border-radius: 0px !important;
+        padding: 2rem 0;
+        color: $white;
+        line-height: 1;
+        height: 44px;
+
+        &:focus,
+        &:active {
+          outline: none;
+          border-bottom: 1px solid rgba($white, 1);
+        }
+      }
+
+      & .ginput_container textarea {
+        width: 100%;
+        height: 44px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba($white, 0.5);
+        border-radius: 0px !important;
+        padding: 2rem 0;
+        color: $white;
+
+        &:focus,
+        &:active {
+          outline: none;
+          border-bottom: 1px solid rgba($white, 1);
+        }
+      }
+
+      &--name {
+        width: 50%;
+      }
+      &--number {
+        width: 50%;
+      }
+    }
+  }
+
+  & div.gform_footer {
+    text-align: right;
+    margin-top: 0;
+
+    & input[type='submit'] {
+      @apply block no-underline font-bold px-8 relative text-center text-white font-display uppercase rounded text-sm border bg-green border-green;
+      padding-top: 4rem;
+      padding-bottom: 3.5rem;
+      // text-decoration: none;
+      // display: block;
+      // width: 100%;
+      // padding: 4rem 12rem;
+      // margin: 0;
+      // border: 1px solid $white;
+      // text-align: center;
+      // color: $white;
+      // border-color: $white;
+      // background-color: transparent;
+      // cursor: pointer;
+
+      &:hover {
+        background-color: darken($green, 5%);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: none;
+      }
+    }
+  }
+}
+
+#gform_confirmation_wrapper_1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > div {
+    font-size: 4.5rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+
+.gform_anchor {
+  display: none !important;
+}

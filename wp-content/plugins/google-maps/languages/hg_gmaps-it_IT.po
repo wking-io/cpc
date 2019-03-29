@@ -1,0 +1,1364 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Huge IT Google Map\n"
+"POT-Creation-Date: 2017-12-22 16:46+0400\n"
+"PO-Revision-Date: 2017-12-22 15:45+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.5\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: googlemap.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: googlemap.php:78 googlemap.php:85
+msgid "Cheatin&#8217; huh?"
+msgstr "Stai imbrogliando eh??"
+
+#: includes/admin/class-hugeit-maps-admin-assets.php:208
+#: includes/admin/class-hugeit-maps-admin-assets.php:214
+msgid "Start Point"
+msgstr "Punto di partenza"
+
+#: includes/admin/class-hugeit-maps-admin-assets.php:209
+#: includes/admin/class-hugeit-maps-admin-assets.php:215
+msgid "Could not construct a route with the given options"
+msgstr "Impossibile creare un percorso con le opzioni specificate"
+
+#: includes/admin/class-hugeit-maps-admin.php:42
+msgid "Huge-IT Google Maps"
+msgstr "Huge-IT Google Maps"
+
+#: includes/admin/class-hugeit-maps-admin.php:42
+msgid "Google Maps"
+msgstr "Google Maps"
+
+#: includes/admin/class-hugeit-maps-admin.php:47
+msgid "Featured Plugins"
+msgstr "Plugin in evidenza"
+
+#: includes/admin/class-hugeit-maps-admin.php:47
+msgid "Featured plugins"
+msgstr "Plugin in evidenza"
+
+#: includes/admin/class-hugeit-maps-admin.php:55
+msgid "Go back"
+msgstr "Indietro"
+
+#: includes/admin/class-hugeit-maps-admin.php:93
+msgid "Missing \"id\" parameter."
+msgstr "Parametro \"id\" mancante."
+
+#: includes/admin/class-hugeit-maps-admin.php:101
+msgid "\"id\" parameter must be not negative integer."
+msgstr "Il parametro \"id\" non deve essere un numero negativo."
+
+#: includes/admin/class-hugeit-maps-admin.php:107
+#: includes/admin/class-hugeit-maps-admin.php:140
+msgid "Security check failed."
+msgstr "Controllo di sicurezza fallito."
+
+#: includes/admin/class-hugeit-maps-admin.php:163
+msgid "Problems occured while creating new map."
+msgstr "Si è verificato un problema durante la creazione della nuova mappa."
+
+#: includes/admin/class-hugeit-maps-admin.php:170
+msgid "\"id\" parameter is required"
+msgstr "parametro \"id\" è obbligatorio"
+
+#: includes/admin/class-hugeit-maps-admin.php:176
+#: includes/class-hugeit-maps-ajax.php:213
+#: includes/class-hugeit-maps-ajax.php:351
+#: includes/class-hugeit-maps-ajax.php:477
+#: includes/class-hugeit-maps-ajax.php:612
+#: includes/class-hugeit-maps-ajax.php:1042
+#: includes/class-hugeit-maps-ajax.php:1154
+msgid "\"id\" parameter must be non negative integer"
+msgstr "Il parametro \"id\" non deve essere un numero negativo"
+
+#: includes/admin/class-hugeit-maps-admin.php:180
+#: includes/class-hugeit-maps-ajax.php:63
+#: includes/class-hugeit-maps-ajax.php:89
+#: includes/class-hugeit-maps-ajax.php:119
+#: includes/class-hugeit-maps-ajax.php:155
+#: includes/class-hugeit-maps-ajax.php:203
+#: includes/class-hugeit-maps-ajax.php:276
+#: includes/class-hugeit-maps-ajax.php:341
+#: includes/class-hugeit-maps-ajax.php:407
+#: includes/class-hugeit-maps-ajax.php:467
+#: includes/class-hugeit-maps-ajax.php:539
+#: includes/class-hugeit-maps-ajax.php:602
+#: includes/class-hugeit-maps-ajax.php:669
+#: includes/class-hugeit-maps-ajax.php:727
+#: includes/class-hugeit-maps-ajax.php:802
+#: includes/class-hugeit-maps-ajax.php:848
+#: includes/class-hugeit-maps-ajax.php:892
+#: includes/class-hugeit-maps-ajax.php:936
+#: includes/class-hugeit-maps-ajax.php:979
+#: includes/class-hugeit-maps-ajax.php:1032
+#: includes/class-hugeit-maps-ajax.php:1095
+#: includes/class-hugeit-maps-ajax.php:1144
+msgid "Security check failed"
+msgstr "Controllo di sicurezza fallito"
+
+#: includes/class-hugeit-maps-ajax.php:93
+#: includes/class-hugeit-maps-ajax.php:123
+#: includes/class-hugeit-maps-ajax.php:159
+#: includes/class-hugeit-maps-ajax.php:217
+#: includes/class-hugeit-maps-ajax.php:280
+#: includes/class-hugeit-maps-ajax.php:355
+#: includes/class-hugeit-maps-ajax.php:411
+#: includes/class-hugeit-maps-ajax.php:481
+#: includes/class-hugeit-maps-ajax.php:543
+#: includes/class-hugeit-maps-ajax.php:616
+#: includes/class-hugeit-maps-ajax.php:673
+#: includes/class-hugeit-maps-ajax.php:731
+#: includes/class-hugeit-maps-ajax.php:806
+#: includes/class-hugeit-maps-ajax.php:852
+#: includes/class-hugeit-maps-ajax.php:896
+#: includes/class-hugeit-maps-ajax.php:940
+#: includes/class-hugeit-maps-ajax.php:983
+#: includes/class-hugeit-maps-ajax.php:1046
+#: includes/class-hugeit-maps-ajax.php:1099
+#: includes/class-hugeit-maps-ajax.php:1158
+msgid "missing \"map_id\" parameter"
+msgstr "parametro \"map_id\" mancante"
+
+#: includes/class-hugeit-maps-ajax.php:207
+#: includes/class-hugeit-maps-ajax.php:345
+#: includes/class-hugeit-maps-ajax.php:471
+#: includes/class-hugeit-maps-ajax.php:606
+#: includes/class-hugeit-maps-ajax.php:1036
+#: includes/class-hugeit-maps-ajax.php:1148
+msgid "missing \"id\" parameter"
+msgstr "parametro \"id\" mancante"
+
+#: includes/class-hugeit-maps-circle.php:164
+msgid "New Circle"
+msgstr "Nuovo cerchio"
+
+#: includes/class-hugeit-maps-circle.php:213
+#: includes/class-hugeit-maps-direction.php:187
+#: includes/class-hugeit-maps-locator.php:159
+#: includes/class-hugeit-maps-map.php:411
+#: includes/class-hugeit-maps-marker.php:166
+#: includes/class-hugeit-maps-polygon.php:198
+#: includes/class-hugeit-maps-polyline.php:159
+msgid "(no title)"
+msgstr "(senza titolo)"
+
+#: includes/class-hugeit-maps-direction.php:138
+msgid "New Direction"
+msgstr "Nuova direzione"
+
+#: includes/class-hugeit-maps-install.php:342
+msgid "My First Map"
+msgstr "La mia prima mappa"
+
+#: includes/class-hugeit-maps-install.php:376
+msgid "New York"
+msgstr "New York"
+
+#: includes/class-hugeit-maps-install.php:380
+msgid "New York City"
+msgstr "New York City"
+
+#: includes/class-hugeit-maps-install.php:389
+#: includes/class-hugeit-maps-install.php:393
+msgid "Delaver"
+msgstr "Delaware"
+
+#: includes/class-hugeit-maps-install.php:409
+msgid "My First Polygon"
+msgstr "Il mio primo poligono"
+
+#: includes/class-hugeit-maps-install.php:434
+msgid "My First Polyline"
+msgstr "La mia prima polilinea"
+
+#: includes/class-hugeit-maps-install.php:455
+msgid "My First Circle"
+msgstr "Il mio primo cerchio"
+
+#: includes/class-hugeit-maps-locator.php:110
+msgid "New Store Locator"
+msgstr "Nuovo localizzatore di negozi"
+
+#: includes/class-hugeit-maps-map.php:387
+msgid "New Map"
+msgstr "Nuova mappa"
+
+#: includes/class-hugeit-maps-marker.php:116
+msgid "New Marker"
+msgstr "Nuovo marcatore"
+
+#: includes/class-hugeit-maps-polygon.php:147
+msgid "New Polygon"
+msgstr "Nuovo poligono"
+
+#: includes/class-hugeit-maps-polyline.php:112
+msgid "New Polyline"
+msgstr "Nuova polilinea"
+
+#: includes/class-hugeit-maps-shortcode.php:75
+msgid "Select Huge IT Google Maps to insert into post"
+msgstr "Seleziona Huge IT Google Maps da inserire nel post"
+
+#: includes/class-hugeit-maps-shortcode.php:76
+msgid "Add Google Maps"
+msgstr "Aggiungi Google Maps"
+
+#: includes/class-hugeit-maps-widget.php:13
+#: includes/class-hugeit-maps-widget.php:14
+msgid "Huge IT Google Maps"
+msgstr "Huge IT Google Maps"
+
+#: includes/class-hugeit-maps-widget.php:64
+msgid "Title:"
+msgstr "Titolo:"
+
+#: includes/class-hugeit-maps-widget.php:69
+msgid "Select map:"
+msgstr "Seleziona mappa:"
+
+#: templates/admin/api-key-form.php:11
+msgid "API KEY"
+msgstr "Chiave API"
+
+#: templates/admin/api-key-form.php:14
+msgid "Input the api key here"
+msgstr "Inserisci la chiave API"
+
+#: templates/admin/api-key-form.php:18
+#: templates/admin/edit-map-circles-section.php:124
+#: templates/admin/edit-map-circles-section.php:285
+#: templates/admin/edit-map-directions-section.php:96
+#: templates/admin/edit-map-directions-section.php:221
+#: templates/admin/edit-map-layers-section.php:36
+#: templates/admin/edit-map-locator-section.php:116
+#: templates/admin/edit-map-locator-section.php:258
+#: templates/admin/edit-map-locator-section.php:280
+#: templates/admin/edit-map-markers-section.php:104
+#: templates/admin/edit-map-polygons-section.php:244
+#: templates/admin/edit-map-polylines-section.php:77
+#: templates/admin/edit-map-polylines-section.php:180
+#: templates/admin/edit-map-styling-section.php:53
+msgid "Save"
+msgstr "Salva"
+
+#: templates/admin/api-key-notice.php:8
+msgid "Attention!"
+msgstr "Attenzione!"
+
+#: templates/admin/api-key-notice.php:8
+msgid ""
+"Before you begin using Google Map plugin, please note that All Google Maps "
+"users now required to have an API key to function. You can read more about "
+"that"
+msgstr ""
+"Prima di iniziare a utilizzare il plug-in Google Maps, tieni presente che "
+"ora tutti gli utenti di Google Maps devono disporre di una chiave API. Puoi "
+"scoprire di più a riguardo"
+
+#: templates/admin/api-key-notice.php:8
+msgid "here."
+msgstr "qui."
+
+#: templates/admin/api-key-notice.php:9
+msgid "Register for Google Maps API now"
+msgstr "Registrati ora per una chiave API di Google Maps"
+
+#: templates/admin/edit-map-circles-section.php:11
+msgid "Circles"
+msgstr "Cerchi"
+
+#: templates/admin/edit-map-circles-section.php:15
+msgid ""
+"Round area, showing the specific range. Right click on map wherever you need "
+"to place the circle’s center. Hold pressed and drag to move it"
+msgstr ""
+"Area rotonda, che mostra l'intervallo specifico. Fare clic con il tasto "
+"destro sulla mappa nel punto in cui vuoi posizionare il centro del cerchio. "
+"Tenere premuto e trascinare per spostarlo"
+
+#: templates/admin/edit-map-circles-section.php:23
+msgid "Add New Circles"
+msgstr "Aggiungi un nuovo cerchio"
+
+#: templates/admin/edit-map-circles-section.php:25
+#: templates/admin/edit-map-circles-section.php:179
+#: templates/admin/edit-map-directions-section.php:24
+#: templates/admin/edit-map-directions-section.php:151
+#: templates/admin/edit-map-locator-section.php:26
+#: templates/admin/edit-map-locator-section.php:170
+#: templates/admin/edit-map-markers-section.php:24
+#: templates/admin/edit-map-markers-section.php:158
+#: templates/admin/edit-map-polygons-section.php:24
+#: templates/admin/edit-map-polygons-section.php:159
+#: templates/admin/edit-map-polylines-section.php:25
+#: templates/admin/edit-map-polylines-section.php:128
+msgid "Back"
+msgstr "Indietro"
+
+#: templates/admin/edit-map-circles-section.php:28
+#: templates/admin/edit-map-circles-section.php:182
+#: templates/admin/edit-map-directions-section.php:27
+#: templates/admin/edit-map-directions-section.php:154
+#: templates/admin/edit-map-locator-section.php:173
+#: templates/admin/edit-map-polygons-section.php:27
+#: templates/admin/edit-map-polygons-section.php:162
+#: templates/admin/edit-map-polylines-section.php:28
+#: templates/admin/edit-map-polylines-section.php:131
+#: templates/admin/maps-list.php:19 templates/admin/maps-list.php:47
+msgid "Name"
+msgstr "Nome"
+
+#: templates/admin/edit-map-circles-section.php:32
+#: templates/admin/edit-map-circles-section.php:186
+#: templates/admin/edit-map-general-options.php:101
+msgid "Center Address"
+msgstr "Indirizzo centro"
+
+#: templates/admin/edit-map-circles-section.php:36
+#: templates/admin/edit-map-circles-section.php:191
+#: templates/admin/edit-map-general-options.php:105
+msgid "Center Latitude"
+msgstr "Latitudine centro"
+
+#: templates/admin/edit-map-circles-section.php:40
+#: templates/admin/edit-map-circles-section.php:196
+#: templates/admin/edit-map-general-options.php:109
+msgid "Center Longitude"
+msgstr "Longitudine centro"
+
+#: templates/admin/edit-map-circles-section.php:45
+#: templates/admin/edit-map-circles-section.php:202
+msgid "Show Marker?"
+msgstr "Visualizza marcatore?"
+
+#: templates/admin/edit-map-circles-section.php:46
+#: templates/admin/edit-map-circles-section.php:203
+msgid "YES"
+msgstr "SI"
+
+#: templates/admin/edit-map-circles-section.php:49
+#: templates/admin/edit-map-circles-section.php:206
+msgid "NO"
+msgstr "NO"
+
+#: templates/admin/edit-map-circles-section.php:54
+#: templates/admin/edit-map-circles-section.php:211
+msgid "Radius(meter)"
+msgstr "Raggio (metri)"
+
+#: templates/admin/edit-map-circles-section.php:58
+#: templates/admin/edit-map-circles-section.php:216
+#: templates/admin/edit-map-directions-section.php:84
+#: templates/admin/edit-map-directions-section.php:211
+#: templates/admin/edit-map-polygons-section.php:54
+#: templates/admin/edit-map-polygons-section.php:189
+#: templates/admin/edit-map-polylines-section.php:52
+#: templates/admin/edit-map-polylines-section.php:155
+msgid "Line Width"
+msgstr "Lunghezza linea"
+
+#: templates/admin/edit-map-circles-section.php:66
+#: templates/admin/edit-map-circles-section.php:225
+#: templates/admin/edit-map-directions-section.php:79
+#: templates/admin/edit-map-directions-section.php:206
+#: templates/admin/edit-map-polygons-section.php:50
+#: templates/admin/edit-map-polygons-section.php:184
+#: templates/admin/edit-map-polylines-section.php:47
+#: templates/admin/edit-map-polylines-section.php:150
+msgid "Line Color"
+msgstr "Colore linea"
+
+#: templates/admin/edit-map-circles-section.php:71
+#: templates/admin/edit-map-circles-section.php:230
+#: templates/admin/edit-map-directions-section.php:69
+#: templates/admin/edit-map-directions-section.php:196
+#: templates/admin/edit-map-polygons-section.php:39
+#: templates/admin/edit-map-polygons-section.php:175
+#: templates/admin/edit-map-polylines-section.php:37
+#: templates/admin/edit-map-polylines-section.php:140
+msgid "Line Transparency"
+msgstr "Trasparenza linea"
+
+#: templates/admin/edit-map-circles-section.php:79
+#: templates/admin/edit-map-circles-section.php:240
+#: templates/admin/edit-map-polygons-section.php:72
+#: templates/admin/edit-map-polygons-section.php:207
+msgid "Fill Color"
+msgstr "Colore di riempimento"
+
+#: templates/admin/edit-map-circles-section.php:84
+#: templates/admin/edit-map-circles-section.php:245
+#: templates/admin/edit-map-polygons-section.php:62
+#: templates/admin/edit-map-polygons-section.php:198
+msgid "Fill Transparency"
+msgstr "Trasparenza riempimento"
+
+#: templates/admin/edit-map-circles-section.php:93
+#: templates/admin/edit-map-circles-section.php:255
+#: templates/admin/edit-map-polygons-section.php:87
+#: templates/admin/edit-map-polygons-section.php:221
+msgid "On-Hover Fill Color"
+msgstr "Colore di riempimento al passaggio del mouse"
+
+#: templates/admin/edit-map-circles-section.php:98
+#: templates/admin/edit-map-circles-section.php:260
+#: templates/admin/edit-map-polygons-section.php:77
+#: templates/admin/edit-map-polygons-section.php:212
+msgid "On-Hover Fill Transparency"
+msgstr "Trasparenza riempimento al passaggio del mouse"
+
+#: templates/admin/edit-map-circles-section.php:107
+#: templates/admin/edit-map-circles-section.php:269
+#: templates/admin/edit-map-polygons-section.php:102
+#: templates/admin/edit-map-polygons-section.php:235
+#: templates/admin/edit-map-polylines-section.php:60
+#: templates/admin/edit-map-polylines-section.php:164
+msgid "On-Hover Line Color"
+msgstr "Colore linea al passaggio del mouse"
+
+#: templates/admin/edit-map-circles-section.php:112
+#: templates/admin/edit-map-circles-section.php:274
+#: templates/admin/edit-map-polygons-section.php:92
+#: templates/admin/edit-map-polygons-section.php:226
+#: templates/admin/edit-map-polylines-section.php:65
+#: templates/admin/edit-map-polylines-section.php:169
+msgid "On-Hover Line Transparency"
+msgstr "Trasparenza linea al passaggio del mouse"
+
+#: templates/admin/edit-map-circles-section.php:126
+#: templates/admin/edit-map-circles-section.php:287
+#: templates/admin/edit-map-directions-section.php:223
+#: templates/admin/edit-map-locator-section.php:260
+#: templates/admin/edit-map-polygons-section.php:111
+#: templates/admin/edit-map-polygons-section.php:245
+#: templates/admin/edit-map-polylines-section.php:78
+#: templates/admin/edit-map-polylines-section.php:181
+msgid "Cancel"
+msgstr "Cancella"
+
+#: templates/admin/edit-map-circles-section.php:132
+#: templates/admin/edit-map-directions-section.php:104
+#: templates/admin/edit-map-locator-section.php:124
+#: templates/admin/edit-map-polygons-section.php:117
+#: templates/admin/edit-map-polylines-section.php:84
+#: templates/admin/maps-list.php:18 templates/admin/maps-list.php:46
+msgid "ID"
+msgstr "ID"
+
+#: templates/admin/edit-map-circles-section.php:133
+#: templates/admin/edit-map-directions-section.php:105
+#: templates/admin/edit-map-locator-section.php:125
+#: templates/admin/edit-map-markers-section.php:47
+#: templates/admin/edit-map-markers-section.php:181
+#: templates/admin/edit-map-polygons-section.php:118
+#: templates/admin/edit-map-polylines-section.php:85
+msgid "Title"
+msgstr "Titolo"
+
+#: templates/admin/edit-map-circles-section.php:134
+#: templates/admin/edit-map-directions-section.php:106
+#: templates/admin/edit-map-locator-section.php:126
+#: templates/admin/edit-map-polygons-section.php:119
+#: templates/admin/edit-map-polylines-section.php:86
+msgid "Action"
+msgstr "Azione"
+
+#: templates/admin/edit-map-circles-section.php:172
+msgid "you have 0 circles on this map"
+msgstr "hai 0 cerchi in questa mappa"
+
+#: templates/admin/edit-map-directions-section.php:10
+msgid "Directions"
+msgstr "Direzioni"
+
+#: templates/admin/edit-map-directions-section.php:14
+msgid ""
+"You can calculate directions by using the DirectionsService/feature. "
+"Directions are displayed as a polyline drawing the route on a map. The right "
+"click adds and varies  the strating and finishing point. Hold pressed the "
+"left click and drug the marker."
+msgstr ""
+"È possibile calcolare le direzioni utilizzando la funzione "
+"DirectionsService. Le direzioni vengono visualizzate come una polilinea che "
+"traccia il percorso su una mappa. Il clic con il tasto destro aggiunge e "
+"modifica il punto di partenza ed il punto finale. Tenere premuto il tasto "
+"sinistro del mouse e posizionare il marcatore."
+
+#: templates/admin/edit-map-directions-section.php:22
+msgid "Add New Direction"
+msgstr "Aggiungi nuova direzione"
+
+#: templates/admin/edit-map-directions-section.php:28
+#: templates/admin/edit-map-directions-section.php:155
+#: templates/admin/edit-map-locator-section.php:30
+msgid "Optional Name"
+msgstr "Nome opzionale"
+
+#: templates/admin/edit-map-directions-section.php:31
+#: templates/admin/edit-map-directions-section.php:158
+msgid "Start Location"
+msgstr "Località di partenza"
+
+#: templates/admin/edit-map-directions-section.php:32
+msgid "Start Address"
+msgstr "Indirizzo di partenza"
+
+#: templates/admin/edit-map-directions-section.php:35
+#: templates/admin/edit-map-directions-section.php:162
+msgid "Start Location Latitude"
+msgstr "Latitudine località di partenza"
+
+#: templates/admin/edit-map-directions-section.php:36
+#: templates/admin/edit-map-directions-section.php:48
+#: templates/admin/edit-map-locator-section.php:38
+#: templates/admin/edit-map-markers-section.php:31
+#: templates/admin/edit-map-markers-section.php:165
+msgid "Latitude"
+msgstr "Latitudine"
+
+#: templates/admin/edit-map-directions-section.php:39
+#: templates/admin/edit-map-directions-section.php:166
+msgid "Start Location Longitude"
+msgstr "Longitudine località di partenza"
+
+#: templates/admin/edit-map-directions-section.php:40
+#: templates/admin/edit-map-directions-section.php:52
+#: templates/admin/edit-map-locator-section.php:42
+#: templates/admin/edit-map-markers-section.php:35
+#: templates/admin/edit-map-markers-section.php:169
+msgid "Longitude"
+msgstr "Longitudine"
+
+#: templates/admin/edit-map-directions-section.php:43
+#: templates/admin/edit-map-directions-section.php:170
+msgid "End Location"
+msgstr "Località di arrivo"
+
+#: templates/admin/edit-map-directions-section.php:44
+msgid "End Address"
+msgstr "Indirizzo di arrivo"
+
+#: templates/admin/edit-map-directions-section.php:47
+#: templates/admin/edit-map-directions-section.php:174
+msgid "End Location Latitude"
+msgstr "Latitudine Indirizzo di arrivo"
+
+#: templates/admin/edit-map-directions-section.php:51
+#: templates/admin/edit-map-directions-section.php:178
+#: templates/admin/edit-map-directions-section.php:182
+msgid "End Location Longitude"
+msgstr "Longitudine Indirizzo di arrivo"
+
+#: templates/admin/edit-map-directions-section.php:55
+msgid "Travel Mode"
+msgstr "Modalità viaggio"
+
+#: templates/admin/edit-map-directions-section.php:57
+#: templates/admin/edit-map-directions-section.php:184
+msgid "Driving"
+msgstr "Guidando"
+
+#: templates/admin/edit-map-directions-section.php:58
+#: templates/admin/edit-map-directions-section.php:185
+msgid "Walking"
+msgstr "Camminando"
+
+#: templates/admin/edit-map-directions-section.php:59
+#: templates/admin/edit-map-directions-section.php:186
+msgid "Bicycling"
+msgstr "Pedalando"
+
+#: templates/admin/edit-map-directions-section.php:60
+#: templates/admin/edit-map-directions-section.php:187
+msgid "Transit"
+msgstr "Transito"
+
+#: templates/admin/edit-map-directions-section.php:64
+#: templates/admin/edit-map-directions-section.php:191
+msgid "Show Markers For Steps"
+msgstr "Visualizza marcatori delle tappe intermedie"
+
+#: templates/admin/edit-map-directions-section.php:144
+msgid "You have 0 directions on this map"
+msgstr "Hai 0 direzioni su questa mappa"
+
+#: templates/admin/edit-map-directions-section.php:159
+#: templates/admin/edit-map-directions-section.php:171
+msgid "Location"
+msgstr "Località"
+
+#: templates/admin/edit-map-frontend-section.php:11
+msgid "Frontend Directions"
+msgstr "Direzioni del frontend"
+
+#: templates/admin/edit-map-frontend-section.php:15
+msgid "Frontend Directions settings for current map"
+msgstr "Impostazioni delle direzioni del frontend per la mappa corrente"
+
+#: templates/admin/edit-map-frontend-section.php:25
+msgid "Enable Frontend Directions"
+msgstr "Abilita le direzioni di frontend"
+
+#: templates/admin/edit-map-frontend-section.php:30
+msgid "Directions Window Align"
+msgstr "Allineamento delle direzioni"
+
+#: templates/admin/edit-map-frontend-section.php:32
+#: templates/admin/edit-map-general-options.php:129
+msgid "left"
+msgstr "sinistra"
+
+#: templates/admin/edit-map-frontend-section.php:33
+#: templates/admin/edit-map-general-options.php:131
+msgid "right"
+msgstr "destra"
+
+#: templates/admin/edit-map-frontend-section.php:34
+msgid "bottom"
+msgstr "in basso"
+
+#: templates/admin/edit-map-frontend-section.php:40
+msgid "Directions Window Width"
+msgstr "Larghezza della finestra delle direzioni"
+
+#: templates/admin/edit-map-general-options.php:11
+msgid "General Options"
+msgstr "Opzioni generali"
+
+#: templates/admin/edit-map-general-options.php:15
+msgid "General Options of current map"
+msgstr "Opzioni generali mappa corrente"
+
+#: templates/admin/edit-map-general-options.php:24
+msgid "Map Name"
+msgstr "Nome mappa"
+
+#: templates/admin/edit-map-general-options.php:28
+msgid "Map Type"
+msgstr "Tipo mappa"
+
+#: templates/admin/edit-map-general-options.php:37
+msgid "Marker Infowindow Opens On"
+msgstr "Marcatore informazioni aperto"
+
+#: templates/admin/edit-map-general-options.php:39
+msgid "Click"
+msgstr "Click"
+
+#: templates/admin/edit-map-general-options.php:40
+msgid "Hover"
+msgstr "Passaggio del mouse"
+
+#: templates/admin/edit-map-general-options.php:44
+msgid "Enable Pan-Controller"
+msgstr "Abilita Pan-Controller"
+
+#: templates/admin/edit-map-general-options.php:48
+msgid "Enable Zoom-Controller"
+msgstr "Abilita controllo dello zoom"
+
+#: templates/admin/edit-map-general-options.php:52
+msgid "Enable Map-Type-Controller"
+msgstr "Abilita controllo tipo mappa"
+
+#: templates/admin/edit-map-general-options.php:57
+msgid "Enable Scale-Controller"
+msgstr "Abilita controllo scala"
+
+#: templates/admin/edit-map-general-options.php:61
+msgid "Enable Street-View-Controlle"
+msgstr "Abilita controllo Street View"
+
+#: templates/admin/edit-map-general-options.php:66
+msgid "Enable Overview-Map-Controller"
+msgstr "Abilita controllo panoramica mappa"
+
+#: templates/admin/edit-map-general-options.php:70
+msgid "Enable Full Screen"
+msgstr "Abilita schermo intero"
+
+#: templates/admin/edit-map-general-options.php:74
+msgid "Default Zoom"
+msgstr "Zoom di default"
+
+#: templates/admin/edit-map-general-options.php:83
+msgid "Minimum Zoom"
+msgstr "Zoom minimo"
+
+#: templates/admin/edit-map-general-options.php:92
+msgid "Maximum Zoom"
+msgstr "Zoom massimo"
+
+#: templates/admin/edit-map-general-options.php:113
+msgid "Map Width"
+msgstr "Larghezza mappa"
+
+#: templates/admin/edit-map-general-options.php:122
+msgid "Map Height"
+msgstr "Altezza mappa"
+
+#: templates/admin/edit-map-general-options.php:127
+msgid "Map Align"
+msgstr "Allineamento mappa"
+
+#: templates/admin/edit-map-general-options.php:130
+msgid "center"
+msgstr "centro"
+
+#: templates/admin/edit-map-general-options.php:135
+msgid "Wheel Scrolling"
+msgstr "Scorrimento"
+
+#: templates/admin/edit-map-general-options.php:137
+#: templates/admin/edit-map-general-options.php:144
+msgid "On"
+msgstr "Acceso"
+
+#: templates/admin/edit-map-general-options.php:138
+#: templates/admin/edit-map-general-options.php:145
+msgid "Off"
+msgstr "Spento"
+
+#: templates/admin/edit-map-general-options.php:142
+msgid "Map Draggable"
+msgstr "Mappa trascinabile"
+
+#: templates/admin/edit-map-general-options.php:149
+msgid "Map Language"
+msgstr "Lingua della mappa"
+
+#: templates/admin/edit-map-general-options.php:163
+msgid "Border Radius"
+msgstr "Raggio del bordo"
+
+#: templates/admin/edit-map-general-options.php:167
+msgid "Open infowindows on load"
+msgstr "Apri la \"info window\" al caricamento"
+
+#: templates/admin/edit-map-general-options.php:171
+msgid "Map Animation"
+msgstr "Animazione mappa"
+
+#: templates/admin/edit-map-general-options.php:173
+#: templates/admin/edit-map-markers-section.php:175
+msgid "None"
+msgstr "Nessuno"
+
+#: templates/admin/edit-map-general-options.php:178
+msgid "Attention Seekers"
+msgstr "Attention Seekers"
+
+#: templates/admin/edit-map-general-options.php:179
+msgid "Bouncing Entrances"
+msgstr "Entrate rimbalzanti"
+
+#: templates/admin/edit-map-general-options.php:180
+msgid "Fading Entrances"
+msgstr "Entrate in dissolvenza"
+
+#: templates/admin/edit-map-general-options.php:181
+msgid "Flippers"
+msgstr "Flippers"
+
+#: templates/admin/edit-map-general-options.php:182
+msgid "Rotating Entrances"
+msgstr "Entrate rotanti"
+
+#: templates/admin/edit-map-general-options.php:183
+msgid "Sliding Entrances"
+msgstr "Entrate scorrevoli"
+
+#: templates/admin/edit-map-general-options.php:184
+msgid "Zooming Entrances"
+msgstr "Entrate in zoom"
+
+#: templates/admin/edit-map-kml-section.php:11
+msgid "Import KML"
+msgstr "Importa KML"
+
+#: templates/admin/edit-map-kml-section.php:15
+msgid "Display KML layer on your Map"
+msgstr "Visualizza il livello KML sulla tua mappa"
+
+#: templates/admin/edit-map-kml-section.php:24
+msgid "KML URL:"
+msgstr "KML URL:"
+
+#: templates/admin/edit-map-layers-section.php:14
+msgid ""
+"Highlighted road areas on map, highlight the roads and real-time traffic on "
+"them, make bicycle road highlighted on your map, transit roads, which "
+"connects cities etc..."
+msgstr ""
+"Le strade evidenziate sulla mappa, visualizzano il traffico in tempo reale, "
+"le piste ciclabili, le strade di transito, le strade che collegano le città "
+"ecc..."
+
+#: templates/admin/edit-map-layers-section.php:23
+msgid "Enable Traffic Layer"
+msgstr "Abilita livello di traffico"
+
+#: templates/admin/edit-map-layers-section.php:27
+msgid "Enable Bicycling Layer"
+msgstr "Abilita livello piste ciclabili"
+
+#: templates/admin/edit-map-layers-section.php:31
+msgid "Enable Transit layer"
+msgstr "Abilita livello di transito"
+
+#: templates/admin/edit-map-locator-section.php:12
+msgid "Store Locator"
+msgstr "Localizzatore negozi"
+
+#: templates/admin/edit-map-locator-section.php:16
+msgid "Store Locator settings for current map"
+msgstr "Impostazioni Store Locator per la mappa corrente"
+
+#: templates/admin/edit-map-locator-section.php:24
+msgid "Add New Store Locator"
+msgstr "Aggiungi un nuovo localizzatore di negozi"
+
+#: templates/admin/edit-map-locator-section.php:29
+#: templates/admin/edit-map-locator-section.php:174
+msgid "Store Name"
+msgstr "Nome negozio"
+
+#: templates/admin/edit-map-locator-section.php:33
+#: templates/admin/edit-map-locator-section.php:34
+msgid "Store Address"
+msgstr "Indirizzo negozio"
+
+#: templates/admin/edit-map-locator-section.php:37
+#: templates/admin/edit-map-locator-section.php:181
+msgid "Store Latitude"
+msgstr "Latitudine negozio"
+
+#: templates/admin/edit-map-locator-section.php:41
+#: templates/admin/edit-map-locator-section.php:185
+msgid "Store Longitude"
+msgstr "Longitudine negozio"
+
+#: templates/admin/edit-map-locator-section.php:45
+#: templates/admin/edit-map-locator-section.php:189
+msgid "Phone Number"
+msgstr "Numero di telefono"
+
+#: templates/admin/edit-map-locator-section.php:46
+#: templates/admin/edit-map-locator-section.php:190
+msgid "e.g. 1 123 4567"
+msgstr "esempio: 0171 410111"
+
+#: templates/admin/edit-map-locator-section.php:49
+#: templates/admin/edit-map-locator-section.php:193
+msgid "Operating Days"
+msgstr "Giorni di apertura"
+
+#: templates/admin/edit-map-locator-section.php:50
+#: templates/admin/edit-map-locator-section.php:194
+msgid "*Leave fields empty if the store is closed"
+msgstr "* Lascia i campi vuoti se il negozio è chiuso"
+
+#: templates/admin/edit-map-locator-section.php:163
+msgid "You have 0 stores"
+msgstr "Hai 0 negozi"
+
+#: templates/admin/edit-map-locator-section.php:177
+#: templates/admin/edit-map-locator-section.php:178
+msgid "Store Location"
+msgstr "Località negozio"
+
+#: templates/admin/edit-map-locator-section.php:270
+msgid "Enable Store Locator"
+msgstr "Abilita localizzatore negozi"
+
+#: templates/admin/edit-map-locator-section.php:275
+msgid "Locator Search Box Default Location"
+msgstr "Posizione predefinita della casella di ricerca del localizzatore"
+
+#: templates/admin/edit-map-markers-section.php:11
+msgid "Markers"
+msgstr "Marcatori"
+
+#: templates/admin/edit-map-markers-section.php:15
+msgid ""
+"A marker identifies a location on a map. Right-Click on the map to add a "
+"Marker. Hold pressed and drag to move it"
+msgstr ""
+"Un indicatore identifica una posizione su una mappa. Fare clic con il tasto "
+"destro sulla mappa per aggiungere un nuovo indicatore. Tenere premuto e "
+"trascinare per spostarlo"
+
+#: templates/admin/edit-map-markers-section.php:22
+msgid "Add New Marker"
+msgstr "Aggiungi nuovo indicatore"
+
+#: templates/admin/edit-map-markers-section.php:27
+#: templates/admin/edit-map-markers-section.php:161
+msgid "Address"
+msgstr "Indirizzo"
+
+#: templates/admin/edit-map-markers-section.php:39
+#: templates/admin/edit-map-markers-section.php:173
+msgid "Animation"
+msgstr "Animazione"
+
+#: templates/admin/edit-map-markers-section.php:51
+#: templates/admin/edit-map-markers-section.php:185
+msgid "Description"
+msgstr "Descrizione"
+
+#: templates/admin/edit-map-markers-section.php:54
+#: templates/admin/edit-map-markers-section.php:188
+msgid "Choose Marker Icon"
+msgstr "Seleziona icona indicatore"
+
+#: templates/admin/edit-map-markers-section.php:96
+#: templates/admin/edit-map-markers-section.php:227
+msgid "Custom Marker Icon"
+msgstr "Icona indicatore personalizzata"
+
+#: templates/admin/edit-map-markers-section.php:148
+msgid "You have 0 markers"
+msgstr "Hai 0 indicatori"
+
+#: templates/admin/edit-map-markers-section.php:214
+msgid "Size of Icon"
+msgstr "Dimensioni icona"
+
+#: templates/admin/edit-map-polygons-section.php:10
+msgid "Polygons"
+msgstr "Poligoni"
+
+#: templates/admin/edit-map-polygons-section.php:14
+msgid ""
+"Bounded highlighted area on the map, showing the specific range, limited "
+"with geometric figure. Right click on the map to add point. Hold pressed and "
+"drag to move it. Left click to remove it."
+msgstr ""
+"Area evidenziata delimitata sulla mappa, che mostra l'intervallo specifico, "
+"limitato con la figura geometrica. Fare clic con il tasto destro sulla mappa "
+"per aggiungere un punto. Tenere premuto e trascinare per spostarlo. Fare "
+"clic sinistro per rimuoverlo."
+
+#: templates/admin/edit-map-polygons-section.php:22
+msgid "Add New Polygon"
+msgstr "Aggiungi nuovo poligono"
+
+#: templates/admin/edit-map-polygons-section.php:31
+#: templates/admin/edit-map-polygons-section.php:166
+msgid "Link"
+msgstr "Link"
+
+#: templates/admin/edit-map-polygons-section.php:36
+#: templates/admin/edit-map-polygons-section.php:172
+#: templates/admin/edit-map-polylines-section.php:34
+#: templates/admin/edit-map-polylines-section.php:137
+msgid ""
+"Right click on the map to add point. Hold pressed and drag to move it. Left "
+"click to remove it."
+msgstr ""
+"Fare clic con il tasto destro sulla mappa per aggiungere un punto. Tenere "
+"premuto e trascinare per spostarlo. Fare clic sinistro per rimuoverlo."
+
+#: templates/admin/edit-map-polygons-section.php:152
+msgid "You have 0 polygones on this map"
+msgstr "Hai 0 poligoni su questa mappa"
+
+#: templates/admin/edit-map-polylines-section.php:11
+msgid "Polylines"
+msgstr "Polilinea"
+
+#: templates/admin/edit-map-polylines-section.php:15
+msgid ""
+"Continuous line composed of one or more line segments, which creates "
+"specific track. Right click on the map to add point. Hold pressed and drag "
+"to move it. Left click to remove it."
+msgstr ""
+"Linea continua composta da uno o più segmenti di linea, che crea una traccia "
+"specifica. Fare clic con il tasto destro sulla mappa per aggiungere un "
+"punto. Tenere premuto e trascinare per spostarlo. Fare clic sinistro per "
+"rimuoverlo."
+
+#: templates/admin/edit-map-polylines-section.php:23
+msgid "Add New Polyline"
+msgstr "Aggiungi nuova polilinea"
+
+#: templates/admin/edit-map-polylines-section.php:32
+#: templates/admin/edit-map-polylines-section.php:135
+msgid "data"
+msgstr "data"
+
+#: templates/admin/edit-map-polylines-section.php:121
+msgid "You have 0 polylines on this map"
+msgstr "Hai 0 polilinee su questa mappa"
+
+#: templates/admin/edit-map-styling-section.php:10
+msgid "Map Styling"
+msgstr "Stile mappa"
+
+#: templates/admin/edit-map-styling-section.php:14
+msgid "Choose some color/tone for the current map"
+msgstr "Scegli un colore/tono per la mappa corrente"
+
+#: templates/admin/edit-map-styling-section.php:23
+msgid "Hue(color)"
+msgstr "Colore"
+
+#: templates/admin/edit-map-styling-section.php:28
+msgid "Lightness"
+msgstr "Luminosità"
+
+#: templates/admin/edit-map-styling-section.php:36
+msgid "Saturation"
+msgstr "Saturazione"
+
+#: templates/admin/edit-map-styling-section.php:44
+msgid "Gamma"
+msgstr "Gamma"
+
+#: templates/admin/edit-map-styling-section.php:54
+msgid "Default"
+msgstr "Default"
+
+#: templates/admin/edit-map.php:78
+msgid "Create Copy Of This Map"
+msgstr "Crea una copia di questa mappa"
+
+#: templates/admin/edit-map.php:79
+msgid "Export This Map To CSV"
+msgstr "Esporta mappa in CSV"
+
+#: templates/admin/edit-map.php:83 templates/admin/maps-list.php:20
+#: templates/admin/maps-list.php:48
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: templates/admin/edit-map.php:84
+msgid "Copy & paste the shortcode directly into any WordPress post or page."
+msgstr ""
+"Copia e incolla lo shortcode direttamente in una pagina o in un post di "
+"Wordpress."
+
+#: templates/admin/edit-map.php:88
+msgid "Template Include"
+msgstr "Inclusione nel template"
+
+#: templates/admin/edit-map.php:89
+msgid ""
+"Copy & paste this code into a template file to include the map within your "
+"theme."
+msgstr ""
+"Copia e incolla questo codice in un template per includere la mappa "
+"all'interno del tema."
+
+#: templates/admin/featured-plugins.php:14
+msgid "Photo Gallery"
+msgstr "Galleria fotografica"
+
+#: templates/admin/featured-plugins.php:15
+msgid ""
+"Access advanced options and customization tools of this ultimate gallery, "
+"use the best ever functionality and unique features."
+msgstr ""
+"Accedi alle opzioni avanzate e agli strumenti di personalizzazione di questa "
+"galleria definitiva, utilizza le migliori funzionalità e caratteristiche "
+"uniche."
+
+#: templates/admin/featured-plugins.php:16
+#: templates/admin/featured-plugins.php:24
+#: templates/admin/featured-plugins.php:32
+#: templates/admin/featured-plugins.php:40
+#: templates/admin/featured-plugins.php:48
+#: templates/admin/featured-plugins.php:56
+#: templates/admin/featured-plugins.php:64
+#: templates/admin/featured-plugins.php:72
+#: templates/admin/featured-plugins.php:80
+#: templates/admin/featured-plugins.php:88
+#: templates/admin/featured-plugins.php:96
+#: templates/admin/featured-plugins.php:104
+#: templates/admin/featured-plugins.php:112
+#: templates/admin/featured-plugins.php:120
+#: templates/admin/featured-plugins.php:128
+msgid "View Plugin"
+msgstr "Visualizza plugin"
+
+#: templates/admin/featured-plugins.php:22
+msgid "Portfolio Gallery"
+msgstr "Galleria lavori"
+
+#: templates/admin/featured-plugins.php:23
+msgid ""
+"Best Portfolio plugin for WordPress with 9 unique views, lightbox options, "
+"slideshows, advanced customization solutions."
+msgstr ""
+"Miglior plug-in Portfolio per WordPress con 9 visualizzazioni uniche, "
+"opzioni lightbox, presentazioni, soluzioni di personalizzazione avanzate."
+
+#: templates/admin/featured-plugins.php:30
+msgid "Responsive Slider"
+msgstr "Slider Responsive"
+
+#: templates/admin/featured-plugins.php:31
+msgid ""
+"Make stunning sliders using advanced video, YouTube, Vimeo options. Link "
+"slides with URL, add text layers, animations and more."
+msgstr ""
+"Realizza fantastici slider usando le opzioni avanzate di video, YouTube, "
+"Vimeo. Collega diapositive con URL, aggiungi livelli di testo, animazioni e "
+"altro."
+
+#: templates/admin/featured-plugins.php:38
+msgid "Forms"
+msgstr "Moduli"
+
+#: templates/admin/featured-plugins.php:39
+msgid ""
+"Create different recipients for each form, send newsletters, use ready-to-go "
+"fields and more with Forms Pro."
+msgstr ""
+"Crea diversi destinatari per ogni modulo, invia newsletter, utilizza i campi "
+"pronti all'uso e altro ancora con Forms Pro."
+
+#: templates/admin/featured-plugins.php:46
+msgid "Gallery"
+msgstr "Galleria"
+
+#: templates/admin/featured-plugins.php:47
+msgid ""
+"Create unlimited stunning galleries of images and videos,  using 8 flexible "
+"and customizable views.Show them in a simple gallery forms."
+msgstr ""
+"Crea illimitate gallerie mozzafiato di immagini e video, utilizzando 8 viste "
+"flessibili e personalizzabili. Mostrale in una semplice galleria."
+
+#: templates/admin/featured-plugins.php:54
+msgid "Slider"
+msgstr "Slider"
+
+#: templates/admin/featured-plugins.php:55
+msgid ""
+"Use million times downloaded slider with theme editor, post feed sliders,"
+"video support and advanced options right away."
+msgstr ""
+"Utilizza uno slider scaricato milioni di volte con editor temi, post feed, "
+"supporto video e opzioni avanzate."
+
+#: templates/admin/featured-plugins.php:62
+msgid "Video Gallery"
+msgstr "Galleria video"
+
+#: templates/admin/featured-plugins.php:63
+msgid ""
+"Create the best video galleries with this plugin using 7 views, design and "
+"lightbox customization, advanced options and more."
+msgstr ""
+"Crea le migliori gallerie video con questo plug-in utilizzando 7 "
+"visualizzazioni, personalizzazione di design e lightbox, opzioni avanzate e "
+"altro ancora."
+
+#: templates/admin/featured-plugins.php:70
+msgid "Login"
+msgstr "Login"
+
+#: templates/admin/featured-plugins.php:71
+msgid ""
+"Add Login and sign up buttons on your site with amazing popup. Customize and "
+"style it to your liking, using security options and reCAPTCHA."
+msgstr ""
+"Aggiungi i pulsanti Accedi e registrati sul tuo sito con un fantastico "
+"popup. Personalizza e personalizzalo a tuo piacimento, utilizzando le "
+"opzioni di sicurezza e reCAPTCHA."
+
+#: templates/admin/featured-plugins.php:78
+msgid "Catalog"
+msgstr "Catalogo"
+
+#: templates/admin/featured-plugins.php:79
+msgid ""
+"Your ultimate store and catalog in 5 stylish views. Create products, design, "
+"customize categories, product pages, messages, comments, ratings."
+msgstr ""
+"Il tuo negozio e catalogo in 5 eleganti viste. Crea prodotti, progetta, "
+"personalizza le categorie, le pagine di prodotti, i messaggi, i commenti, e "
+"le valutazioni."
+
+#: templates/admin/featured-plugins.php:86
+msgid "Lightbox"
+msgstr "Lightbox"
+
+#: templates/admin/featured-plugins.php:87
+msgid ""
+"Pop up your images and videos in beautiful lightbox, share on social media "
+"and secure your images with watermark."
+msgstr ""
+"Fai apparire le tue immagini e i tuoi video in una fantastica lightbox, "
+"condividi sui social media e proteggi le tue immagini con watermark."
+
+#: templates/admin/featured-plugins.php:94
+msgid "Video Player"
+msgstr "Video Player"
+
+#: templates/admin/featured-plugins.php:95
+msgid ""
+"Create and customize your video player using advanced options, select skins "
+"and themes for your player."
+msgstr ""
+"Crea e personalizza il tuo lettore video utilizzando le opzioni avanzate, "
+"seleziona skin e temi per il tuo lettore."
+
+#: templates/admin/featured-plugins.php:102
+msgid "Princing Table"
+msgstr "Tabella di comparazione prezzi"
+
+#: templates/admin/featured-plugins.php:103
+msgid ""
+"Sell your products and services using 120 stunning pricing table themes and "
+"use more advanced options to design them."
+msgstr ""
+"Vendi i tuoi prodotti e servizi utilizzando 120 fantastici temi per i prezzi "
+"e utilizza opzioni più avanzate per progettarli."
+
+#: templates/admin/featured-plugins.php:110
+msgid "Colorbox"
+msgstr "Colorbox"
+
+#: templates/admin/featured-plugins.php:111
+msgid ""
+"Add advanced solutions for your Colorbox plugin using customization settings "
+"and bring best of popup and lightbox effects."
+msgstr ""
+"Aggiungi soluzioni avanzate per il tuo plugin Colorbox utilizzando le "
+"impostazioni di personalizzazione e sfrutta i migliori effetti popup e "
+"lightbox."
+
+#: templates/admin/featured-plugins.php:118
+msgid "Share buttons"
+msgstr "Pulsanti di condivisione"
+
+#: templates/admin/featured-plugins.php:119
+msgid ""
+"Spread the message of your websites all around social media using 11 "
+"beautiful design options and style settings of Share Buttons."
+msgstr ""
+"Condividi i contenuti dal tuo sito web su tutti i social media utilizzando "
+"11 bellissime opzioni di design e le impostazioni di stile dei pulsanti "
+"Condividi."
+
+#: templates/admin/featured-plugins.php:126
+msgid "Price Table Builder"
+msgstr "Creatore tabelle di comparazione prezzi"
+
+#: templates/admin/featured-plugins.php:127
+msgid ""
+"Access full customization list of Pricing Table Builder and change every "
+"corner of it, by customizing to your needs."
+msgstr ""
+"Accedi alla lista completa di personalizzazione di Table Builder e modifica "
+"ogni angolo di esso, personalizzandolo in base alle tue esigenze."
+
+#: templates/admin/frontend-directions-block.php:61
+#: templates/frontend/directions-block.php:61
+msgid "Distance Units"
+msgstr "Unità di distanza"
+
+#: templates/admin/frontend-directions-block.php:64
+#: templates/frontend/directions-block.php:64
+msgid "km"
+msgstr "km"
+
+#: templates/admin/frontend-directions-block.php:65
+#: templates/frontend/directions-block.php:65
+msgid "mile"
+msgstr "miglia"
+
+#: templates/admin/inline-popup-form.php:21
+msgid "Insert Map"
+msgstr "Inserisci mappa"
+
+#: templates/admin/inline-popup-form.php:24
+msgid "Map name"
+msgstr "Nome mappa"
+
+#: templates/admin/inline-popup-form.php:28
+msgid "Map type"
+msgstr "Tipo mappa"
+
+#: templates/admin/inline-popup-form.php:51
+msgid "Map width"
+msgstr "Larghezza mappa"
+
+#: templates/admin/inline-popup-form.php:60
+msgid "Map height"
+msgstr "Altezza mappa"
+
+#: templates/admin/inline-popup-form.php:64
+msgid "Map align"
+msgstr "Allineamento mappa"
+
+#: templates/admin/inline-popup-form.php:81
+msgid "Border radius"
+msgstr "Raggio degli angoli"
+
+#: templates/admin/inline-popup.php:48
+msgid "You have not creted any maps"
+msgstr "Non hai creato mappe"
+
+#: templates/admin/inline-popup.php:50
+msgid "Create new Map"
+msgstr "Crea una nuova mappa"
+
+#: templates/admin/maps-list-no-items.php:8
+msgid "No items"
+msgstr "Nessun oggetto"
+
+#: templates/admin/maps-list-single-item.php:31
+#: templates/admin/maps-list.php:21 templates/admin/maps-list.php:49
+msgid "Delete"
+msgstr "Elimina"
+
+#: templates/admin/maps-list.php:13
+msgid "Huge-IT Google maps"
+msgstr "Huge-IT Google maps"
+
+#: templates/admin/maps-list.php:13
+msgid "Add New Map"
+msgstr "Aggiungi nuova mappa"
+
+#. Plugin Name of the plugin/theme
+msgid "Huge IT Google Map"
+msgstr "Huge-IT Google maps"
+
+#. Plugin URI of the plugin/theme
+msgid "https://huge-it.com/google-map"
+msgstr "https://huge-it.com/google-map"
+
+#. Description of the plugin/theme
+msgid ""
+"This easy to use Google Map plugin gives you opportunity to show anything on "
+"the map with fantastic tools of Google Maps."
+msgstr ""
+"Questo semplice plug-in ti dà la possibilità di mostrare qualsiasi cosa "
+"sulla mappa con fantastici strumenti di Google Maps."
+
+#. Author of the plugin/theme
+msgid "Huge-IT"
+msgstr "Huge-IT"
+
+#. Author URI of the plugin/theme
+msgid "https://huge-it.com"
+msgstr "https://huge-it.com"
