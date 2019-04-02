@@ -30,7 +30,7 @@ include 'inc/helpers.php';
 include 'inc/shortcodes.php';
 
 // Custom active class on menu items
-include 'inc/menu.php';
+// include 'inc/menu.php';
 
 // Auto copyright
 include 'inc/copyright.php';
@@ -39,7 +39,7 @@ include 'inc/copyright.php';
 include 'inc/cloudinary.php';
 
 // Template functions
-include 'inc/templates.php';
+// include 'inc/templates.php';
 
 // Favicon
 include 'inc/favicons.php';
