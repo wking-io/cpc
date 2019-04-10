@@ -26,9 +26,13 @@ function add_option_pages() {
 			'icon_url' 	 => 'dashicons-building',
 			'position'	 => 75
 		) );
+
+		add_option_sub_page( 'Blog Archive' );
+		add_option_sub_page( 'Event Archive', 'edit.php?post_type=cpc_event' );
+		add_option_sub_page( 'Officer Archive', 'edit.php?post_type=cpc_officer' );
 	
 	}
 
 }
 
-// add_action( 'acf/init', 'add_option_pages' );
+add_action( 'acf/init', 'add_option_pages' );

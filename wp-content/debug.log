@@ -1,0 +1,25 @@
+[10-Apr-2019 14:42:22 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 14:42:27 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 14:42:28 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 14:42:28 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 14:42:32 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 20:43:10 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 20:43:33 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 20:44:40 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 20:46:40 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 20:48:38 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 20:50:38 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 20:52:38 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 20:54:38 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 20:56:38 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 20:58:38 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 21:00:38 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 21:02:38 UTC] No Cloudinary URL found in Options table.
+[10-Apr-2019 21:03:10 UTC] WordPress database error Server shutdown in progress for query SELECT option_value FROM wp_options WHERE option_name = 'gform_enable_logging' LIMIT 1 made by include('phar:///usr/local/bin/wp/php/boot-phar.php'), include('phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/wp-cli.php'), WP_CLI\bootstrap, WP_CLI\Bootstrap\LaunchRunner->process, WP_CLI\Runner->start, WP_CLI\Runner->load_wordpress, require('wp-settings.php'), include_once('/plugins/gravityforms/gravityforms.php'), require_once('/plugins/gravityforms/includes/logging/logging.php'), get_option
+[10-Apr-2019 21:03:10 UTC] PHP Warning:  Error while sending QUERY packet. PID=24866 in /app/public/wp-includes/wp-db.php on line 2007
+[10-Apr-2019 21:03:10 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /app/public/wp-includes/wp-db.php on line 1612
+[10-Apr-2019 21:03:10 UTC] WordPress database error Server shutdown in progress for query SELECT option_value FROM wp_options WHERE option_name = 'gform_enable_logging' LIMIT 1 made by include('phar:///usr/local/bin/wp/php/boot-phar.php'), include('phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/wp-cli.php'), WP_CLI\bootstrap, WP_CLI\Bootstrap\LaunchRunner->process, WP_CLI\Runner->start, WP_CLI\Runner->load_wordpress, require('wp-settings.php'), include_once('/plugins/gravityforms/gravityforms.php'), require_once('/plugins/gravityforms/includes/logging/logging.php'), get_option
+[10-Apr-2019 21:03:11 UTC] PHP Warning:  Error while sending QUERY packet. PID=24881 in /app/public/wp-includes/wp-db.php on line 2007
+[10-Apr-2019 21:03:11 UTC] PHP Warning:  Error while sending QUERY packet. PID=24955 in /app/public/wp-includes/wp-db.php on line 2007
+[10-Apr-2019 21:03:11 UTC] WordPress database error Server shutdown in progress for query SELECT option_value FROM wp_options WHERE option_name = 'gform_enable_logging' LIMIT 1 made by include('phar:///usr/local/bin/wp/php/boot-phar.php'), include('phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/wp-cli.php'), WP_CLI\bootstrap, WP_CLI\Bootstrap\LaunchRunner->process, WP_CLI\Runner->start, WP_CLI\Runner->load_wordpress, require('wp-settings.php'), include_once('/plugins/gravityforms/gravityforms.php'), require_once('/plugins/gravityforms/includes/logging/logging.php'), get_option
+[10-Apr-2019 21:03:11 UTC] PHP Warning:  Error while sending QUERY packet. PID=24921 in /app/public/wp-includes/wp-db.php on line 2007

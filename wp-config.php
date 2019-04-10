@@ -63,8 +63,10 @@ define('NONCE_SALT',       '+BLWKQpakjOgUDHRjpuyUy529hCjd4YxX4TsTosYAgp9ioIesc2n
  */
 $table_prefix = 'wp_';
 
-
-
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
+// this will log errors and warnings in wp-content/debug.log
+define('WP_DEBUG_DISPLAY', false);
 
 /* That's all, stop editing! Happy blogging. */
 
