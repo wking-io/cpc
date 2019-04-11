@@ -1,0 +1,16 @@
+.DS_Store
+wp-content/uploads
+scripts/config.php
+wp-config.php
+
+# Logs
+*.log
+log.txt
+
+# Wills Env
+local-phpinfo.php
+.vscode
+
+# Build System
+node_modules
+wp-content/mu-plugins/skillcrush-core/build

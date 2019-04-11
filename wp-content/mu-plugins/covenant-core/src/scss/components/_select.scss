@@ -1,0 +1,19 @@
+.sc-select {
+  @apply relative font-sans;
+
+  select {
+    @apply relative border-black appearance-none leading-none p-2 pr-6 h-auto;
+  }
+
+  &::after {
+    @apply absolute block;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $black;
+    content: '';
+    right: 10px;
+    top: calc(50% + 4px);
+    transform: translateY(-50%);
+  }
+}

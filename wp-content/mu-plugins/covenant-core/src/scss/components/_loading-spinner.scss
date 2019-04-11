@@ -1,0 +1,38 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sc-spinner {
+  background-color: rgba($white, 0.6);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.sc-spinner--loading .sc-spinner {
+  visibility: visible;
+  z-index: 9;
+}
+
+$spinner-size: 26px;
+
+.sc-spinner svg {
+  animation: 1s linear infinite rotate;
+  fill: $sc-red;
+  fill-opacity: 0.75;
+  height: $spinner-size;
+  left: calc(50% - (#{$spinner-size} / 2));
+  position: absolute;
+  top: calc(50% - (#{$spinner-size} / 2));
+  width: auto;
+}

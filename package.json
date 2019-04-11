@@ -1,0 +1,51 @@
+{
+  "name": "covenant-build-system",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Test repository for new build",
+  "dependencies": {
+    "data.task": "3.1.2"
+  },
+  "devDependencies": {
+    "ajv": "6.9.1",
+    "autoprefixer": "8.5.0",
+    "babel-core": "6.26.3",
+    "babel-eslint": "8.2.3",
+    "babel-loader": "7.1.4",
+    "babel-preset-cgb": "1.6.0",
+    "babel-preset-env": "1.7.0",
+    "browserslist": "3.2.7",
+    "css-loader": "2.1.1",
+    "cssnano": "4.1.10",
+    "eslint": "4.19.1",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-config-wordpress": "2.0.0",
+    "eslint-loader": "2.0.0",
+    "eslint-plugin-import": "2.11.0",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "7.12.4",
+    "eslint-plugin-wordpress": "0.1.0",
+    "extract-text-webpack-plugin": "4.0.0-beta.0",
+    "file-loader": "1.1.11",
+    "image-webpack-loader": "4.6.0",
+    "mini-css-extract-plugin": "0.5.0",
+    "node-sass": "4.11.0",
+    "postcss-flexbugs-fixes": "3.3.1",
+    "postcss-loader": "2.1.5",
+    "prettier": "1.12.1",
+    "prettier-eslint-cli": "4.7.1",
+    "sass-loader": "7.0.1",
+    "stylelint": "9.10.1",
+    "stylelint-config-sass-guidelines": "5.0.0",
+    "stylelint-scss": "3.1.0",
+    "stylelint-webpack-plugin": "0.10.5",
+    "tailwindcss": "0.7.4",
+    "webpack": "4.8.3",
+    "webpack-cli": "3.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --mode=development --watch --config=config/webpack.config.js",
+    "build": "webpack --mode=production --config=config/webpack.config.js"
+  }
+}

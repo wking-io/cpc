@@ -1,0 +1,28 @@
+.sc-popup {
+  @apply fixed pin;
+
+  &--admin {
+    left: 160px;
+  }
+
+  &[data-popup-hidden='true'] {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &[data-popup-hidden='false'] {
+    opacity: 1;
+    z-index: 9999999;
+  }
+}
+
+.sc-popup__overlay {
+  @apply absolute pin bg-black opacity-75;
+}
+
+.sc-popup__content {
+  @apply absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

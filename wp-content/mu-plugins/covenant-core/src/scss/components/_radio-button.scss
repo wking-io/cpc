@@ -1,0 +1,14 @@
+.sc-radio-button {
+  input {
+    @include visually-hidden;
+  }
+
+  label {
+    @apply bg-grey p-2 font-bold inline-block font-sans;
+    line-height: 1.3;
+  }
+
+  input:checked + label {
+    @apply bg-black text-white;
+  }
+}

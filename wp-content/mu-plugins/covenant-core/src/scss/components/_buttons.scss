@@ -1,0 +1,15 @@
+.sc-button {
+  @apply bg-black text-white font-display uppercase px-4 py-2 inline-block font-bold border-0;
+
+  &:hover {
+    @apply bg-grey-dark;
+  }
+
+  &--primary {
+    @apply bg-primary;
+  }
+
+  &--primary:hover {
+    @apply bg-primary-dark;
+  }
+}

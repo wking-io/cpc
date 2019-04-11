@@ -1,0 +1,16 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-cgb-block-cpc-blocks {
+  background: #f16059;
+  border: .2rem solid #3b3b3b;
+  color: #3b3b3b;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjc3MvYmxvY2stc3R5bGVzLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/
