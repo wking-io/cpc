@@ -1,17 +1,6 @@
-/**
- * #.# Editor Styles
- *
- * CSS for just Backend enqueued after style.scss
- * which makes it higher in priority.
- */
-
-.wp-block-cgb-block-cpc-blocks {
-  background: #123456;
-  border: .2rem solid #3b3b3b;
-  color: #3b3b3b;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem;
+img {
+  border: 0;
+  display: initial;
 }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjc3MvYmxvY2stZWRpdG9ycy5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/

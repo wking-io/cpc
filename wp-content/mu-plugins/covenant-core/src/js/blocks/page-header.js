@@ -8,7 +8,7 @@
 //  Import CSS.
 
 const { __ } = wp.i18n;
-const { MediaUpload, PlainText } = wp.editor;
+const { MediaUpload, PlainText, InspectorControls } = wp.editor;
 const { registerBlockType } = wp.blocks;
 const { Button } = wp.components;
 
@@ -31,18 +31,22 @@ registerBlockType('cpc/page-image-header', {
   icon: 'format-image', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
   category: 'common', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
   keywords: [__('test')],
+  supports: {
+    align: ['full'],
+  },
   attributes: {
     title: {
       source: 'text',
-      selector: '.page-header__title',
     },
     imageAlt: {
       attribute: 'alt',
-      selector: '.page-header__image',
     },
     imageUrl: {
       attribute: 'src',
-      selector: '.page-header__image',
+    },
+    align: {
+      type: 'string',
+      default: 'full',
     },
   },
 
@@ -54,37 +58,55 @@ registerBlockType('cpc/page-image-header', {
    *
    * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
    */
-  edit: function({ attributes, className, setAttributes }) {
-    const getImageButton = openEvent => (
-      <div className="button-container relative">
-        {!attributes.imageUrl && (
-          <img
-            alt={attributes.imageAlt}
-            src={attributes.imageUrl}
-            className="image"
-          />
-        )}
-        <Button onClick={openEvent} className="button button-large">
-          Pick an image
-        </Button>
-      </div>
-    );
+  edit: function({ attributes, className, setAttributes, isSelected }) {
+    const getImageButton = openEvent => {
+      const buttonText =
+        attributes.imageUrl && attributes.imageUrl.length > 0
+          ? 'Replace Image'
+          : 'Pick Image';
+      return (
+        <div>
+          <label htmlFor="bg-image">Background Image</label>
+          <Button
+            id="bg-image"
+            onClick={openEvent}
+            className="button button-large"
+          >
+            {buttonText}
+          </Button>
+        </div>
+      );
+    };
+
     return (
-      <div className={`relative ${className}`}>
-        <MediaUpload
-          onSelect={media => {
-            setAttributes({ imageAlt: media.alt, imageUrl: media.url });
-          }}
-          type="image"
-          value={attributes.imageID}
-          render={({ open }) => getImageButton(open)}
+      <div className={`page-header relative aspect-3:1 bg-grey ${className}`}>
+        <InspectorControls>
+          <MediaUpload
+            onSelect={media => {
+              setAttributes({ imageAlt: media.alt, imageUrl: media.url });
+            }}
+            type="image"
+            value={attributes.imageID}
+            render={({ open }) => getImageButton(open)}
+          />
+          <div>
+            <label htmlFor="page-header-title">Heading</label>
+            <PlainText
+              id="page-header-title"
+              onChange={content => setAttributes({ title: content })}
+              value={attributes.title}
+              placeholder="Page Heading"
+            />
+          </div>
+        </InspectorControls>
+        <img
+          className="absolute top-0 left-0 w-full h-full object-center page-header__img"
+          src={attributes.imageUrl}
+          alt={attributes.imageAlt}
         />
-        <PlainText
-          onChange={content => setAttributes({ title: content })}
-          value={attributes.title}
-          placeholder="Your card title"
-          className="heading"
-        />
+        <h1 className="absolute font-sans uppercase pin-center text-center text-white">
+          {attributes.title || 'Page Heading'}
+        </h1>
       </div>
     );
   },
@@ -97,22 +119,17 @@ registerBlockType('cpc/page-image-header', {
    *
    * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
    */
-  save: function(props) {
+  save: function({ attributes, className }) {
     return (
-      <div className={props.className}>
-        <p>— Hello from the frontend.</p>
-        <p>
-          CGB BLOCK: <code>cpc-blocks</code> is a new Gutenberg block.
-        </p>
-        <p>
-          It was created via{' '}
-          <code>
-            <a href="https://github.com/ahmadawais/create-guten-block">
-              create-guten-block
-            </a>
-          </code>
-          .
-        </p>
+      <div className={`page-header relative aspect-3:1 bg-grey ${className}`}>
+        <img
+          className="absolute top-0 left-0 w-full h-full object-center page-header__img"
+          src={attributes.imageUrl}
+          alt={attributes.imageAlt}
+        />
+        <h1 className="absolute font-sans uppercase pin-center text-center text-white">
+          {attributes.title || 'Page Heading'}
+        </h1>
       </div>
     );
   },

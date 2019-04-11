@@ -62,6 +62,7 @@ function cpc_setup() {
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
+	add_theme_support( 'align-wide' );
 
 	// Turn off admin bar on Front End
 	add_filter( 'show_admin_bar', '__return_false' );

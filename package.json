@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "description": "Test repository for new build",
   "dependencies": {
-    "data.task": "3.1.2"
+    "data.task": "3.1.2",
+    "tailwindcss": "1.0.0-beta.4"
   },
   "devDependencies": {
     "ajv": "6.9.1",
@@ -39,7 +40,6 @@
     "stylelint-config-sass-guidelines": "5.0.0",
     "stylelint-scss": "3.1.0",
     "stylelint-webpack-plugin": "0.10.5",
-    "tailwindcss": "0.7.4",
     "webpack": "4.8.3",
     "webpack-cli": "3.3.0"
   },

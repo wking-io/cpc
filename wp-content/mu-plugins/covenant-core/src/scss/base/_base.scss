@@ -1,3 +1,64 @@
-.this-is-a-test {
-  font-size: 16px;
+*,
+*::before,
+*::after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button:focus,
+button:active,
+a:focus,
+a:active {
+  outline: none;
+}
+
+html {
+  font-size: 4px;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 4rem;
+  overflow: hidden;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: calc(100% - 16rem);
+}
+
+.wrapper-sm {
+  margin: 0 auto;
+  max-width: 800px;
+  width: calc(100% - 16rem);
+}
+
+@include media('>=#{$lg}') {
+  .wrapper,
+  .wrapper-sm {
+    width: 90vw;
+  }
+}
+
+[data-style='border'] {
+  border: 2rem solid $black;
+
+  &[data-theme='green'] {
+    border-color: $green;
+  }
+
+  &[data-theme='yellow'] {
+    border-color: $yellow;
+  }
+
+  &[data-theme='red'] {
+    border-color: $red;
+  }
+}
+
+@include media('>=#{$lg}') {
+  [data-style='border'] {
+    border: 4rem solid $black;
+  }
 }

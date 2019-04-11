@@ -1,6 +1,6 @@
 @responsive {
   .aspect-none {
-    &:before {
+    &::before {
       display: none;
     }
   }
