@@ -4,6 +4,16 @@
  * CSS for both Frontend+Backend.
  */
 
-.page-header .page-header__img {
-  height: 100%;
+.page-header {
+  .page-header__img {
+    height: 100%;
+  }
+
+  .page-header__overlay {
+    background-image: linear-gradient(
+      rgba($primary-dark, 1),
+      rgba($primary-dark, 0.8) 30%,
+      rgba($primary-dark, 0)
+    );
+  }
 }

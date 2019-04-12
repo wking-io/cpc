@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "Test repository for new build",
   "dependencies": {
+    "clone-deep": "4.0.1",
     "data.task": "3.1.2",
     "tailwindcss": "1.0.0-beta.4"
   },
@@ -40,6 +41,7 @@
     "stylelint-config-sass-guidelines": "5.0.0",
     "stylelint-scss": "3.1.0",
     "stylelint-webpack-plugin": "0.10.5",
+    "tailwind-config": "0.1.1",
     "webpack": "4.8.3",
     "webpack-cli": "3.3.0"
   },

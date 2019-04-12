@@ -39,7 +39,6 @@
     "comma-dangle": ["error", "always-multiline"],
     "comma-spacing": "error",
     "comma-style": "error",
-    "computed-property-spacing": ["error", "always"],
     "constructor-super": "error",
     "dot-notation": "error",
     "eol-last": "error",

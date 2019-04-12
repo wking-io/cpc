@@ -5,12 +5,10 @@
  * Simple block, renders and saves the same content without any interactivity.
  */
 
-//  Import CSS.
-
 const { __ } = wp.i18n;
-const { MediaUpload, PlainText, InspectorControls } = wp.editor;
+const { MediaUpload, InspectorControls } = wp.editor;
 const { registerBlockType } = wp.blocks;
-const { Button } = wp.components;
+const { Button, TextControl } = wp.components;
 
 /**
  * Register: aa Gutenberg Block.
@@ -58,15 +56,17 @@ registerBlockType('cpc/page-image-header', {
    *
    * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
    */
-  edit: function({ attributes, className, setAttributes, isSelected }) {
+  edit: function({ attributes, className, setAttributes }) {
     const getImageButton = openEvent => {
       const buttonText =
         attributes.imageUrl && attributes.imageUrl.length > 0
           ? 'Replace Image'
           : 'Pick Image';
       return (
-        <div>
-          <label htmlFor="bg-image">Background Image</label>
+        <div className="flex flex-col pt-6 pb-3">
+          <label className="mb-1" htmlFor="bg-image">
+            Background Image
+          </label>
           <Button
             id="bg-image"
             onClick={openEvent}
@@ -89,22 +89,22 @@ registerBlockType('cpc/page-image-header', {
             value={attributes.imageID}
             render={({ open }) => getImageButton(open)}
           />
-          <div>
-            <label htmlFor="page-header-title">Heading</label>
-            <PlainText
-              id="page-header-title"
-              onChange={content => setAttributes({ title: content })}
-              value={attributes.title}
-              placeholder="Page Heading"
-            />
-          </div>
+          <TextControl
+            label="Heading"
+            id="page-header-title"
+            onChange={content => setAttributes({ title: content })}
+            value={attributes.title}
+            placeholder="Page Heading"
+            className="pb-3"
+          />
         </InspectorControls>
         <img
-          className="absolute top-0 left-0 w-full h-full object-center page-header__img"
+          className="absolute top-0 left-0 w-full h-full object-cover page-header__img"
           src={attributes.imageUrl}
           alt={attributes.imageAlt}
         />
-        <h1 className="absolute font-sans uppercase pin-center text-center text-white">
+        <div className="absolute inset-0 page-header__overlay" />
+        <h1 className="absolute font-sans uppercase pin-center text-center text-white text-4xl font-bold">
           {attributes.title || 'Page Heading'}
         </h1>
       </div>
