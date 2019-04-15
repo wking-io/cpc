@@ -12,3 +12,9 @@
 import '../scss/block-editors.scss';
 import '../scss/block-styles.scss';
 import './blocks/page-header';
+import './blocks/heading-one';
+import './blocks/heading-two';
+import './blocks/heading-three';
+import './blocks/heading-four';
+import './blocks/heading-five';
+import './blocks/heading-six';

@@ -142,7 +142,10 @@
     "no-unreachable": "error",
     "no-unsafe-negation": "error",
     "no-unused-expressions": "error",
-    "no-unused-vars": "error",
+    "no-unused-vars": [
+      "error",
+      { "args": "after-used", "argsIgnorePattern": "^_" }
+    ],
     "no-useless-computed-key": "error",
     "no-useless-constructor": "error",
     "no-useless-return": "error",

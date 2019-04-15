@@ -120,6 +120,7 @@ module.exports = (_, { mode }) => {
                   options: {
                     babelrc: false,
                     presets: [require.resolve('babel-preset-cgb')],
+                    plugins: ['lodash'],
                     cacheDirectory: true,
                   },
                 },

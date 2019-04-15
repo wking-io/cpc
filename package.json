@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "description": "Test repository for new build",
   "dependencies": {
+    "@wordpress/components": "7.2.2",
+    "@wordpress/compose": "3.2.0",
     "clone-deep": "4.0.1",
     "data.task": "3.1.2",
     "tailwindcss": "1.0.0-beta.4"
@@ -14,6 +16,7 @@
     "babel-core": "6.26.3",
     "babel-eslint": "8.2.3",
     "babel-loader": "7.1.4",
+    "babel-plugin-lodash": "3.3.4",
     "babel-preset-cgb": "1.6.0",
     "babel-preset-env": "1.7.0",
     "browserslist": "3.2.7",
