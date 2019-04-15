@@ -6,6 +6,6 @@ registerBlockType(
   HeadingBase({
     title: 'Heading One',
     tag: 'h1',
-    textSize: 'text-5xl',
+    textSize: 'text-4xl md:text-5xl',
   })
 );

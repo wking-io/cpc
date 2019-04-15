@@ -65,11 +65,11 @@ export const HeadingBase = ({ title, tag, textSize }) => ({
           value={attributes.content}
           onChange={content => setAttributes({ content })}
           placeholder={`${title}…`}
-          className={`font-sans font-bold ${textSize} ${
+          className={`font-sans font-bold mt-2 mb-4 ${textSize} ${
             attributes.uppercase ? 'uppercase' : ''
           } text-${attributes.alignment} text-${
             attributes.textColor
-          } ${className}`}
+          } ${className || ''}`}
         />
       </div>
     );
@@ -86,11 +86,11 @@ export const HeadingBase = ({ title, tag, textSize }) => ({
   save: function({ attributes, className }) {
     return (
       <h1
-        className={`font-sans font-bold text-5xl ${
+        className={`font-sans font-bold mt-2 mb-4 ${textSize} ${
           attributes.uppercase ? 'uppercase' : ''
         } text-${attributes.alignment} text-${
           attributes.textColor
-        } ${className}`}
+        } ${className || ''}`}
       >
         {attributes.content}
       </h1>

@@ -79,6 +79,11 @@ module.exports = (_, { mode }) => {
       filename: 'js/[name].js',
     },
     devtool: isProduction ? false : 'inline-source-map',
+    externals: [
+      {
+        lodash: 'window.lodash',
+      },
+    ],
     module: {
       strictExportPresence: true,
       rules: [

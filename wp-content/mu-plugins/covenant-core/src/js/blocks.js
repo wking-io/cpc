@@ -18,3 +18,4 @@ import './blocks/heading-three';
 import './blocks/heading-four';
 import './blocks/heading-five';
 import './blocks/heading-six';
+import './blocks/quote';
