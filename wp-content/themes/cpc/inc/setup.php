@@ -63,6 +63,40 @@ function cpc_setup() {
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 	add_theme_support( 'align-wide' );
+	add_theme_support(
+		'editor-color-palette', array(
+			array(
+				'name'  => esc_html__( 'Transparent', THEME_NAME ),
+				'slug' => 'transparent',
+				'color' => 'transparent',
+			),
+			array(
+				'name'  => esc_html__( 'Black', THEME_NAME ),
+				'slug' => 'black',
+				'color' => '#03293b',
+			),
+			array(
+				'name'  => esc_html__( 'Grey', THEME_NAME ),
+				'slug' => 'grey',
+				'color' => '#f2f4f5',
+			),
+			array(
+				'name'  => esc_html__( 'White', THEME_NAME ),
+				'slug' => 'white',
+				'color' => '#ffffff',
+			),
+			array(
+				'name'  => esc_html__( 'Primary', THEME_NAME ),
+				'slug' => 'primary',
+				'color' => '#5ba5bf',
+			),
+			array(
+				'name'  => esc_html__( 'Primary Dark', THEME_NAME ),
+				'slug' => 'primary-dark',
+				'color' => '#436979',
+			)
+		)
+	);
 
 	// Turn off admin bar on Front End
 	add_filter( 'show_admin_bar', '__return_false' );

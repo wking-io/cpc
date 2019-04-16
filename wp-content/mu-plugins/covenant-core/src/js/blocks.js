@@ -19,3 +19,4 @@ import './blocks/heading-four';
 import './blocks/heading-five';
 import './blocks/heading-six';
 import './blocks/quote';
+import './blocks/wrapper';

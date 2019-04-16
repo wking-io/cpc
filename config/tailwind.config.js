@@ -4,6 +4,7 @@ const colors = {
   grey: '#f2f4f5',
   white: '#ffffff',
   primary: '#5ba5bf',
+  'primary-dark': '#436979',
 };
 
 module.exports = {

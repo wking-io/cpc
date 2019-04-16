@@ -8,9 +8,6 @@ registerBlockType('cpc/page-image-header', {
   icon: 'format-image',
   category: 'common',
   keywords: [__('test')],
-  supports: {
-    align: ['full'],
-  },
   attributes: {
     title: {
       type: 'string',
@@ -21,10 +18,10 @@ registerBlockType('cpc/page-image-header', {
     imageUrl: {
       type: 'string',
     },
-    align: {
-      type: 'string',
-      default: 'full',
-    },
+  },
+
+  getEditWrapperProps() {
+    return { 'data-align': 'full' };
   },
 
   edit: function({ attributes, className, setAttributes }) {

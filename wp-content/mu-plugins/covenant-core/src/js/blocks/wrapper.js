@@ -1,12 +1,13 @@
-import { CovenantColorPalette, colors } from './inputs/colorPicker';
+import { CovenantColorPalette, colors } from './inputs/colorPalette';
+import wrapperIcon from './icons/wrapper';
 
 const { __ } = wp.i18n;
 const { InspectorControls, InnerBlocks } = wp.editor;
 const { registerBlockType } = wp.blocks;
 
 registerBlockType('cpc/wrapper', {
-  title: __('Section'),
-  icon: 'editor-quote',
+  title: __('Wrapper'),
+  icon: wrapperIcon,
   category: 'common',
   keywords: [__('test')],
   supports: {
@@ -14,13 +15,13 @@ registerBlockType('cpc/wrapper', {
     className: false,
   },
   attributes: {
-    backgroundColor: {
+    bgColor: {
       type: 'string',
       default: 'black',
     },
-    colorValue: {
+    bgValue: {
       type: 'string',
-      default: 'black',
+      default: colors.black,
     },
     align: {
       type: 'string',
@@ -38,16 +39,27 @@ registerBlockType('cpc/wrapper', {
    */
   edit: function({ attributes, setAttributes }) {
     return (
-      <div className={`bg-${attributes.textColor}`}>
+      <div className={`bg-${attributes.bgColor}`}>
         <InspectorControls>
           <CovenantColorPalette
-            color={attributes.colorValue || colors.black}
-            onChange={([textColor, colorValue]) =>
-              setAttributes({ textColor, colorValue })
+            color={attributes.bgValue || colors.black}
+            onChange={([bgColor, bgValue]) =>
+              setAttributes({ bgColor, bgValue })
             }
           />
         </InspectorControls>
-        <InnerBlocks />
+        <InnerBlocks
+          template={[
+            [
+              'cpc/heading-two',
+              { textColor: 'white', colorValue: colors.white },
+            ],
+            [
+              'core/paragraph',
+              { content: 'Enter content...', textColor: colors.white },
+            ],
+          ]}
+        />
       </div>
     );
   },
@@ -62,7 +74,7 @@ registerBlockType('cpc/wrapper', {
    */
   save: function({ attributes }) {
     return (
-      <div className={`bg-${attributes.textColor}`}>
+      <div className={`bg-${attributes.bgColor}`}>
         <InnerBlocks.Content />
       </div>
     );
