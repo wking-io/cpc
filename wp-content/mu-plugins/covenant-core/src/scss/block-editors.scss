@@ -1,2 +1,6 @@
 @import 'base/variables';
+
+@tailwind base;
+@tailwind utilities;
+
 @import 'blocks/page-header/editor';

@@ -1,10 +1,6 @@
 @import 'base/variables';
 @import 'base/mixins';
 
-@tailwind base;
-
 @import 'blocks/page-header/style';
 @import 'utils/pin';
 @import 'utils/aspect';
-
-@tailwind utilities;

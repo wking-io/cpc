@@ -1,4 +1,4 @@
-import { CovenantColorPalette, colors } from './inputs/colorPicker';
+import { CovenantColorPalette, colors } from './inputs/colorPalette';
 
 const { __ } = wp.i18n;
 const {

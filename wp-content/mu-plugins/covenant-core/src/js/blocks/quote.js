@@ -1,3 +1,5 @@
+import quoteIcon from './icons/quote';
+
 const { __ } = wp.i18n;
 const { InspectorControls, RichText } = wp.editor;
 const { registerBlockType } = wp.blocks;
@@ -5,7 +7,7 @@ import { ToggleControl } from '@wordpress/components';
 
 registerBlockType('cpc/quote', {
   title: __('Quote'),
-  icon: 'quote',
+  icon: quoteIcon,
   category: 'common',
   keywords: [__('test')],
   attributes: {

@@ -8,13 +8,7 @@
 if ( ! function_exists( 'cpc_scripts' ) ) :
 
 	function cpc_scripts() {
-
-		wp_register_script( 'polyfill', get_template_directory_uri() . '/assets/js/polyfill.js', array(), '1.0.0', true );
-		wp_enqueue_script( 'polyfill' );
-		
-		wp_register_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array(), '1.0.0', true );
-		wp_enqueue_script( 'main' );
-
+		// wp_enqueue_script( 'cpc_main' );
 	}
 
 endif;
@@ -24,10 +18,7 @@ add_action('wp_enqueue_scripts', 'cpc_scripts');
 if ( ! function_exists( 'cpc_styles' ) ) :
 
 	function cpc_styles() {
-
-	    wp_register_style( 'main', get_template_directory_uri() . '/assets/css/main.css', array(), '1.0.0', false );
-	    wp_enqueue_style( 'main' );
-
+	    wp_enqueue_style( 'cpc_main' );
 	}
 
 endif;

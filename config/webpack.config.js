@@ -1,5 +1,6 @@
 'use strict';
 
+const prefixer = require('postcss-prefix-selector');
 const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -9,9 +10,22 @@ const paths = require('./paths');
 // Options for PostCSS as we reference these options twice
 // Adds vendor prefixing based on your specified browser support in
 // package.json
-const postcssOptions = isProduction => {
+const postcssOptions = (addPrefix, isProduction) => {
   const defaultOptions = [
     require('tailwindcss')(paths.tailwind),
+    ...(addPrefix
+      ? [
+          prefixer({
+            prefix: '.block-editor .block-editor__container',
+            transform: function(prefix, selector, prefixedSelector) {
+              if (selector.includes('.')) {
+                return prefixedSelector;
+              }
+              return selector;
+            },
+          }),
+        ]
+      : []),
     require('postcss-flexbugs-fixes'),
     autoprefixer({
       browsers: [
@@ -53,7 +67,7 @@ const styleLintConfig = {
 // The development configuration is different and lives in a separate file.
 module.exports = (_, { mode }) => {
   const isProduction = mode === 'production';
-  const extractConfig = {
+  const extractConfig = addPrefix => ({
     use: [
       {
         loader: require.resolve('css-loader'),
@@ -64,11 +78,11 @@ module.exports = (_, { mode }) => {
       },
       {
         loader: require.resolve('postcss-loader'),
-        options: postcssOptions(isProduction),
+        options: postcssOptions(addPrefix, isProduction),
       },
       require.resolve('sass-loader'),
     ],
-  };
+  });
   return {
     // Don't attempt to continue if there are any errors.
     bail: isProduction,
@@ -134,17 +148,17 @@ module.exports = (_, { mode }) => {
             {
               test: /styles\.s?css$/,
               include: paths.styles,
-              use: extractBlockStyle.extract(extractConfig),
+              use: extractBlockStyle.extract(extractConfig(false)),
             },
             {
               test: /editors\.s?css$/,
               include: paths.styles,
-              use: extractBlockEditor.extract(extractConfig),
+              use: extractBlockEditor.extract(extractConfig(true)),
             },
             {
               test: /\.scss$/,
               include: paths.styles,
-              use: extractCSS.extract(extractConfig),
+              use: extractCSS.extract(extractConfig(false)),
             },
             {
               test: /\.(gif|png|jpe?g|svg)$/i,
