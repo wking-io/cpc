@@ -4,7 +4,6 @@ const prefixer = require('postcss-prefix-selector');
 const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
 const paths = require('./paths');
 
 // Options for PostCSS as we reference these options twice
@@ -56,11 +55,6 @@ const extractBlockStyle = new ExtractTextPlugin({
 const extractBlockEditor = new ExtractTextPlugin({
   filename: 'css/block-editors.css',
 });
-
-const styleLintConfig = {
-  configFile: paths.stylelint,
-  context: paths.styles,
-};
 
 // This is the production configuration.
 // It compiles slowly and is focused on producing a fast and minimal bundle.
@@ -190,7 +184,6 @@ module.exports = (_, { mode }) => {
     },
     plugins: [
       new webpack.NamedModulesPlugin(),
-      new StyleLintPlugin(styleLintConfig),
       extractBlockStyle,
       extractBlockEditor,
       extractCSS,

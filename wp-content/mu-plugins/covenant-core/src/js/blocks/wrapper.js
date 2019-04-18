@@ -1,5 +1,6 @@
 import { CovenantColorPalette, colors } from './inputs/colorPalette';
 import wrapperIcon from './icons/wrapper';
+import { ALLOWED_BLOCKS } from './utils';
 
 const { __ } = wp.i18n;
 const { InspectorControls, InnerBlocks } = wp.editor;
@@ -29,6 +30,12 @@ registerBlockType('cpc/wrapper', {
     },
   },
 
+  getEditWrapperProps({ align }) {
+    if (['wide', 'full'].indexOf(align) === -1) {
+      return { 'data-align': 'full' };
+    }
+  },
+
   /**
    * The edit function describes the structure of your block in the context of the editor.
    * This represents what the editor will render when the block is used.
@@ -39,7 +46,7 @@ registerBlockType('cpc/wrapper', {
    */
   edit: function({ attributes, setAttributes }) {
     return (
-      <div className={`bg-${attributes.bgColor}`}>
+      <div className={`cpc-wrapper bg-${attributes.bgColor}`}>
         <InspectorControls>
           <CovenantColorPalette
             color={attributes.bgValue || colors.black}
@@ -48,18 +55,7 @@ registerBlockType('cpc/wrapper', {
             }
           />
         </InspectorControls>
-        <InnerBlocks
-          template={[
-            [
-              'cpc/heading-two',
-              { textColor: 'white', colorValue: colors.white },
-            ],
-            [
-              'core/paragraph',
-              { content: 'Enter content...', textColor: colors.white },
-            ],
-          ]}
-        />
+        <InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
       </div>
     );
   },
@@ -74,7 +70,7 @@ registerBlockType('cpc/wrapper', {
    */
   save: function({ attributes }) {
     return (
-      <div className={`bg-${attributes.bgColor}`}>
+      <div className={`cpc-wrapper bg-${attributes.bgColor}`}>
         <InnerBlocks.Content />
       </div>
     );

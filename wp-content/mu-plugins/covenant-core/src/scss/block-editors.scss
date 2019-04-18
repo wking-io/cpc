@@ -3,4 +3,38 @@
 @tailwind base;
 @tailwind utilities;
 
+/* stylelint-disable */
+.bg-black .editor-block-list__block-edit .wp-block-paragraph,
+.bg-primary .editor-block-list__block-edit .wp-block-paragraph,
+.bg-primary-dark .editor-block-list__block-edit .wp-block-paragraph {
+  color: $white;
+}
+
+.bg-black .editor-default-block-appender textarea.editor-default-block-appender__content,
+.bg-primary .editor-default-block-appender textarea.editor-default-block-appender__content,
+.bg-primary-dark .editor-default-block-appender textarea.editor-default-block-appender__content,
+.bg-black .editor-block-list__block-edit .wp-block-paragraph:nth-child(2),
+.bg-primary .editor-block-list__block-edit .wp-block-paragraph:nth-child(2),
+.bg-primary-dark .editor-block-list__block-edit .wp-block-paragraph:nth-child(2) {
+  color: rgba($white, 0.62);
+}
+
+.bg-black .editor-block-list__empty-block-inserter .editor-inserter__toggle:not(:hover),
+.bg-primary .editor-block-list__empty-block-inserter .editor-inserter__toggle:not(:hover),
+.bg-primary-dark .editor-block-list__empty-block-inserter .editor-inserter__toggle:not(:hover) {
+  border-color: $white;
+}
+
+.bg-black .editor-block-list__empty-block-inserter .editor-inserter__toggle:not(:hover) path,
+.bg-primary .editor-block-list__empty-block-inserter .editor-inserter__toggle:not(:hover) path,
+.bg-primary-dark .editor-block-list__empty-block-inserter .editor-inserter__toggle:not(:hover) path {
+  fill: $white;
+}
+/* stylelint-enable */
+
 @import 'blocks/page-header/editor';
+@import 'blocks/heading-base/editor';
+@import 'blocks/quote/editor';
+@import 'blocks/wrapper/editor';
+@import 'blocks/split-header/editor';
+@import 'blocks/drawer/editor';

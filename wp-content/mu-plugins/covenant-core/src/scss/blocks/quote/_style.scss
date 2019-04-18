@@ -1,0 +1,11 @@
+.cpc-quote {
+  @apply border-l-2 py-2 pl-4;
+
+  &__content {
+    @apply font-sans mt-0 mb-4 leading-normal text-lg;
+  }
+
+  &__source {
+    @apply font-sans font-bold m-0 leading-tight text-base;
+  }
+}

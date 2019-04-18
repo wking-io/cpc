@@ -47,7 +47,7 @@ registerBlockType('cpc/page-image-header', {
     };
 
     return (
-      <div className={`page-header relative aspect-3:1 bg-grey ${className}`}>
+      <div className={`page-header ${className}`}>
         <InspectorControls>
           <MediaUpload
             onSelect={media => {
@@ -67,12 +67,12 @@ registerBlockType('cpc/page-image-header', {
           />
         </InspectorControls>
         <img
-          className="absolute top-0 left-0 w-full h-full object-cover page-header__img"
+          className="page-header__img"
           src={attributes.imageUrl}
           alt={attributes.imageAlt}
         />
-        <div className="absolute inset-0 page-header__overlay" />
-        <h1 className="absolute font-sans uppercase pin-center text-center text-white text-4xl font-bold">
+        <div className="page-header__overlay" />
+        <h1 className="page-header__heading">
           {attributes.title || 'Page Heading'}
         </h1>
       </div>
@@ -81,14 +81,14 @@ registerBlockType('cpc/page-image-header', {
 
   save: function({ attributes, className }) {
     return (
-      <div className={`page-header relative aspect-3:1 bg-grey ${className}`}>
+      <div className={`page-header ${className}`}>
         <img
-          className="absolute mb-8 top-0 left-0 w-full h-full object-cover page-header__img"
+          className="page-header__img"
           src={attributes.imageUrl}
           alt={attributes.imageAlt}
         />
-        <div className="absolute inset-0 page-header__overlay" />
-        <h1 className="absolute font-sans uppercase pin-center text-center text-white text-4xl font-bold">
+        <div className="page-header__overlay" />
+        <h1 className="page-header__heading">
           {attributes.title || 'Page Heading'}
         </h1>
       </div>

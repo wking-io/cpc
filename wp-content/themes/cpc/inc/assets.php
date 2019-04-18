@@ -8,7 +8,7 @@
 if ( ! function_exists( 'cpc_scripts' ) ) :
 
 	function cpc_scripts() {
-		// wp_enqueue_script( 'cpc_main' );
+		wp_enqueue_script( 'cpc_main' );
 	}
 
 endif;

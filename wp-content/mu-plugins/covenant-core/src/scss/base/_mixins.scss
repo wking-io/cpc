@@ -16,3 +16,35 @@
     top: 0;
   }
 }
+
+@mixin aspect-none() {
+  &::before {
+    display: none;
+  }
+}
+
+@mixin aspect-3-1() {
+  @include aspect-ratio(3, 1);
+}
+
+@mixin aspect-2-1() {
+  @include aspect-ratio(2, 1);
+}
+
+@mixin aspect-16-9() {
+  @include aspect-ratio(16, 9);
+}
+
+@mixin aspect-5-3() {
+  @include aspect-ratio(5, 3);
+}
+
+@mixin aspect-4-3() {
+  @include aspect-ratio(4, 3);
+}
+
+@mixin pin-center() {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

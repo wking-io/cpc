@@ -20,3 +20,5 @@ import './blocks/heading-five';
 import './blocks/heading-six';
 import './blocks/quote';
 import './blocks/wrapper';
+import './blocks/split-panel';
+import './blocks/drawer';

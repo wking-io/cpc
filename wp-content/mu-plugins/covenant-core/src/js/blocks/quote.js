@@ -34,7 +34,7 @@ registerBlockType('cpc/quote', {
   edit: function({ attributes, setAttributes }) {
     return (
       <blockquote
-        className={`border-l-2 py-2 pl-4 border-${
+        className={`cpc-quote border-${
           attributes.isLight ? 'white' : 'primary'
         }`}
       >
@@ -56,7 +56,7 @@ registerBlockType('cpc/quote', {
           value={attributes.quote}
           onChange={quote => setAttributes({ quote })}
           placeholder={`Add quote here…`}
-          className={`font-sans mt-0 mb-4 leading-normal text-md md:text-lg text-${
+          className={`cpc-quote__content text-${
             attributes.isLight ? 'white' : 'black'
           }`}
         />
@@ -66,7 +66,7 @@ registerBlockType('cpc/quote', {
           value={attributes.source}
           onChange={source => setAttributes({ source })}
           placeholder={`Add source here…`}
-          className={`font-sans font-bold m-0 leading-tight text-base md:text-md text-${
+          className={`cpc-quote__source text-${
             attributes.isLight ? 'white' : 'black'
           }`}
         />
@@ -85,19 +85,19 @@ registerBlockType('cpc/quote', {
   save: function({ attributes }) {
     return (
       <blockquote
-        className={`border-l-2 py-2 pl-4 border-${
+        className={`cpc-quote border-${
           attributes.isLight ? 'white' : 'primary'
         }`}
       >
         <p
-          className={`font-sans mt-0 mb-4 leading-normal text-md md:text-lg text-${
+          className={`cpc-quote__content text-${
             attributes.isLight ? 'white' : 'black'
           }`}
         >
           {attributes.quote}
         </p>
         <p
-          className={`font-sans font-bold m-0 leading-tight text-base md:text-md text-${
+          className={`cpc-quote__source text-${
             attributes.isLight ? 'white' : 'black'
           }`}
         >

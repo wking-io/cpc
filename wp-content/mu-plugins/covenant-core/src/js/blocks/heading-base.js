@@ -65,7 +65,7 @@ export const HeadingBase = ({ title, tag, textSize }) => ({
           value={attributes.content}
           onChange={content => setAttributes({ content })}
           placeholder={`${title}…`}
-          className={`font-sans font-bold mt-2 mb-4 ${textSize} ${
+          className={`cpc-heading-base ${textSize} ${
             attributes.uppercase ? 'uppercase' : ''
           } text-${attributes.alignment} text-${
             attributes.textColor
@@ -86,7 +86,7 @@ export const HeadingBase = ({ title, tag, textSize }) => ({
   save: function({ attributes, className }) {
     return (
       <h1
-        className={`font-sans font-bold mt-2 mb-4 ${textSize} ${
+        className={`cpc-heading-base ${textSize} ${
           attributes.uppercase ? 'uppercase' : ''
         } text-${attributes.alignment} text-${
           attributes.textColor

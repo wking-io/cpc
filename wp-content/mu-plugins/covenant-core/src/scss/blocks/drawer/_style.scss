@@ -1,0 +1,37 @@
+.cpc-drawer {
+  @apply border border-black;
+
+  &__title-wrapper {
+    @apply flex items-center justify-between py-3 px-4;
+  }
+
+  &__title {
+    @apply flex-1 text-white font-sans font-bold;
+  }
+
+  &__toggle {
+    @apply relative;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__toggle-bar {
+    @apply absolute block w-full bg-white h-1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in-out;
+
+    &:first-child {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+
+  &__content {
+    @apply p-4;
+  }
+
+  &[data-drawer-expanded="true"] &__toggle-bar:first-child {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}

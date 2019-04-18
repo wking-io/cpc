@@ -4324,6 +4324,37 @@ video {
   z-index: auto;
 }
 
+/* stylelint-disable */
+
+.block-editor .block-editor__container .bg-black .editor-block-list__block-edit .wp-block-paragraph,
+.block-editor .block-editor__container .bg-primary .editor-block-list__block-edit .wp-block-paragraph,
+.block-editor .block-editor__container .bg-primary-dark .editor-block-list__block-edit .wp-block-paragraph {
+  color: #fff;
+}
+
+.block-editor .block-editor__container .bg-black .editor-default-block-appender textarea.editor-default-block-appender__content,
+.block-editor .block-editor__container .bg-primary .editor-default-block-appender textarea.editor-default-block-appender__content,
+.block-editor .block-editor__container .bg-primary-dark .editor-default-block-appender textarea.editor-default-block-appender__content,
+.block-editor .block-editor__container .bg-black .editor-block-list__block-edit .wp-block-paragraph:nth-child(2),
+.block-editor .block-editor__container .bg-primary .editor-block-list__block-edit .wp-block-paragraph:nth-child(2),
+.block-editor .block-editor__container .bg-primary-dark .editor-block-list__block-edit .wp-block-paragraph:nth-child(2) {
+  color: rgba(255, 255, 255, .62);
+}
+
+.block-editor .block-editor__container .bg-black .editor-block-list__empty-block-inserter .editor-inserter__toggle:not(:hover),
+.block-editor .block-editor__container .bg-primary .editor-block-list__empty-block-inserter .editor-inserter__toggle:not(:hover),
+.block-editor .block-editor__container .bg-primary-dark .editor-block-list__empty-block-inserter .editor-inserter__toggle:not(:hover) {
+  border-color: #fff;
+}
+
+.block-editor .block-editor__container .bg-black .editor-block-list__empty-block-inserter .editor-inserter__toggle:not(:hover) path,
+.block-editor .block-editor__container .bg-primary .editor-block-list__empty-block-inserter .editor-inserter__toggle:not(:hover) path,
+.block-editor .block-editor__container .bg-primary-dark .editor-block-list__empty-block-inserter .editor-inserter__toggle:not(:hover) path {
+  fill: #fff;
+}
+
+/* stylelint-enable */
+
 img {
   border: 0;
   display: initial;

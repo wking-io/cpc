@@ -5,15 +5,24 @@
  */
 
 .page-header {
-  .page-header__img {
-    height: 100%;
+  @apply relative bg-grey;
+  @include aspect-3-1();
+
+  & &__img {
+    @apply absolute mb-8 top-0 left-0 w-full h-full object-cover;
   }
 
-  .page-header__overlay {
+  &__overlay {
+    @apply absolute inset-0;
     background-image: linear-gradient(
       rgba($primary-dark, 1),
       rgba($primary-dark, 0.8) 30%,
       rgba($primary-dark, 0)
     );
+  }
+
+  &__heading {
+    @apply absolute font-sans uppercase text-center text-white text-4xl font-bold;
+    @include pin-center();
   }
 }
