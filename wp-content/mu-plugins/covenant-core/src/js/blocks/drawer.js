@@ -6,27 +6,30 @@ const { __ } = wp.i18n;
 const { InspectorControls, InnerBlocks, RichText } = wp.editor;
 const { registerBlockType } = wp.blocks;
 
+const attrs = {
+  title: {
+    type: 'string',
+  },
+  bgColor: {
+    type: 'string',
+    default: 'black',
+  },
+  bgValue: {
+    type: 'string',
+    default: colors.black,
+  },
+  clientId: {
+    type: 'string',
+  },
+};
+
 registerBlockType('cpc/drawer', {
   title: __('Drawer'),
+  parent: ['cpc/drawer-list'],
   icon: quoteIcon,
   category: 'common',
   keywords: [__('test')],
-  attributes: {
-    title: {
-      type: 'string',
-    },
-    bgColor: {
-      type: 'string',
-      default: 'black',
-    },
-    bgValue: {
-      type: 'string',
-      default: colors.black,
-    },
-    clientId: {
-      type: 'string',
-    },
-  },
+  attributes: attrs,
 
   /**
    * The edit function describes the structure of your block in the context of the editor.
@@ -40,7 +43,7 @@ registerBlockType('cpc/drawer', {
     setAttributes({ clientId });
     return (
       <div
-        className="cpc-drawer"
+        className={`cpc-drawer border-${attributes.bgColor}`}
         data-drawer-wrapper
         data-drawer-expanded="false"
         id={clientId}
@@ -95,7 +98,7 @@ registerBlockType('cpc/drawer', {
   save: function({ attributes }) {
     return (
       <div
-        className="cpc-drawer"
+        className={`cpc-drawer border-${attributes.bgColor}`}
         data-drawer-wrapper
         data-drawer-expanded="false"
         id={attributes.clientId}

@@ -55,7 +55,10 @@ registerBlockType('cpc/wrapper', {
             }
           />
         </InspectorControls>
-        <InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
+        <InnerBlocks
+          allowedBlocks={ALLOWED_BLOCKS}
+          renderAppender={() => <InnerBlocks.ButtonBlockAppender />}
+        />
       </div>
     );
   },

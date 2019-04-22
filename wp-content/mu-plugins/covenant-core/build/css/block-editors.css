@@ -4360,6 +4360,72 @@ img {
   display: initial;
 }
 
+.block-editor .block-editor__container .cpc-button {
+  background-color: #03293b;
+  color: #fff;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  text-transform: uppercase;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  display: inline-block;
+  font-weight: 700;
+  border-width: 1px;
+  border-color: #03293b;
+}
+
+.block-editor .block-editor__container .cpc-button:hover {
+  background-color: #436979;
+  border-color: #436979;
+}
+
+.block-editor .block-editor__container .cpc-button--primary {
+  background-color: #5ba5bf;
+  border-color: #5ba5bf;
+}
+
+.block-editor .block-editor__container .cpc-button--primary:hover {
+  background-color: #436979;
+  border-color: #436979;
+}
+
+.block-editor .block-editor__container .cpc-button--secondary-light {
+  background-color: #fff;
+  border-color: #fff;
+  color: #03293b;
+}
+
+.block-editor .block-editor__container .cpc-button--secondary-light:hover {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.block-editor .block-editor__container .cpc-button--outline {
+  background-color: transparent;
+  color: #03293b;
+  border-color: #5ba5bf;
+}
+
+.block-editor .block-editor__container .cpc-button--outline:hover {
+  background-color: #5ba5bf;
+  border-color: #5ba5bf;
+  color: #fff;
+}
+
+.block-editor .block-editor__container .cpc-button--outline-light {
+  background-color: transparent;
+  color: #fff;
+  border-color: #5ba5bf;
+}
+
+.block-editor .block-editor__container .cpc-button--outline-light:hover {
+  background-color: #5ba5bf;
+  border-color: #5ba5bf;
+  color: #fff;
+}
+
 @media (min-width: 640px) {
   .block-editor .block-editor__container .sm\:appearance-none {
     -webkit-appearance: none;

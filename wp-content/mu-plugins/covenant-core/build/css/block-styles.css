@@ -160,9 +160,20 @@
   }
 }
 
+.cpc-drawer-list {
+  margin: 0;
+  padding: 0;
+}
+
 .cpc-drawer {
   border-width: 1px;
-  border-color: #03293b;
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+.cpc-drawer:last-child {
+  margin-bottom: 0;
 }
 
 .cpc-drawer__title-wrapper {
@@ -184,6 +195,11 @@
   color: #fff;
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 700;
+}
+
+.bg-grey .cpc-drawer__title,
+.bg-white .cpc-drawer__title {
+  color: #03293b;
 }
 
 .cpc-drawer__toggle {
@@ -212,6 +228,11 @@
   -webkit-transform: translate(-50%, -50%) rotate(90deg);
       -ms-transform: translate(-50%, -50%) rotate(90deg);
           transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.bg-grey .cpc-drawer__toggle-bar,
+.bg-white .cpc-drawer__toggle-bar {
+  background-color: #03293b;
 }
 
 .cpc-drawer__content {

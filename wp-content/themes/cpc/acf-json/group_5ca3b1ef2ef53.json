@@ -508,8 +508,8 @@
                             },
                             "default_value": "",
                             "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
+                            "toolbar": "basic",
+                            "media_upload": 0,
                             "delay": 0
                         }
                     ]
@@ -842,25 +842,6 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
-                },
-                {
-                    "key": "field_5ca3d4b85da42",
-                    "label": "Link URL",
-                    "name": "link_url",
-                    "type": "page_link",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": "",
-                    "taxonomy": "",
-                    "allow_null": 0,
-                    "allow_archives": 1,
-                    "multiple": 0
                 }
             ]
         }
@@ -870,7 +851,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "template-giving.php"
+                "value": "template-sundays.php"
             }
         ]
     ],
@@ -884,5 +865,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1554241392
+    "modified": 1555935520
 }

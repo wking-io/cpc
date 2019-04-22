@@ -1,5 +1,13 @@
+.cpc-drawer-list {
+  @apply m-0 p-0;
+}
+
 .cpc-drawer {
-  @apply border border-black;
+  @apply border m-0 mb-4 p-0;
+
+  &:last-child {
+    @apply mb-0;
+  }
 
   &__title-wrapper {
     @apply flex items-center justify-between py-3 px-4;
@@ -7,6 +15,11 @@
 
   &__title {
     @apply flex-1 text-white font-sans font-bold;
+  }
+
+  .bg-grey &__title,
+  .bg-white &__title {
+    @apply text-black;
   }
 
   &__toggle {
@@ -25,6 +38,11 @@
     &:first-child {
       transform: translate(-50%, -50%) rotate(90deg);
     }
+  }
+
+  .bg-grey &__toggle-bar,
+  .bg-white &__toggle-bar {
+    @apply bg-black;
   }
 
   &__content {

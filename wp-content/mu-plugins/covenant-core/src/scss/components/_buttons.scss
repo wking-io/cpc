@@ -1,15 +1,39 @@
-.sc-button {
-  @apply bg-black text-white font-display uppercase px-4 py-2 inline-block font-bold border-0;
+.cpc-button {
+  @apply bg-black text-white font-sans uppercase px-4 py-2 inline-block font-bold border border-black;
 
   &:hover {
-    @apply bg-grey-dark;
+    @apply bg-primary-dark border-primary-dark;
   }
 
   &--primary {
-    @apply bg-primary;
+    @apply bg-primary border-primary;
   }
 
   &--primary:hover {
-    @apply bg-primary-dark;
+    @apply bg-primary-dark border-primary-dark;
+  }
+
+  &--secondary-light {
+    @apply bg-white border-white text-black;
+  }
+
+  &--secondary-light:hover {
+    @apply bg-transparent border-white text-white;
+  }
+
+  &--outline {
+    @apply bg-transparent text-black border-primary;
+  }
+
+  &--outline:hover {
+    @apply bg-primary border-primary text-white;
+  }
+
+  &--outline-light {
+    @apply bg-transparent text-white border-primary;
+  }
+
+  &--outline-light:hover {
+    @apply bg-primary border-primary text-white;
   }
 }

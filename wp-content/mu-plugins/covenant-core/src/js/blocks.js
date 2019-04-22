@@ -22,3 +22,5 @@ import './blocks/quote';
 import './blocks/wrapper';
 import './blocks/split-panel';
 import './blocks/drawer';
+import './blocks/drawer-list';
+import './blocks/link-button';
