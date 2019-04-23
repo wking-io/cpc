@@ -1,4 +1,4 @@
-jQuery(function() {  
+jQuery(function() {
   var xdmConfig = jQuery('#cloudinary-library-config');
   if (xdmConfig.length == 0) return;
 
@@ -6,8 +6,8 @@ jQuery(function() {
   jQuery('#cloudinary-library').hide();
     jQuery('#wpcontent').css('margin-left', '165px');
     jQuery('#wpbody').css('height', 'auto').css('overflow', 'visible');
-  }        
-    
+  }
+
   function add_to_gallery(json) {
     var ajaxurl = xdmConfig.data("ajaxurl");
     var data = {
@@ -23,16 +23,16 @@ jQuery(function() {
       } else {
         jQuery('.cloudinary_message').html('Image successfully added to gallery');
       }
-    });    
+    });
   }
-  
+
   function insert_into_post(json) {
-  	var src = json.src;  	
-  	var href = json.href;  	
+  	var src = json.src;
+  	var href = json.href;
   	delete json.message;
   	delete json.src;
   	delete json.href;
-  	var image = jQuery('<img/>').attr('src', src);  	
+  	var image = jQuery('<img/>').attr('src', src);
   	if (json.align && json.align != '') {
   		image.addClass('align' + json.align);
   		delete json.align;
@@ -40,7 +40,7 @@ jQuery(function() {
   	jQuery.each(json, function(key, value) {
   		if (value != null && value != "") {
   			image.attr(key, value);
-  		}	
+  		}
   	});
     var ajaxurl = xdmConfig.data("ajaxurl");
     var data = {
@@ -53,9 +53,9 @@ jQuery(function() {
     if (typeof tinyMCE !== 'undefined' && tinyMCE.activeEditor && tinyMCE.activeEditor.selection) {
       var html = tinyMCE.activeEditor.selection.getContent({format : 'html'});
       var match = html.match(/wp-image-(\d+)/);
-      if (match) data.attachment_id = match[1];      
+      if (match) data.attachment_id = match[1];
     }
-    
+
     jQuery.post(ajaxurl, data, function(json) {
       if (json.error) {
         alert(json.message);
@@ -69,26 +69,28 @@ jQuery(function() {
         image = jQuery('<a/>').attr('href', href).append(image);
       }
       if (typeof tinyMCE !== 'undefined' && tinyMCE.activeEditor && tinyMCE.activeEditor.selection) {
-        tinyMCE.activeEditor.selection.setContent(jQuery('<div/>').append(image).html()); 
+        tinyMCE.activeEditor.selection.setContent(jQuery('<div/>').append(image).html());
       } else {
-        send_to_editor(jQuery('<div/>').append(image).html());  
-      }        
+        send_to_editor(jQuery('<div/>').append(image).html());
+      }
     });
-  } 
+  }
 
   function update_window_dimensions() {  	
-  	var footer = jQuery('#footer').size() > 0 ? jQuery('#footer') : jQuery('#wpfooter');
-  	var body_height = jQuery('body').height() - jQuery(footer).outerHeight(true);
-  	jQuery('#wpcontent').css('margin-left', '156px');
-  	jQuery('#wpbody').css('height', body_height).css('overflow', 'hidden');
-  	jQuery('#cloudinary-library, #cloudinary-library iframe').css('height', body_height);              	
+    if (jQuery('#cloudinary-library').is(':visible')) {
+      var footer = jQuery('#footer').size() > 0 ? jQuery('#footer') : jQuery('#wpfooter');
+      var body_height = jQuery('body').height() - jQuery(footer).outerHeight(true);
+      jQuery('#wpcontent').css('margin-left', '156px');
+      jQuery('#wpbody').css('height', body_height).css('overflow', 'hidden');
+      jQuery('#cloudinary-library, #cloudinary-library iframe').css('height', body_height);
+    }
   }
-  
+
   var controller = {
     socket: new easyXDM.Socket({
       name: xdmConfig.data("base") + "/easyXDM.name.html",
       swf: xdmConfig.data("base") + "/easyxdm.swf",
-      remote: xdmConfig.data("remote"),      
+      remote: xdmConfig.data("remote"),
       remoteHelper: xdmConfig.data("remotehelper"),
       container: "cloudinary-library",
       props: {style: {width: "100%", height: "80%"}},
@@ -103,11 +105,11 @@ jQuery(function() {
         case "add_to_gallery":
           close_media_library();
           add_to_gallery(json);
-          break;        	
-        case "done": 
+          break;
+        case "done":
           close_media_library();
           break;
-        }        
+        }
       },
       onReady: function() {
         controller.resizeWatcher();
@@ -115,10 +117,10 @@ jQuery(function() {
     }),
     currentWidth: 0,
     currentHeight: 0,
-    resizeWatcher: function() {      
+    resizeWatcher: function() {
       jQuery(window).resize(update_window_dimensions);
     }
-  };  
+  };
 
   function register_edit_image() {
     var buttons = jQuery('.mce-toolbar-grp.mce-inline-toolbar-grp.mce-container.mce-panel');
@@ -131,8 +133,8 @@ jQuery(function() {
           message: "edit_image",
           html: html
         }));
-        update_window_dimensions();
         jQuery('#cloudinary-library').show();
+        update_window_dimensions();
       });
     } else {
       setTimeout(register_edit_image, 10);
@@ -140,17 +142,17 @@ jQuery(function() {
   }
   if (typeof(tinyMCE) != 'undefined')
     register_edit_image();
-  
-  jQuery('.cloudinary_add_media').click(function() {
+
+  jQuery(document).on('click', '.cloudinary_add_media', function() {
     jQuery('.cloudinary_message').html('');
-  	update_window_dimensions();
   	jQuery('#cloudinary-library').show();
+  	update_window_dimensions();
     return false;
   });
-  
+
   var div = jQuery('<div id="cloudinary-library"></div>').hide().appendTo(jQuery('#wpbody-content'));
   if (xdmConfig.data("autoshow")) {
   	div.show();
   	setTimeout(function() { update_window_dimensions()}, 1);
-  } 
+  }
 });

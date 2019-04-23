@@ -33,3 +33,12 @@ function cpc_get_content_by_id ( $id = 0 ) {
   $content = str_replace(']]>', ']]&gt;', $content);
   return $content;
 }
+
+function cpc_get_nav_type ( $is_light = false ) {
+
+  if ( is_front_page() || is_post_type_archive( 'cpc_officer' ) || is_page_template( 'template-giving.php' ) || has_term( 'light', 'nav_type' ) ) :
+    $is_light = true;
+  endif;
+
+  return $is_light;
+}

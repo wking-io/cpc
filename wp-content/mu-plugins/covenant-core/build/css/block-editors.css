@@ -3840,8 +3840,32 @@ video {
           box-shadow: none;
 }
 
-.block-editor .block-editor__container .fill-current {
-  fill: currentColor;
+.block-editor .block-editor__container .fill-transparent {
+  fill: transparent;
+}
+
+.block-editor .block-editor__container .fill-black {
+  fill: #03293b;
+}
+
+.block-editor .block-editor__container .fill-grey {
+  fill: #f2f4f5;
+}
+
+.block-editor .block-editor__container .fill-white {
+  fill: #fff;
+}
+
+.block-editor .block-editor__container .fill-primary {
+  fill: #5ba5bf;
+}
+
+.block-editor .block-editor__container .fill-primary-dark {
+  fill: #436979;
+}
+
+.block-editor .block-editor__container .fill-primary-med {
+  fill: #64929d;
 }
 
 .block-editor .block-editor__container .stroke-current {

@@ -39,7 +39,7 @@ function cpc_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'menu-main' => esc_html__( 'Primary', THEME_NAME ),
-		'menu-footer' => esc_html__( 'Footer', THEME_NAME ),
+		'menu-top' => esc_html__( 'Top', THEME_NAME ),
 	) );
 
 	/*

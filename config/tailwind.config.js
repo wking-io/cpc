@@ -26,6 +26,12 @@ module.exports = {
         'sans-serif',
       ],
     },
+    fill: colors,
+    extend: {
+      fill: {
+        'primary-med': '#64929D',
+      },
+    },
   },
   variants: {
     // Some useful comment

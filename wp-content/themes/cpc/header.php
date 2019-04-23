@@ -9,6 +9,8 @@
  * @package cpc
  */
 
+$is_light = cpc_get_nav_type();
+
 ?>
 
 <!DOCTYPE html>
@@ -30,25 +32,35 @@
 <body <?php body_class( 'font-sans text-black' ); ?>>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', THEME_NAME ); ?></a>
 
-	<header id="masthead" class="header w-full flex justify-between items-center z-50" role="banner" data-menu-open="false" data-header-fixed="false">
-		<h1 class="branding relative z-50 h-6">
-			<a class="flex items-center h-full" href="<?php echo home_url(); ?>">
-			</a>
+	<header id="masthead" class="header w-full flex justify-between items-center z-50 absolute top-0 inset-x-0 py-3 px-4 lg:py-4 lg:px-6" role="banner" data-menu-open="false" data-header-fixed="false">
+		<h1 class="relative z-50 h-10">
+			<a class="logo--sm block lg:hidden h-full" href="<?php echo home_url(); ?>"><?php echo ui_logo( array( 'type' => 'condensed', 'is_light' => $is_light ) ); ?></a>
+			<a class="logo--lg absolute hidden lg:block top-0 left-0" href="<?php echo home_url(); ?>"><?php echo ui_logo( array( 'is_light' => $is_light ) ); ?></a>
+			<span class="visually-hidden"><?php echo get_bloginfo( 'name' ); ?></span>
 		</h1>
 
-		<nav class="nav z-40" role="navigation">
-			<button class="menu-toggle z-40 w-6 relative cursor-pointer lg:hidden" aria-expanded="false" aria-controls="masthead">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
+		<nav class="nav z-40 flex items-center" role="navigation">
+			<?php wp_nav_menu( array(
+				'theme_location' => 'menu-top',
+				'menu_id' => 'top-menu',
+				'menu_class' => 'top-menu hidden md:flex list-reset justify-end items-center p-0 m-0 z-40',
+				'container' => false,
+				'walker' => new Top_Menu()
+			) ); ?>
+
+			<button class="menu-toggle ml-12 z-40 relative cursor-pointer" aria-expanded="false" aria-controls="masthead">
+				<span class="<?php echo $is_light ? 'bg-white' : 'bg-primary'?>"></span>
+				<span class="<?php echo $is_light ? 'bg-white' : 'bg-primary'?>"></span>
 			</button>
 		
-			<div class="menu-wrapper w-full flex flex-col lg:flex-row justify-end items-center fixed lg:static pin bg-black lg:bg-transparent p-8 lg:p-0 overflow-hidden lg:overflow-visible text-white lg:text-black text-right opacity-0 lg:opacity-100">
-				<div class="menu-aside w-full text-white p-4 sm:p-6 m-0 lg:hidden">
-					<p class="mb-4 leading-normal"></p>
-					<p class="m-0"><strong></strong></p>
-				</div>
+			<div class="menu-wrapper w-full h-screen fixed inset-0 bg-black p-6 text-white opacity-0 pt-20 overflow-scroll md:overflow-visible">
+				<?php wp_nav_menu( array(
+						'theme_location' => 'menu-main',
+						'menu_id' => 'primary-menu',
+						'menu_class' => 'list-reset flex flex-row flex-wrap lg:flex-no-wrap lg:justify-center w-full m-0 pt-4 lg:pt-16 max-w-5xl mx-auto',
+						'container' => false,
+						'walker' => new Primary_Menu()
+					) ); ?>
 			</div>
 
 		</nav><!-- #site-navigation -->

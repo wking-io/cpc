@@ -28,7 +28,7 @@ function add_taxonomies() {
 		'rewrite'           => array( 'slug' => 'ministry' ),
 	);
 
-	register_taxonomy( 'ministry', array('event', 'group'), $ministry_args );
+	register_taxonomy( 'ministry', array('cpc_event', 'cpc_group'), $ministry_args );
 
 	$day_labels = array(
 		'name' => _x( 'Days', 'taxonomy general name', THEME_NAME ),
@@ -53,7 +53,7 @@ function add_taxonomies() {
 		'rewrite'           => array( 'slug' => 'day' ),
 	);
 
-	register_taxonomy( 'day', array('group'), $day_args );
+	register_taxonomy( 'day', array('cpc_group'), $day_args );
 
 	$group_type_labels = array(
 		'name' => _x( 'Group Types', 'taxonomy general name', THEME_NAME ),
@@ -78,7 +78,7 @@ function add_taxonomies() {
 		'rewrite'           => array( 'slug' => 'group-type' ),
 	);
 
-	register_taxonomy( 'group_type', array('group'), $group_type_args );
+	register_taxonomy( 'group_type', array('cpc_group'), $group_type_args );
 
 	$officer_title_labels = array(
 		'name' => _x( 'Officer Titles', 'taxonomy general name', THEME_NAME ),
@@ -103,6 +103,31 @@ function add_taxonomies() {
 		'rewrite'           => array( 'slug' => 'officer-title' ),
 	);
 
-	register_taxonomy( 'officer_title', array('officer'), $officer_title_args );
+	register_taxonomy( 'officer_title', array('cpc_officer'), $officer_title_args );
+
+	$page_nav_labels = array(
+		'name' => _x( 'Nav Types', 'taxonomy general name', THEME_NAME ),
+		'singular_name' => _x( 'Nav Type', 'taxonomy singular name', THEME_NAME ),
+		'search_items' =>  __( 'Search Nav Types', THEME_NAME ),
+		'all_items' => __( 'All Nav Types', THEME_NAME ),
+		'parent_item' => __( 'Parent Nav Type', THEME_NAME ),
+		'parent_item_colon' => __( 'Parent Nav Type:', THEME_NAME ),
+		'edit_item' => __( 'Edit Nav Type', THEME_NAME ),
+		'update_item' => __( 'Update Nav Type', THEME_NAME ),
+		'add_new_item' => __( 'Add New Nav Type', THEME_NAME ),
+		'new_item_name' => __( 'New Nav Type', THEME_NAME ),
+		'menu_name' => __( 'Nav Types', THEME_NAME ),
+	);
+
+	$page_nav_args = array(
+		'hierarchical'      => true,
+		'labels'            => $page_nav_labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'nav-type' ),
+	);
+
+	register_taxonomy( 'nav_type', array('page'), $page_nav_args );
 }
 add_action( 'init', 'add_taxonomies', 0 );

@@ -4,6 +4,7 @@ get_header();
 
 ?>
 
-<section></section>
+<section class="h-screen bg-black"></section>
+<section class="h-screen"></section>
 
 <?php get_footer();

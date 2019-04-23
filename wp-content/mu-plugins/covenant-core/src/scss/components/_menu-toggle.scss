@@ -1,0 +1,58 @@
+.menu-toggle {
+  height: 10px;
+  width: 26px;
+  display: inherit;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  [data-header-fixed='true'] & span {
+    @apply bg-primary;
+  }
+
+  & span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    opacity: 1;
+    top: 50%;
+    right: 0;
+    transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+
+    &:first-child {
+      transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+      transform: translateY(-120%) rotate(0deg);
+    }
+
+    &:last-child {
+      width: 80%;
+      transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+      transform: translateY(120%) rotate(0deg);
+    }
+  }
+
+  &[aria-expanded='true'] span {
+    &:first-child {
+      width: 70%;
+      background-color: $primary;
+      transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &:last-child {
+      width: 70%;
+      background-color: $primary;
+      transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+}
+
+@include media('>=#{$lg}') {
+  button.menu-toggle {
+    margin-left: 12vw;
+  }
+}

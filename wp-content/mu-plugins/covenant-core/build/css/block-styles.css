@@ -352,6 +352,25 @@
   top: 0;
 }
 
+.aspect-3\:4 {
+  position: relative;
+}
+
+.aspect-3\:4::before {
+  content: '';
+  display: block;
+  padding-top: 133.33333%;
+  width: 100%;
+}
+
+.aspect-3\:4 > .content {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 @media (min-width: 640px) {
   .sm\:pin-center {
     left: 50%;
@@ -453,6 +472,25 @@
   }
 
   .aspect-4\:3 > .sm\:content {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .sm\:aspect-3\:4 {
+    position: relative;
+  }
+
+  .sm\:aspect-3\:4::before {
+    content: '';
+    display: block;
+    padding-top: 133.33333%;
+    width: 100%;
+  }
+
+  .aspect-3\:4 > .sm\:content {
     bottom: 0;
     left: 0;
     position: absolute;
@@ -568,6 +606,25 @@
     right: 0;
     top: 0;
   }
+
+  .md\:aspect-3\:4 {
+    position: relative;
+  }
+
+  .md\:aspect-3\:4::before {
+    content: '';
+    display: block;
+    padding-top: 133.33333%;
+    width: 100%;
+  }
+
+  .aspect-3\:4 > .md\:content {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -677,6 +734,25 @@
     right: 0;
     top: 0;
   }
+
+  .lg\:aspect-3\:4 {
+    position: relative;
+  }
+
+  .lg\:aspect-3\:4::before {
+    content: '';
+    display: block;
+    padding-top: 133.33333%;
+    width: 100%;
+  }
+
+  .aspect-3\:4 > .lg\:content {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -780,6 +856,25 @@
   }
 
   .aspect-4\:3 > .xl\:content {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .xl\:aspect-3\:4 {
+    position: relative;
+  }
+
+  .xl\:aspect-3\:4::before {
+    content: '';
+    display: block;
+    padding-top: 133.33333%;
+    width: 100%;
+  }
+
+  .aspect-3\:4 > .xl\:content {
     bottom: 0;
     left: 0;
     position: absolute;

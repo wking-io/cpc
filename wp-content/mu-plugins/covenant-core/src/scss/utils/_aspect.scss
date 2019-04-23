@@ -24,4 +24,9 @@
   .aspect-4\:3 {
     @include aspect-ratio(4, 3);
   }
+
+  .aspect-3\:4 {
+    @include aspect-ratio(3, 4);
+  }
+
 }

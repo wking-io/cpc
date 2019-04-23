@@ -75,6 +75,22 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_5cbdb5125d482",
+                    "label": "Give Button URL",
+                    "name": "give_button_url",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
                     "key": "field_5cacf7b0a7c5b",
                     "label": "Pledge Button Text",
                     "name": "pledge_button_text",
@@ -113,7 +129,7 @@
         },
         {
             "key": "field_5cacf7e3a7c5c",
-            "label": "Planned_giving",
+            "label": "Planned Giving",
             "name": "planned_giving",
             "type": "group",
             "instructions": "",
@@ -262,5 +278,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1554840228
+    "modified": 1555936578
 }

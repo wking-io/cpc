@@ -2,7 +2,7 @@
 Contributors: cloudinary
 Tags: image, images, media, gallery, photo, photos, picture, pictures, thumbnail, upload, admin, administration, api, cms, dashboard, editor, flickr, integration, manage, mobile, page, pages, post, social-media
 Requires at least: 3.0
-Tested up to: 4.9.5
+Tested up to: 5.1
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -161,7 +161,15 @@ N/A
 
 == Changelog ==
 
-= 1.1.10 (17 May 2018)
+= 1.1.12 (11 Mar 2019) =
+  * Fix jQuery exception
+
+= 1.1.11 (3 Mar 2019) =
+  * Add CLI command for syncing media
+  * Fix `update_window_dimensions` to fire only when library is visible
+  * Fix illegal function call in PHP5.3
+
+= 1.1.10 (17 May 2018) =
  * Fix memory exhaustion in "Upload to Cloudinary" functionality
  * Fix "Cloudinary Upload/Insert" button compatibility and style
  * Fix `url` and `secure_url` inconsistency

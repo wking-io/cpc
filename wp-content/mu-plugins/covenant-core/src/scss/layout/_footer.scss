@@ -1,0 +1,40 @@
+.footer {
+  .logo {
+    height: 150px;
+  }
+
+  .menu-item--parent {
+    width: calc(50% - #{$s6});
+
+    &:first-child,
+    &:nth-child(2n + 1) {
+      @apply mr-6;
+    }
+    
+    &:nth-child(2n) {
+      @apply ml-6;
+    }
+  }
+
+  .menu-item-link--parent {
+    border-bottom: 2px solid rgba( $black, 0.25 );
+  }
+}
+
+@include media('>=#{$lg}') {
+  .footer {  
+    .menu-item--parent {
+      width: auto;
+      flex: 1;
+  
+      &:first-child,
+      &:nth-child(2n + 1) {
+        @apply mx-3;
+      }
+      
+      &:nth-child(2n) {
+        @apply mx-3;
+      }
+    }
+  }
+}

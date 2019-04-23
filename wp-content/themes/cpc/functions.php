@@ -30,7 +30,7 @@ include 'inc/helpers.php';
 include 'inc/shortcodes.php';
 
 // Custom active class on menu items
-// include 'inc/menu.php';
+include 'inc/menu.php';
 
 // Auto copyright
 include 'inc/copyright.php';
