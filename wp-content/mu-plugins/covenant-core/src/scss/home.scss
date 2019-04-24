@@ -1,0 +1,16 @@
+@import './vendor/module';
+@import './base/variables';
+@import './base/mixins';
+
+@tailwind base;
+
+@import './base/base';
+@import './components/accessibility';
+@import './components/buttons';
+@import './components/menu-toggle';
+@import './layout/header';
+@import './layout/footer';
+@import './pages/home';
+@import './utils/visually-hidden';
+
+@tailwind utilities;

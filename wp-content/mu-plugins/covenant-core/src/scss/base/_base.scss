@@ -23,13 +23,13 @@ body {
 .wrapper {
   margin: 0 auto;
   max-width: 1200px;
-  width: calc(100% - 16rem);
+  width: calc(100% - 4rem);
 }
 
 .wrapper-sm {
   margin: 0 auto;
   max-width: 800px;
-  width: calc(100% - 16rem);
+  width: calc(100% - 4rem);
 }
 
 @include media('>=#{$lg}') {

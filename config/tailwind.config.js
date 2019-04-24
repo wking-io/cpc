@@ -28,6 +28,10 @@ module.exports = {
     },
     fill: colors,
     extend: {
+      height: {
+        hero: '750px',
+        '1px': '1px',
+      },
       fill: {
         'primary-med': '#64929D',
       },

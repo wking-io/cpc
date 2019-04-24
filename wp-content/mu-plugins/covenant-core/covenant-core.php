@@ -150,7 +150,6 @@ class CovenantCore {
      * @access   private
      */
     public function register_admin_styles() {
-      // wp_register_style('sc_churn_admin', $this->get_asset_url( 'css/sc-churn-admin.css' ), array(), '1.0.0' );
     }
 
     /**
@@ -161,7 +160,6 @@ class CovenantCore {
      * @access   private
      */
     public function register_admin_scripts() {
-      // wp_register_script('sc_churn_admin', $this->get_asset_url( 'js/sc-churn-admin.js' ), array( 'jquery', 'jquery-ui-datepicker', 'jquery-ui-core' ), '1.0.0', true );
     }
 
     /**
@@ -173,6 +171,7 @@ class CovenantCore {
      */
     public function register_public_styles() {
       wp_register_style('cpc_main', $this->get_asset_url( 'css/main.css' ), array(), '1.0.0' );
+      wp_register_style('cpc_home', $this->get_asset_url( 'css/home.css' ), array(), '1.0.0' );
     }
 
     /**
@@ -184,7 +183,7 @@ class CovenantCore {
      */
     public function register_public_scripts() {
       wp_register_script('cpc_main', $this->get_asset_url( 'js/main.js' ), array(), '1.0.0', true );
-      wp_register_script('cpc_calendar', $this->get_asset_url( 'js/calendar.js' ), array(), '1.0.0', true );
+      wp_register_script('cpc_home', $this->get_asset_url( 'js/home.js' ), array(), '1.0.0', true );
     }
 
     /**

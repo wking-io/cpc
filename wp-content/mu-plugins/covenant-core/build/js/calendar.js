@@ -78,7 +78,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/Users/wking/sites/cpc/app/public/wp-content/mu-plugins/covenant-core/src/js/calendar.js'");
 
 /***/ })
 
