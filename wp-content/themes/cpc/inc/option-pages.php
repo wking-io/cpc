@@ -21,8 +21,8 @@ function add_option_pages() {
 
 	if( function_exists( 'acf_add_options_page' ) ) {
 		acf_add_options_page( array(
-			'page_title' => 'Company Settings',
-			'menu_slug'	 => 'company-settings',
+			'page_title' => 'Covenant Settings',
+			'menu_slug'	 => 'covenant-settings',
 			'icon_url' 	 => 'dashicons-building',
 			'position'	 => 75
 		) );

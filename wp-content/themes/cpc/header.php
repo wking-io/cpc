@@ -35,7 +35,7 @@ $is_light = cpc_get_nav_type();
 	<header id="masthead" class="header w-full flex justify-between items-center z-50 absolute top-0 inset-x-0 py-3 px-4 lg:py-4 lg:px-6" role="banner" data-menu-open="false" data-header-fixed="false">
 		<h1 class="relative z-50 h-10">
 			<a class="logo--sm block lg:hidden h-full" href="<?php echo home_url(); ?>"><?php echo ui_logo( array( 'type' => 'condensed', 'is_light' => $is_light ) ); ?></a>
-			<a class="logo--lg absolute hidden lg:block top-0 left-0" href="<?php echo home_url(); ?>"><?php echo ui_logo( array( 'is_light' => $is_light ) ); ?></a>
+			<a class="logo--lg absolute hidden lg:block top-0 left-0 mt-2" href="<?php echo home_url(); ?>"><?php echo ui_logo( array( 'is_light' => $is_light ) ); ?></a>
 			<span class="visually-hidden"><?php echo get_bloginfo( 'name' ); ?></span>
 		</h1>
 

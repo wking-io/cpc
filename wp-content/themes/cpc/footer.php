@@ -26,14 +26,14 @@
 				<p class="text-white pb-8 md:pb-0">&copy; <?php echo date('Y'); ?> All Rights Reserved.</p>
 				<ul class="list-reset flex -mx-4">
 					<li class="h-5 mx-2">
-						<a class="h-full" href="<?php the_field('company_facebook_page', 'options'); ?>">
+						<a class="h-full" href="<?php the_field('facebook_page', 'options'); ?>">
 							<svg class="h-full" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M9.27537 6.57204H6.11039V4.49628C6.11039 3.71673 6.62706 3.53499 6.99096 3.53499C7.35403 3.53499 9.22445 3.53499 9.22445 3.53499V0.107953L6.14848 0.0959473C2.73387 0.0959473 1.9568 2.65194 1.9568 4.28763V6.57204H-0.0179443V10.1034H1.9568C1.9568 14.6354 1.9568 20.0959 1.9568 20.0959H6.11039C6.11039 20.0959 6.11039 14.5816 6.11039 10.1034H8.91313L9.27537 6.57204Z" fill="white"/>
 							</svg>
 						</a>
 					</li>
 					<li class="h-5 mx-4">
-						<a class="h-full" href="<?php the_field('company_instagram_page', 'options'); ?>">
+						<a class="h-full" href="<?php the_field('instagram_page', 'options'); ?>">
 							<svg class="h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.7 56.7">
 								<path class="fill-white" d="M28.35,13.6A14.64,14.64,0,1,0,43,28.24,14.66,14.66,0,0,0,28.35,13.6Zm0,24a9.38,9.38,0,1,1,9.37-9.37A9.42,9.42,0,0,1,28.35,37.61Z"/>
 								<circle class="fill-white" cx="43.55" cy="13.26" r="3.32"/>
