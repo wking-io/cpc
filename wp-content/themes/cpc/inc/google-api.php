@@ -4,7 +4,7 @@ require_once __DIR__ . '/google-api/vendor/autoload.php';
 
 function cpc_get_next_events() {
   $client = new Google_Client();
-  $client->setDeveloperKey('AIzaSyCLeVp62GHs-dhQZrkh8pu8kOHlmhrnNag');
+  $client->setDeveloperKey();
   $service = new Google_Service_Calendar($client);
 
   $calendar_id = 'alice.searcy@covhsv.org';
