@@ -283,6 +283,28 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_5cc13834ed218",
+                    "label": "Featured Event",
+                    "name": "featured",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "cpc_event"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "id",
+                    "ui": 1
+                },
+                {
                     "key": "field_5ca3b12c9fd6d",
                     "label": "Calendar Link Text",
                     "name": "link_text",
@@ -397,5 +419,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1554241055
+    "modified": 1556166775
 }

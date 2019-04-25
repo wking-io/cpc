@@ -43,3 +43,6 @@ include 'inc/cloudinary.php';
 
 // Favicon
 include 'inc/favicons.php';
+
+// Google API
+include 'inc/google-api.php';

@@ -1,5 +1,5 @@
 .cpc-button {
-  @apply bg-black text-white font-sans uppercase px-4 py-2 inline-block font-bold border border-black;
+  @apply bg-black text-white font-sans uppercase px-4 py-2 inline-block font-bold border border-black text-center;
 
   &:hover {
     @apply bg-primary-dark border-primary-dark;

@@ -1,3 +1,20 @@
 .hero-overlay {
-  background-image: linear-gradient(to bottom, rgba($black, 0.75) 0%, rgba($black, 0.7) 25%, rgba($black, 0) 50%, rgba($black, 0.7) 75%, rgba($black, 0.75) 100%)
+  background-image: linear-gradient(to bottom, rgba($black, 0.75) 0%, rgba($black, 0.7) 25%, rgba($black, 0) 50%, rgba($black, 0.7) 75%, rgba($black, 0.75) 100%);
+}
+
+.cta-heading span {
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.cta-video video {
+  margin-left: auto;
+}
+
+.featured-event {
+  transition: 0.4s all ease-in-out;
+}
+
+.featured-event-content {
+  background-image: linear-gradient(to bottom, rgba($black, 0), rgba($black, 0.75) 70%, rgba($black, 0.85) 100%)
 }
