@@ -6,14 +6,14 @@
 
 @import './base/base';
 @import './components/accessibility';
-@import './components/arrow';
 @import './components/buttons';
 @import './components/contact-form';
 @import './components/general-content';
 @import './components/menu-toggle';
 @import './layout/header';
 @import './layout/footer';
-@import './pages/home';
+@import './pages/sundays';
 @import './utils/visually-hidden';
+@import './utils/spacing';
 
 @tailwind utilities;

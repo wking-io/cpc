@@ -27,6 +27,8 @@ if ( ! function_exists( 'cpc_styles' ) ) :
 
 			if ( is_front_page() ) :
 				wp_enqueue_style( 'cpc_home' );
+			elseif ( is_page_template( 'template-sundays.php' ) ) :
+				wp_enqueue_style( 'cpc_sundays' );
 			else :
 				wp_enqueue_style( 'cpc_main' );
 			endif;

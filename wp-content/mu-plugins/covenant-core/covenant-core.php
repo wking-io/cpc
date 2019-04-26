@@ -172,6 +172,7 @@ class CovenantCore {
     public function register_public_styles() {
       wp_register_style('cpc_main', $this->get_asset_url( 'css/main.css' ), array(), '1.0.0' );
       wp_register_style('cpc_home', $this->get_asset_url( 'css/home.css' ), array(), '1.0.0' );
+      wp_register_style('cpc_sundays', $this->get_asset_url( 'css/sundays.css' ), array(), '1.0.0' );
     }
 
     /**

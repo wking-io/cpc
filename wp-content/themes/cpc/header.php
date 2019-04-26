@@ -22,8 +22,8 @@ $is_light = cpc_get_nav_type();
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 
-		<?php if ( is_page( 'contact' ) ) :
-			// gravity_form_enqueue_scripts( 1, false );
+		<?php if ( is_front_page() ) :
+			gravity_form_enqueue_scripts( 1, false );
 		endif; ?>
 
 		<?php wp_head(); ?>

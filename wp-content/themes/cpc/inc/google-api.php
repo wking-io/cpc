@@ -1,10 +1,17 @@
 <?php 
 
+
 require_once __DIR__ . '/google-api/vendor/autoload.php';
 
-function cpc_get_next_events() {
+function cpc_get_next_events( $filtered_events = array() ) {
+  $google_api = get_field( 'cpc_google_api', 'options' );
+
+  if ( empty( $google_api ) ) :
+    return $filtered_events;
+  endif;
+
   $client = new Google_Client();
-  $client->setDeveloperKey();
+  $client->setDeveloperKey($google_api);
   $service = new Google_Service_Calendar($client);
 
   $calendar_id = 'alice.searcy@covhsv.org';
@@ -16,8 +23,6 @@ function cpc_get_next_events() {
   );
   $results     = $service->events->listEvents($calendar_id, $params);
   $events      = $results->getItems();
-  // error_log( print_r( $events, true ) );
-  $filtered_events = array();
 
 
   if ( ! empty( $events ) ) :

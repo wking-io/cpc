@@ -1,0 +1,22 @@
+.sundays-hero {
+  margin-right: 72px;
+}
+
+.sundays-underlay {
+  top: 180px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, $primary-dark, $black);
+  z-index: -1;
+}
+
+.sundays-video video {
+  width: 100%;
+}
+
+@include media('>=#{$lg}') {
+  .sundays-underlay {
+    top: 72px;
+  }
+} 

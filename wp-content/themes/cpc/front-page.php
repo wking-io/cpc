@@ -60,13 +60,13 @@ $next_events = cpc_get_next_events();
   </div>
 </section>
 <section class="my-20 wrapper">
-  <h2 class="uppercase text-2xl md:text-3xl xl:text-4xl font-bold text-center mb-8"><?php echo $events['title']; ?></h2>
+  <h2 class="uppercase text-2xl md:text-3xl xl:text-4xl font-bold text-center lg:pt-12 mb-8"><?php echo $events['title']; ?></h2>
   <div class="flex flex-col md:flex-row md:justify-between md:items-center md:mb-16">
     <div class="featured-event relative aspect-4:3 md:h-full w-full md:w-1/2 shadow-lg hover:shadow-xl mb-8 md:mb-0 md:mr-16">
       <a class="content" href="<?php echo $featured_event['url']; ?>">
         <img src="<?php echo $featured_event['img']; ?>" alt="Event Image" class="w-full h-full object-cover">
         <div class="featured-event-content absolute inset-0 p-6 flex flex-col justify-end">
-          <p class="text-white text-sm ld:text-base"><?php echo date( 'm/d/Y - g:i A', $featured_event['date'] ); ?></p>
+          <p class="text-white text-sm ld:text-base"><?php echo date( 'm/d/Y - g:i A', strtotime( $featured_event['date'] ) ); ?></p>
           <h3 class="text-white text-xl md:text-2xl xl:text-3xl font-bold uppercase"><?php echo $featured_event['title']; ?></h3>
         </div>
       </a>
@@ -81,13 +81,13 @@ $next_events = cpc_get_next_events();
 </section>
 <section class="bg-black">
   <div class="arrow arrow-top"></div>
-  <div class="wrapper flex flex-col md:flex-row items-center justify-between pt-16 pb-20">
-    <div class="flex-1 mb-12 mx-auto md:mb-0 md:ml-0 md:mr-4 text-center md:text-left max-w-xl">
+  <div class="wrapper flex flex-col md:flex-row items-center justify-between pt-20 pb-20">
+    <div class="flex-1 mb-12 mx-auto md:mb-0 md:ml-0 md:mr-4 lg:pr-8 text-center md:text-left max-w-xl">
       <h2 class="text-white uppercase bold text-2xl sm:text-3xl xl:text-4xl mb-4 mt-0 font-bold leading-tight"><?php echo $learn_more['title']; ?></h2>
       <div class="general-content text-sm sm:text-base text-white mb-8"><?php echo $learn_more['description']; ?></div>
-      <p><a class="cpc-button cpc-button--outline-light w-full" href="<?php echo home_url('blog'); ?>"><?php echo $learn_more['link_text']; ?></a></p>
+      <p><a class="cpc-button cpc-button--outline-light w-full md:w-auto" href="<?php echo home_url('blog'); ?>"><?php echo $learn_more['link_text']; ?></a></p>
     </div>
-    <div class="flex-1 md:ml-4"></div>
+    <div class="w-full flex-1 md:ml-4"><?php echo do_shortcode('[gravityform id=1 title=false description=false ajax=true]'); ?></div>
   </div>
   <div class="arrow arrow-bottom"></div>
 </section>

@@ -190,7 +190,7 @@
                                     "key": "field_5ca3b71a5da1f",
                                     "label": "Description",
                                     "name": "description",
-                                    "type": "text",
+                                    "type": "textarea",
                                     "instructions": "",
                                     "required": 1,
                                     "conditional_logic": 0,
@@ -201,9 +201,9 @@
                                     },
                                     "default_value": "",
                                     "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "rows": 4,
+                                    "new_lines": ""
                                 }
                             ]
                         }
@@ -865,5 +865,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1555935520
+    "modified": 1556301262
 }

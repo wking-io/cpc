@@ -1,0 +1,47 @@
+$arrow-height: 50px;
+
+.arrow {
+  @apply bg-black relative;
+  height: $arrow-height;
+  
+  &:before {
+    @apply absolute w-0 h-0;
+    content: '';
+    border-bottom: 0 solid transparent;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: $arrow-height solid $white;
+  }
+
+  &-bottom {
+    @apply bg-primary;
+
+    &:before {
+      @apply absolute w-0 h-0;
+      content: '';
+      border-bottom: 0 solid transparent;
+      border-left: 50vw solid transparent;
+      border-right: 50vw solid transparent;
+      border-top: $arrow-height solid $black;
+    }
+  }
+}
+
+@include media('>=#{$md}') {
+  $arrow-height: 80px;
+
+  .arrow {
+    height: $arrow-height;
+    
+    &:before {
+      border-top: $arrow-height solid $white;
+    }
+  
+    &-bottom {
+  
+      &:before {
+        border-top: $arrow-height solid $black;
+      }
+    }
+  }
+}
