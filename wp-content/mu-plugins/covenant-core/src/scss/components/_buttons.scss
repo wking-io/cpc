@@ -1,5 +1,5 @@
 .cpc-button {
-  @apply bg-black text-white font-sans uppercase px-6 py-3 inline-block font-bold border border-black text-center;
+  @apply bg-black text-white font-sans uppercase px-4 py-2 inline-block text-sm font-bold border border-black text-center;
 
   &:hover {
     @apply bg-primary-dark border-primary-dark;
@@ -43,5 +43,11 @@
 
   &--outline-white:hover {
     @apply bg-white text-black border-white;
+  }
+}
+
+@include media('>=#{$md}') {
+  .cpc-button {
+    @apply px-6 py-3 text-base;
   }
 }

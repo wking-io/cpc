@@ -69,7 +69,7 @@ $questions = get_field( 'questions' );
   <div class="cpc-split-panel__img-wrapper">
     <?php echo do_shortcode("[huge_it_maps id='1']"); ?>
   </div>
-  <div class="cpc-split-panel__content p-8 py-12 md:py-8 text-white">
+  <div class="cpc-split-panel__content w-full md:w-1/2 p-8 py-12 md:py-8 text-white">
     <h3 class="text-xl md:text-2xl xl:text-3xl uppercase font-bold text-white text-center mb-3"><?php echo $parking['title']; ?></h3>
     <div class="general-content text-white text-center mb-4"><?php echo $parking['description']; ?></div>
     <p class="mb-3 text-center w-full"><a class="cpc-button hover:border-black w-4/5 mx-auto" href="<?php echo $parking['directions_link_url']; ?>"><?php echo $parking['directions_link_text']; ?></a></p>
@@ -95,7 +95,7 @@ $questions = get_field( 'questions' );
   <div class="cpc-split-panel__img-wrapper aspect-4:3 w-full md:w-1/2 overflow-hidden">
     <img class="w-full h-full object-cover absolute top-0" src="<?php echo $more['image']['sizes']['large']; ?>" alt="Learn More">
   </div>
-  <div class="cpc-split-panel__content p-8 py-12 md:py-8 text-white">
+  <div class="cpc-split-panel__content w-full md:w-1/2 p-8 py-12 md:py-8 text-white">
     <h3 class="text-xl md:text-2xl xl:text-3xl uppercase font-bold text-white text-center mb-3"><?php echo $more['title']; ?></h3>
     <div class="general-content text-white text-center mb-4"><?php echo $more['description']; ?></div>
     <p class="text-center"><a class="cpc-button px-12" href="<?php echo $more['link_url']; ?>"><?php echo $more['link_text']; ?></a></p>
@@ -123,7 +123,7 @@ $questions = get_field( 'questions' );
   <div class="cpc-split-panel__img-wrapper aspect-4:3 w-full md:w-1/2 overflow-hidden">
     <img class="w-full h-full object-cover absolute top-0" src="<?php echo $questions['image']['sizes']['large']; ?>" alt="Learn More">
   </div>
-  <div class="cpc-split-panel__content p-8 py-12 md:py-8 text-white">
+  <div class="cpc-split-panel__content w-full md:w-1/2 p-8 py-12 md:py-8 text-white">
     <h3 class="text-xl md:text-2xl xl:text-3xl uppercase font-bold text-white text-center mb-3"><?php echo $questions['title']; ?></h3>
     <div class="general-content text-white text-center mb-4"><?php echo $questions['description']; ?></div>
     <button class="cpc-button cpc-button--primary px-12" data-popup-action aria-controls="sundays-question"><?php echo $questions['link_text']; ?></button>
@@ -132,7 +132,7 @@ $questions = get_field( 'questions' );
 
 <aside class="cpc-popup" id="sundays-question" data-popup-hidden="true">
   <div class="cpc-popup__underlay" data-popup-action aria-controls="sundays-question"></div>
-  <div class="cpc-popup__content bg-primary p-16 form--dark-button">
+  <div class="cpc-popup__content bg-primary p-8 md:p-16 form--dark-button">
     <h3 class="text-center text-xl md:text-2xl xl:text-3xl uppercase font-bold text-white mb-3">Any Questions For Us?</h3>
     <?php echo do_shortcode('[gravityform id=2 title=false description=false ajax=true]'); ?>
   </div>
