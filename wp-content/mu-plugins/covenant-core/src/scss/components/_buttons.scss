@@ -36,4 +36,12 @@
   &--outline-light:hover {
     @apply bg-primary border-primary text-white;
   }
+
+  &--outline-white {
+    @apply bg-transparent text-white border-white;
+  }
+
+  &--outline-white:hover {
+    @apply bg-white text-black border-white;
+  }
 }

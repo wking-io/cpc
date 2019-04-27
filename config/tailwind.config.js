@@ -36,6 +36,9 @@ module.exports = {
       fill: {
         'primary-med': '#64929D',
       },
+      width: {
+        '9/10': '90%',
+      },
     },
   },
   variants: {

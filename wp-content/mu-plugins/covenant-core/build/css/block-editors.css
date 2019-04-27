@@ -4368,6 +4368,10 @@ video {
   width: 100vw;
 }
 
+.block-editor .block-editor__container .w-9\/10 {
+  width: 90%;
+}
+
 .block-editor .block-editor__container .z-0 {
   z-index: 0;
 }
@@ -4497,6 +4501,18 @@ img {
   background-color: #5ba5bf;
   border-color: #5ba5bf;
   color: #fff;
+}
+
+.block-editor .block-editor__container .cpc-button--outline-white {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+.block-editor .block-editor__container .cpc-button--outline-white:hover {
+  background-color: #fff;
+  color: #03293b;
+  border-color: #fff;
 }
 
 @media (min-width: 640px) {
@@ -8220,6 +8236,10 @@ img {
 
   .block-editor .block-editor__container .sm\:w-screen {
     width: 100vw;
+  }
+
+  .block-editor .block-editor__container .sm\:w-9\/10 {
+    width: 90%;
   }
 
   .block-editor .block-editor__container .sm\:z-0 {
@@ -11974,6 +11994,10 @@ img {
     width: 100vw;
   }
 
+  .block-editor .block-editor__container .md\:w-9\/10 {
+    width: 90%;
+  }
+
   .block-editor .block-editor__container .md\:z-0 {
     z-index: 0;
   }
@@ -15726,6 +15750,10 @@ img {
     width: 100vw;
   }
 
+  .block-editor .block-editor__container .lg\:w-9\/10 {
+    width: 90%;
+  }
+
   .block-editor .block-editor__container .lg\:z-0 {
     z-index: 0;
   }
@@ -19476,6 +19504,10 @@ img {
 
   .block-editor .block-editor__container .xl\:w-screen {
     width: 100vw;
+  }
+
+  .block-editor .block-editor__container .xl\:w-9\/10 {
+    width: 90%;
   }
 
   .block-editor .block-editor__container .xl\:z-0 {

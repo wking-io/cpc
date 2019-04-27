@@ -185,6 +185,7 @@ class CovenantCore {
     public function register_public_scripts() {
       wp_register_script('cpc_main', $this->get_asset_url( 'js/main.js' ), array(), '1.0.0', true );
       wp_register_script('cpc_home', $this->get_asset_url( 'js/home.js' ), array(), '1.0.0', true );
+      wp_register_script('cpc_sundays', $this->get_asset_url( 'js/sundays.js' ), array(), '1.0.0', true );
     }
 
     /**

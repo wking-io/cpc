@@ -12,6 +12,8 @@ if ( ! function_exists( 'cpc_scripts' ) ) :
 
 		if ( is_front_page() ) :
 			wp_enqueue_script( 'cpc_home' );
+		elseif ( is_page_template( 'template-sundays.php' ) ) :
+			wp_enqueue_script( 'cpc_sundays' );
 		else :
 			wp_enqueue_script( 'cpc_main' );
 		endif;

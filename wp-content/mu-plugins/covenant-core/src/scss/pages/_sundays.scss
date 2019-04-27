@@ -1,7 +1,3 @@
-.sundays-hero {
-  margin-right: 72px;
-}
-
 .sundays-underlay {
   top: 180px;
   left: 0;
@@ -15,8 +11,27 @@
   width: 100%;
 }
 
+.sunday-group {
+  width: calc(50% - 2rem);
+}
+
 @include media('>=#{$lg}') {
+  .sundays-hero {
+    margin-left: 236px;
+  }
+
   .sundays-underlay {
     top: 72px;
+  }
+
+  .sundays-about {
+    margin-left: 236px;
+    margin-right: 236px;
+  }
+}
+
+@include media('>=#{$xl}') {
+  .sundays-hero {
+    margin-right: 72px;
   }
 } 

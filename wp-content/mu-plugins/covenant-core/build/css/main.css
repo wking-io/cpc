@@ -742,6 +742,18 @@ body {
   color: #fff;
 }
 
+.cpc-button--outline-white {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+.cpc-button--outline-white:hover {
+  background-color: #fff;
+  color: #03293b;
+  border-color: #fff;
+}
+
 .menu-toggle {
   height: 10px;
   width: 26px;
@@ -4763,6 +4775,10 @@ body {
   width: 100vw;
 }
 
+.w-9\/10 {
+  width: 90%;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -8512,6 +8528,10 @@ body {
 
   .sm\:w-screen {
     width: 100vw;
+  }
+
+  .sm\:w-9\/10 {
+    width: 90%;
   }
 
   .sm\:z-0 {
@@ -12266,6 +12286,10 @@ body {
     width: 100vw;
   }
 
+  .md\:w-9\/10 {
+    width: 90%;
+  }
+
   .md\:z-0 {
     z-index: 0;
   }
@@ -16018,6 +16042,10 @@ body {
     width: 100vw;
   }
 
+  .lg\:w-9\/10 {
+    width: 90%;
+  }
+
   .lg\:z-0 {
     z-index: 0;
   }
@@ -19768,6 +19796,10 @@ body {
 
   .xl\:w-screen {
     width: 100vw;
+  }
+
+  .xl\:w-9\/10 {
+    width: 90%;
   }
 
   .xl\:z-0 {

@@ -1,9 +1,6 @@
-.sc-popup {
-  @apply fixed pin;
-
-  &--admin {
-    left: 160px;
-  }
+.cpc-popup {
+  @apply fixed inset-0;
+  z-index: 99999;
 
   &[data-popup-hidden='true'] {
     opacity: 0;
@@ -16,13 +13,18 @@
   }
 }
 
-.sc-popup__overlay {
-  @apply absolute pin bg-black opacity-75;
+.cpc-popup__underlay {
+  @apply absolute inset-0 bg-black opacity-75;
 }
 
-.sc-popup__content {
+.cpc-popup__content {
   @apply absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+
+  & .cpc-form_wrapper {
+    width: 70vw;
+    max-width: 460px;
+  }
 }
