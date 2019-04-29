@@ -1131,6 +1131,10 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   }
 }
 
+.page-template-template-sundays .top-menu .menu-item a:hover {
+  color: #436979;
+}
+
 .footer .logo {
   height: 150px;
 }
@@ -1202,13 +1206,18 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
 
   .sundays-about {
     margin-left: 236px;
-    margin-right: 236px;
+    margin-right: 120px;
   }
 }
 
 @media (min-width: 1280px) {
   .sundays-hero {
     margin-right: 72px;
+  }
+
+  .sundays-about {
+    margin-left: 236px;
+    margin-right: 236px;
   }
 }
 

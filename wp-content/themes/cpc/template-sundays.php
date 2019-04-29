@@ -60,9 +60,9 @@ $questions = get_field( 'questions' );
   </div>
 </section>
 
-<section class="sundays-about flex items-center my-20 py-4">
-  <h2 class="text-xl md:text-2xl xl:text-3xl uppercase font-bold max-w-sm mr-12 w-full"><?php echo $about['title']; ?></h2>
-  <p class="flex-1"><?php echo $about['description']; ?></p>
+<section class="sundays-about flex flex-col md:flex-row items-center my-20 py-4">
+  <h2 class="text-xl md:text-2xl xl:text-3xl uppercase font-bold max-w-sm mb-4 md:mb-0 mr-0 md:mr-12 w-full lg:w-48 xl:w-56 text-center lg:text-left"><?php echo $about['title']; ?></h2>
+  <div class="flex-1 text-center lg:text-left mx-8 lg:mx-0"><?php echo $about['description']; ?></div>
 </section>
 
 <section class="cpc-split-panel flex-col md:flex-row-reverse bg-primary-dark">

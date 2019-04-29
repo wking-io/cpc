@@ -173,6 +173,7 @@ class CovenantCore {
       wp_register_style('cpc_main', $this->get_asset_url( 'css/main.css' ), array(), '1.0.0' );
       wp_register_style('cpc_home', $this->get_asset_url( 'css/home.css' ), array(), '1.0.0' );
       wp_register_style('cpc_sundays', $this->get_asset_url( 'css/sundays.css' ), array(), '1.0.0' );
+      wp_register_style('cpc_sermons', $this->get_asset_url( 'css/sermons.css' ), array(), '1.0.0' );
     }
 
     /**
@@ -186,6 +187,7 @@ class CovenantCore {
       wp_register_script('cpc_main', $this->get_asset_url( 'js/main.js' ), array(), '1.0.0', true );
       wp_register_script('cpc_home', $this->get_asset_url( 'js/home.js' ), array(), '1.0.0', true );
       wp_register_script('cpc_sundays', $this->get_asset_url( 'js/sundays.js' ), array(), '1.0.0', true );
+      wp_register_script('cpc_sermons', $this->get_asset_url( 'js/sermons.js' ), array(), '1.0.0', true );
     }
 
     /**

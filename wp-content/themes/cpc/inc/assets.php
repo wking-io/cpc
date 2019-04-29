@@ -31,6 +31,8 @@ if ( ! function_exists( 'cpc_styles' ) ) :
 				wp_enqueue_style( 'cpc_home' );
 			elseif ( is_page_template( 'template-sundays.php' ) ) :
 				wp_enqueue_style( 'cpc_sundays' );
+			elseif ( is_archive( 'cpc_sermon' )) :
+				wp_enqueue_style( 'cpc_sermons' );
 			else :
 				wp_enqueue_style( 'cpc_main' );
 			endif;

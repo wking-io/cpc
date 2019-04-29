@@ -1,0 +1,8 @@
+.post-nav {
+  .cpc-button {
+    @apply pt-8 pb-20;
+  }
+  .cpc-button:nth-child(2) {
+    @apply ml-4;
+  }
+}

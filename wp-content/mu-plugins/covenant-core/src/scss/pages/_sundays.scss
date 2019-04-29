@@ -26,12 +26,17 @@
 
   .sundays-about {
     margin-left: 236px;
-    margin-right: 236px;
+    margin-right: 120px;
   }
 }
 
 @include media('>=#{$xl}') {
   .sundays-hero {
     margin-right: 72px;
+  }
+
+  .sundays-about {
+    margin-left: 236px;
+    margin-right: 236px;
   }
 } 

@@ -960,6 +960,10 @@ body {
   }
 }
 
+.page-template-template-sundays .top-menu .menu-item a:hover {
+  color: #436979;
+}
+
 .footer .logo {
   height: 150px;
 }

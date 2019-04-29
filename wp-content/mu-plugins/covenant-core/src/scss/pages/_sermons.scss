@@ -1,0 +1,55 @@
+.sermon-page-heading {
+  font-size: 12vw;
+  margin-left: -2.4vw;
+}
+
+.featured-sermon-image {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.sermon-item {
+  width: auto;
+}
+
+.sermon-image {
+  width: calc(100% - 1.5rem);
+  transition: all 0.3s ease-in-out;
+}
+
+.featured-sermon:hover .featured-sermon-image,
+.sermon-item:hover .sermon-image {
+  transform: translate(-0.25rem, -0.25rem);
+}
+
+@include media('<=#{$sm}') {
+  .featured-sermon {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
+
+@include media('>=#{$sm}') {
+  .featured-sermon-image {
+    width: calc(100% - 4rem);
+  }
+}
+
+@include media('>=#{$md}') {
+  .sermon-page-heading {
+    font-size: 6vw;
+    margin-left: -1.5vw;
+  }
+
+  .sermon-item {
+    width: calc(50% - 3rem);
+  }
+
+  .sermon-image {
+    width: calc(100% - 2rem);
+  }
+}

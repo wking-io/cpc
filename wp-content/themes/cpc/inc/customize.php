@@ -130,4 +130,28 @@ function add_taxonomies() {
 
 	register_taxonomy( 'nav_type', array('page'), $page_nav_args );
 }
+
 add_action( 'init', 'add_taxonomies', 0 );
+
+function cpc_offset_sermon_query ( $query ) {
+	if ( is_post_type_archive( 'cpc_sermon' ) && $query->is_main_query() ) :
+		$per_page = 30;
+		if ( ! $query->is_paged() ) :
+			$query->set( 'offset', '1' );
+		else :
+			$query->set( 'offset', ( ( get_query_var('paged') - 1 ) * $per_page) + 1);
+		endif;
+
+		$query->set( 'posts_per_page', $per_page );
+	endif;
+}
+
+add_action( 'pre_get_posts', 'cpc_offset_sermon_query' );
+
+function posts_link_attributes() {
+    return 'class="cpc-button cpc-button--outline"';
+}
+
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
