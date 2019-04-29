@@ -697,6 +697,14 @@ body {
   border-color: #436979;
 }
 
+.cpc-button.cpc-button--sm {
+  font-size: .875rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
 .cpc-button--primary {
   background-color: #5ba5bf;
   border-color: #5ba5bf;
@@ -728,6 +736,18 @@ body {
 .cpc-button--outline:hover {
   background-color: #5ba5bf;
   border-color: #5ba5bf;
+  color: #fff;
+}
+
+.cpc-button--outline-dark {
+  background-color: transparent;
+  color: #fff;
+  border-color: #03293b;
+}
+
+.cpc-button--outline-dark:hover {
+  background-color: #03293b;
+  border-color: #03293b;
   color: #fff;
 }
 

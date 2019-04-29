@@ -1,8 +1,16 @@
-@responsive {
+.mt-nav {
+  margin-top: 64px;
+}
+
+.pt-nav {
+  padding-top: 64px;
+}
+
+@include media('>=#{$lg}') {
   .mt-nav {
     margin-top: 72px;
   }
-
+  
   .pt-nav {
     padding-top: 72px;
   }

@@ -158,4 +158,40 @@ function ui_event( $opts = array(), $add_top = false ) {
   <?php endif; return ob_get_clean();
 }
 
+function ui_icon( $opts = array() ) {
+
+  $default = array(
+    'icon'   => 'mp3',
+    'classes'    => 'h-full w-auto',
+    'color'      => 'fill-black',
+  );
+
+  $options = wp_parse_args( $opts, $default );
+
+  ob_start();
+
+  if ( 'mp3' === $options['icon'] ) : ?>
+    <svg class="<?php echo $options['classes']; ?>" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16">
+      <path class="<?php echo $options['color']; ?>" d="M19.35,6a7.49,7.49,0,0,0-14-2A6,6,0,0,0,6,16H19a5,5,0,0,0,.35-10ZM17,9l-5,5L7,9h3V5h4V9Z"/>
+    </svg>
+  <?php elseif( 'facebook' === $options['icon'] ) : ?>
+    <svg class="<?php echo $options['classes']; ?>" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9.27537 6.57204H6.11039V4.49628C6.11039 3.71673 6.62706 3.53499 6.99096 3.53499C7.35403 3.53499 9.22445 3.53499 9.22445 3.53499V0.107953L6.14848 0.0959473C2.73387 0.0959473 1.9568 2.65194 1.9568 4.28763V6.57204H-0.0179443V10.1034H1.9568C1.9568 14.6354 1.9568 20.0959 1.9568 20.0959H6.11039C6.11039 20.0959 6.11039 14.5816 6.11039 10.1034H8.91313L9.27537 6.57204Z" class="<?php echo $options['color']; ?>"/>
+    </svg>
+  <?php elseif( 'itunes' === $options['icon'] ) : ?>
+    <svg class="<?php echo $options['classes']; ?>" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.17 56.69">
+      <path class="<?php echo $options['color']; ?>" d="M38.56,30.13c-.07-7.19,5.86-10.63,6.12-10.8a13.23,13.23,0,0,0-10.37-5.62c-4.41-.45-8.61,2.6-10.85,2.6s-5.7-2.53-9.36-2.47A13.88,13.88,0,0,0,2.37,21c-5,8.67-1.28,21.53,3.6,28.57,2.38,3.44,5.22,7.31,9,7.17s4.94-2.32,9.28-2.32,5.57,2.32,9.36,2.25,6.32-3.51,8.68-7a31.68,31.68,0,0,0,3.93-8.07A12.52,12.52,0,0,1,38.56,30.13Z"/>
+      <path class="<?php echo $options['color']; ?>" d="M31.42,9.05a12.46,12.46,0,0,0,2.95-9A12.76,12.76,0,0,0,26,4.29c-1.84,2.13-3.44,5.52-3,8.78C26.19,13.31,29.44,11.45,31.42,9.05Z"/>
+    </svg>
+  <?php elseif ( 'file' === $options['icon'] ) : ?>
+  <svg class="<?php echo $options['classes']; ?>" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 0H2C0.9 0 0.0100002 0.855 0.0100002 1.9L0 17.1C0 18.145 0.89 19 1.99 19H14C15.1 19 16 18.145 16 17.1V5.7L10 0ZM2 17.1V1.9H9V6.65H14V17.1H2Z" class="<?php echo $options['color']; ?>" />
+  </svg>
+  <?php else : ?>
+    <svg class="<?php echo $options['classes']; ?>" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9.27537 6.57204H6.11039V4.49628C6.11039 3.71673 6.62706 3.53499 6.99096 3.53499C7.35403 3.53499 9.22445 3.53499 9.22445 3.53499V0.107953L6.14848 0.0959473C2.73387 0.0959473 1.9568 2.65194 1.9568 4.28763V6.57204H-0.0179443V10.1034H1.9568C1.9568 14.6354 1.9568 20.0959 1.9568 20.0959H6.11039C6.11039 20.0959 6.11039 14.5816 6.11039 10.1034H8.91313L9.27537 6.57204Z" class="<?php echo $options['color']; ?>"/>
+    </svg>
+  <?php endif; return ob_get_clean();
+}
+
 ?>

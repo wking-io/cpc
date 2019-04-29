@@ -5,6 +5,10 @@
     @apply bg-primary-dark border-primary-dark;
   }
 
+  &.cpc-button--sm {
+    @apply text-sm py-1 px-2;
+  }
+
   &--primary {
     @apply bg-primary border-primary;
   }
@@ -27,6 +31,14 @@
 
   &--outline:hover {
     @apply bg-primary border-primary text-white;
+  }
+
+  &--outline-dark {
+    @apply bg-transparent text-white border-black;
+  }
+
+  &--outline-dark:hover {
+    @apply bg-black border-black text-white;
   }
 
   &--outline-light {

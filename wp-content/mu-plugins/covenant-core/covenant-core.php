@@ -170,10 +170,20 @@ class CovenantCore {
      * @access   private
      */
     public function register_public_styles() {
-      wp_register_style('cpc_main', $this->get_asset_url( 'css/main.css' ), array(), '1.0.0' );
+      wp_register_style('cpc_blog', $this->get_asset_url( 'css/blog.css' ), array(), '1.0.0' );
+      wp_register_style('cpc_blogs', $this->get_asset_url( 'css/blogs.css' ), array(), '1.0.0' );
+      wp_register_style('cpc_event', $this->get_asset_url( 'css/event.css' ), array(), '1.0.0' );
+      wp_register_style('cpc_events', $this->get_asset_url( 'css/events.css' ), array(), '1.0.0' );
+      wp_register_style('cpc_giving', $this->get_asset_url( 'css/giving.css' ), array(), '1.0.0' );
+      wp_register_style('cpc_group', $this->get_asset_url( 'css/group.css' ), array(), '1.0.0' );
+      wp_register_style('cpc_groups', $this->get_asset_url( 'css/groups.css' ), array(), '1.0.0' );
       wp_register_style('cpc_home', $this->get_asset_url( 'css/home.css' ), array(), '1.0.0' );
-      wp_register_style('cpc_sundays', $this->get_asset_url( 'css/sundays.css' ), array(), '1.0.0' );
+      wp_register_style('cpc_main', $this->get_asset_url( 'css/main.css' ), array(), '1.0.0' );
+      wp_register_style('cpc_officers', $this->get_asset_url( 'css/officers.css' ), array(), '1.0.0' );
+      wp_register_style('cpc_sermon', $this->get_asset_url( 'css/sermon.css' ), array(), '1.0.0' );
       wp_register_style('cpc_sermons', $this->get_asset_url( 'css/sermons.css' ), array(), '1.0.0' );
+      wp_register_style('cpc_staff', $this->get_asset_url( 'css/staff.css' ), array(), '1.0.0' );
+      wp_register_style('cpc_sundays', $this->get_asset_url( 'css/sundays.css' ), array(), '1.0.0' );
     }
 
     /**
@@ -184,10 +194,20 @@ class CovenantCore {
      * @access   private
      */
     public function register_public_scripts() {
-      wp_register_script('cpc_main', $this->get_asset_url( 'js/main.js' ), array(), '1.0.0', true );
+      wp_register_script('cpc_blog', $this->get_asset_url( 'js/blog.js' ), array(), '1.0.0', true );
+      wp_register_script('cpc_blogs', $this->get_asset_url( 'js/blogs.js' ), array(), '1.0.0', true );
+      wp_register_script('cpc_event', $this->get_asset_url( 'js/event.js' ), array(), '1.0.0', true );
+      wp_register_script('cpc_events', $this->get_asset_url( 'js/events.js' ), array(), '1.0.0', true );
+      wp_register_script('cpc_giving', $this->get_asset_url( 'js/giving.js' ), array(), '1.0.0', true );
+      wp_register_script('cpc_group', $this->get_asset_url( 'js/group.js' ), array(), '1.0.0', true );
+      wp_register_script('cpc_groups', $this->get_asset_url( 'js/groups.js' ), array(), '1.0.0', true );
       wp_register_script('cpc_home', $this->get_asset_url( 'js/home.js' ), array(), '1.0.0', true );
-      wp_register_script('cpc_sundays', $this->get_asset_url( 'js/sundays.js' ), array(), '1.0.0', true );
+      wp_register_script('cpc_main', $this->get_asset_url( 'js/main.js' ), array(), '1.0.0', true );
+      wp_register_script('cpc_officers', $this->get_asset_url( 'js/officers.js' ), array(), '1.0.0', true );
+      wp_register_script('cpc_staff', $this->get_asset_url( 'js/staff.js' ), array(), '1.0.0', true );
+      wp_register_script('cpc_sermon', $this->get_asset_url( 'js/sermon.js' ), array(), '1.0.0', true );
       wp_register_script('cpc_sermons', $this->get_asset_url( 'js/sermons.js' ), array(), '1.0.0', true );
+      wp_register_script('cpc_sundays', $this->get_asset_url( 'js/sundays.js' ), array(), '1.0.0', true );
     }
 
     /**

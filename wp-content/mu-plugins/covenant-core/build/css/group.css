@@ -675,52 +675,6 @@ body {
   outline: 0;
 }
 
-.arrow {
-  background-color: #03293b;
-  position: relative;
-  height: 50px;
-}
-
-.arrow:before {
-  position: absolute;
-  width: 0;
-  height: 0;
-  content: '';
-  border-bottom: 0 solid transparent;
-  border-left: 50vw solid transparent;
-  border-right: 50vw solid transparent;
-  border-top: 50px solid #fff;
-}
-
-.arrow-bottom {
-  background-color: #5ba5bf;
-}
-
-.arrow-bottom:before {
-  position: absolute;
-  width: 0;
-  height: 0;
-  content: '';
-  border-bottom: 0 solid transparent;
-  border-left: 50vw solid transparent;
-  border-right: 50vw solid transparent;
-  border-top: 50px solid #03293b;
-}
-
-@media (min-width: 768px) {
-  .arrow {
-    height: 80px;
-  }
-
-  .arrow:before {
-    border-top: 80px solid #fff;
-  }
-
-  .arrow-bottom:before {
-    border-top: 80px solid #03293b;
-  }
-}
-
 .cpc-button {
   background-color: #03293b;
   color: #fff;
@@ -1034,6 +988,58 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   }
 }
 
+.cpc-popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+.cpc-popup[data-popup-hidden='true'] {
+  opacity: 0;
+  z-index: -1;
+}
+
+.cpc-popup[data-popup-hidden='false'] {
+  opacity: 1;
+  z-index: 9999999;
+}
+
+.cpc-popup__underlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #03293b;
+  opacity: .75;
+}
+
+.cpc-popup__content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.cpc-popup__content .cpc-form_wrapper {
+  width: 70vw;
+  max-width: 460px;
+}
+
+.post-nav .cpc-button {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+.post-nav .cpc-button:nth-child(2) {
+  margin-left: 1rem;
+}
+
 .header .menu-wrapper {
   z-index: -1;
   -webkit-transform: translateX(100%);
@@ -1198,35 +1204,6 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   }
 }
 
-.hero-overlay {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(3, 41, 59, .75)), color-stop(25%, rgba(3, 41, 59, .7)), color-stop(50%, rgba(3, 41, 59, 0)), color-stop(75%, rgba(3, 41, 59, .7)), to(rgba(3, 41, 59, .75)));
-  background-image: -webkit-linear-gradient(top, rgba(3, 41, 59, .75) 0%, rgba(3, 41, 59, .7) 25%, rgba(3, 41, 59, 0) 50%, rgba(3, 41, 59, .7) 75%, rgba(3, 41, 59, .75) 100%);
-  background-image: -o-linear-gradient(top, rgba(3, 41, 59, .75) 0%, rgba(3, 41, 59, .7) 25%, rgba(3, 41, 59, 0) 50%, rgba(3, 41, 59, .7) 75%, rgba(3, 41, 59, .75) 100%);
-  background-image: linear-gradient(to bottom, rgba(3, 41, 59, .75) 0%, rgba(3, 41, 59, .7) 25%, rgba(3, 41, 59, 0) 50%, rgba(3, 41, 59, .7) 75%, rgba(3, 41, 59, .75) 100%);
-}
-
-.cta-heading span {
-  margin-bottom: .25rem;
-  line-height: 1;
-}
-
-.cta-video video {
-  margin-left: auto;
-}
-
-.featured-event {
-  -webkit-transition: .4s all ease-in-out;
-  -o-transition: .4s all ease-in-out;
-  transition: .4s all ease-in-out;
-}
-
-.featured-event-content {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(3, 41, 59, 0)), color-stop(70%, rgba(3, 41, 59, .75)), to(rgba(3, 41, 59, .85)));
-  background-image: -webkit-linear-gradient(top, rgba(3, 41, 59, 0), rgba(3, 41, 59, .75) 70%, rgba(3, 41, 59, .85) 100%);
-  background-image: -o-linear-gradient(top, rgba(3, 41, 59, 0), rgba(3, 41, 59, .75) 70%, rgba(3, 41, 59, .85) 100%);
-  background-image: linear-gradient(to bottom, rgba(3, 41, 59, 0), rgba(3, 41, 59, .75) 70%, rgba(3, 41, 59, .85) 100%);
-}
-
 .visually-hidden {
   border: 0 !important;
   clip: rect(1px 1px 1px 1px);
@@ -1237,6 +1214,33 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   padding: 0 !important;
   position: absolute !important;
   width: 1px !important;
+}
+
+.mt-nav {
+  margin-top: 64px;
+}
+
+.pt-nav {
+  padding-top: 64px;
+}
+
+@media (min-width: 1024px) {
+  .mt-nav {
+    margin-top: 72px;
+  }
+
+  .pt-nav {
+    padding-top: 72px;
+  }
+}
+
+.w-wide {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .appearance-none {
@@ -5046,6 +5050,15 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
 }
 
 @media (min-width: 640px) {
+  .sm\:w-wide {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
   .sm\:appearance-none {
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -8802,6 +8815,15 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
 }
 
 @media (min-width: 768px) {
+  .md\:w-wide {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
   .md\:appearance-none {
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -12558,6 +12580,15 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
 }
 
 @media (min-width: 1024px) {
+  .lg\:w-wide {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
   .lg\:appearance-none {
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -16314,6 +16345,15 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
 }
 
 @media (min-width: 1280px) {
+  .xl\:w-wide {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
   .xl\:appearance-none {
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -20069,4 +20109,4 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   }
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjc3MvaG9tZS5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjc3MvZ3JvdXAuY3NzIiwic291cmNlUm9vdCI6IiJ9*/

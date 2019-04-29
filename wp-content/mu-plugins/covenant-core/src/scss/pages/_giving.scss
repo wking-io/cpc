@@ -1,0 +1,15 @@
+.giving-image {
+  z-index: -2;
+}
+
+.giving-image-overlay {
+  @apply w-full h-full absolute top-0 left-0;
+  z-index: -1;
+  background-image: linear-gradient(to bottom, rgba($primary-dark, 1), rgba($primary-dark, 0.85) 60%, rgba($primary-dark, 0) );
+}
+
+@include media('>=#{$md}') {
+  .giving-image-overlay {
+    background-image: linear-gradient(to right, rgba($primary-dark, 1), rgba($primary-dark, 0.85) 40%, rgba($primary-dark, 0) );
+  }
+}

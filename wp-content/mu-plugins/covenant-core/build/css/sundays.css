@@ -697,6 +697,14 @@ body {
   border-color: #436979;
 }
 
+.cpc-button.cpc-button--sm {
+  font-size: .875rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
 .cpc-button--primary {
   background-color: #5ba5bf;
   border-color: #5ba5bf;
@@ -728,6 +736,18 @@ body {
 .cpc-button--outline:hover {
   background-color: #5ba5bf;
   border-color: #5ba5bf;
+  color: #fff;
+}
+
+.cpc-button--outline-dark {
+  background-color: transparent;
+  color: #fff;
+  border-color: #03293b;
+}
+
+.cpc-button--outline-dark:hover {
+  background-color: #03293b;
+  border-color: #03293b;
   color: #fff;
 }
 
@@ -1234,11 +1254,21 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
 }
 
 .mt-nav {
-  margin-top: 72px;
+  margin-top: 64px;
 }
 
 .pt-nav {
-  padding-top: 72px;
+  padding-top: 64px;
+}
+
+@media (min-width: 1024px) {
+  .mt-nav {
+    margin-top: 72px;
+  }
+
+  .pt-nav {
+    padding-top: 72px;
+  }
 }
 
 .appearance-none {
@@ -5048,14 +5078,6 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
 }
 
 @media (min-width: 640px) {
-  .sm\:mt-nav {
-    margin-top: 72px;
-  }
-
-  .sm\:pt-nav {
-    padding-top: 72px;
-  }
-
   .sm\:appearance-none {
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -8812,14 +8834,6 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
 }
 
 @media (min-width: 768px) {
-  .md\:mt-nav {
-    margin-top: 72px;
-  }
-
-  .md\:pt-nav {
-    padding-top: 72px;
-  }
-
   .md\:appearance-none {
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -12576,14 +12590,6 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
 }
 
 @media (min-width: 1024px) {
-  .lg\:mt-nav {
-    margin-top: 72px;
-  }
-
-  .lg\:pt-nav {
-    padding-top: 72px;
-  }
-
   .lg\:appearance-none {
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -16340,14 +16346,6 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
 }
 
 @media (min-width: 1280px) {
-  .xl\:mt-nav {
-    margin-top: 72px;
-  }
-
-  .xl\:pt-nav {
-    padding-top: 72px;
-  }
-
   .xl\:appearance-none {
     -webkit-appearance: none;
        -moz-appearance: none;
