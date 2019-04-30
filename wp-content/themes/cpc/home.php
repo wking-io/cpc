@@ -5,8 +5,8 @@ get_header();
 ?>
 
 <section class="wrapper md:mt-8 lg:mt-16 pt-nav pb-20">
-  <h1 class="pt-12 text-6xl blog-heading leading-none mb-3 font-bold max-w-md"><?php the_field( 'blog_heading', 'options' ); ?></h1>
-  <h2 class="text-2xl text-primary font-bold"><?php the_field( 'blog_subheading', 'options' ); ?></h2>
+  <h1 class="pt-12 text-4xl sm:text-5xl md:text-6xl blog-heading leading-none mb-3 font-bold max-w-md"><?php the_field( 'blog_heading', 'options' ); ?></h1>
+  <h2 class="text-lg sm:text-xl md:text-2xl text-primary font-bold"><?php the_field( 'blog_subheading', 'options' ); ?></h2>
 
   <?php if ( have_posts() ) : ?>
     <ul class="py-20 flex flex-wrap -mx-4">

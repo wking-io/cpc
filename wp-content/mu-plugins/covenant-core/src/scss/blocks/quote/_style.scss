@@ -1,5 +1,5 @@
 .cpc-quote {
-  @apply border-l-2 py-2 pl-4;
+  @apply border-l-2 py-2 pl-4 mt-12 mb-12;
 
   &__content {
     @apply font-sans mt-0 mb-4 leading-normal text-lg;
@@ -7,5 +7,26 @@
 
   &__source {
     @apply font-sans font-bold m-0 leading-tight text-base;
+  }
+}
+
+@include media('>=#{$md}') {
+  .cpc-quote {
+    &__content {
+      @apply text-xl;
+    }
+  }
+}
+
+@include media('>=#{$lg}') {
+  .cpc-quote {
+  
+    &__content {
+      @apply text-2xl;
+    }
+  
+    &__source {
+      @apply text-lg;
+    }
   }
 }

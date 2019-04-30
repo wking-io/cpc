@@ -122,6 +122,8 @@
   padding-top: .5rem;
   padding-bottom: .5rem;
   padding-left: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .cpc-quote__content {
@@ -138,6 +140,22 @@
   margin: 0;
   line-height: 1.25;
   font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .cpc-quote__content {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cpc-quote__content {
+    font-size: 1.5rem;
+  }
+
+  .cpc-quote__source {
+    font-size: 1.125rem;
+  }
 }
 
 .cpc-wrapper {

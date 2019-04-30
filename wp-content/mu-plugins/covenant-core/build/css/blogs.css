@@ -917,7 +917,7 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   display: none !important;
 }
 
-.general-content p {
+.general-content > p {
   margin-bottom: 1rem;
   line-height: 1.5;
 }
@@ -1217,6 +1217,10 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   background-image: url("../images/blog-bg.png");
   background-repeat: repeat;
   background-size: 30%;
+}
+
+.blog-item {
+  width: 100%;
 }
 
 @media (min-width: 768px) {

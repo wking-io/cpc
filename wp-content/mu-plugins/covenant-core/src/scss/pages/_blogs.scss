@@ -4,6 +4,10 @@
   background-size: 30%;
 }
 
+.blog-item {
+  width: 100%;
+}
+
 @include media('>=#{$md}') {
   .blog-item {
     width: calc( ( 100% / 2 ) - 2rem );
