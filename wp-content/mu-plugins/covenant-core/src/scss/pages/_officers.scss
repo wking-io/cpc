@@ -1,0 +1,44 @@
+[data-active-tab="tab\:elder"] {
+  .tab\:elder {
+    @apply bg-primary text-white;
+    pointer-events: none;
+  }
+
+  .panel\:elder {
+    display: block;
+  }
+}
+
+[data-active-tab="tab\:deacon"] {
+  .tab\:deacon {
+    @apply bg-primary text-white;
+    pointer-events: none;
+  }
+
+  .panel\:deacon {
+    display: block;
+  }
+}
+
+[data-active-tab="tab\:trustee"] {
+  .tab\:trustee {
+    @apply bg-primary text-white;
+    pointer-events: none;
+  }
+
+  .panel\:trustee {
+    display: block;
+  }
+}
+
+@include media('>=#{$sm}') {
+  .officer-item {
+    width: calc( ( 100% / 2 ) - 2rem);
+  }
+}
+
+@include media('>=#{$lg}') {
+  .officer-item {
+    width: calc( ( 100% / 3 ) - 2rem);
+  }
+}

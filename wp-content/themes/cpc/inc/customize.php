@@ -146,13 +146,18 @@ function cpc_offset_query ( $query ) {
 	endif;
 
 	if ( is_post_type_archive( 'cpc_staff' ) && $query->is_main_query() ) :
-		$per_page = 200;
+		$per_page = 500;
 		if ( ! $query->is_paged() ) :
 			$query->set( 'offset', '1' );
 		else :
 			$query->set( 'offset', ( ( get_query_var('paged') - 1 ) * $per_page) + 1);
 		endif;
 
+		$query->set( 'posts_per_page', $per_page );
+	endif;
+
+	if ( is_post_type_archive( 'cpc_officer' ) && $query->is_main_query() ) :
+		$per_page = 500;
 		$query->set( 'posts_per_page', $per_page );
 	endif;
 
@@ -167,3 +172,9 @@ function posts_link_attributes() {
 
 add_filter('next_posts_link_attributes', 'posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function spinner_url( $image_src, $form ) {
+    return home_url( '/wp-content/mu-plugins/covenant-core/build/images/spinner.png' );
+}
+
+add_filter( 'gform_ajax_spinner_url', 'spinner_url', 10, 2 );

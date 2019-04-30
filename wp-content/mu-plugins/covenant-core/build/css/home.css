@@ -831,6 +831,15 @@ body {
   }
 }
 
+.cpc-form.gform_confirmation_wrapper {
+  text-align: center;
+  color: #fff;
+}
+
+.cpc-form .gform_ajax_spinner {
+  display: none;
+}
+
 .cpc-form .gform_body .cpc-form__input {
   margin: 0;
   padding: 0;

@@ -1,0 +1,11 @@
+.blog {
+  background-image: url('../images/blog-bg.png');
+  background-repeat: repeat;
+  background-size: 30%;
+}
+
+@include media('>=#{$md}') {
+  .blog-item {
+    width: calc( ( 100% / 2 ) - 2rem );
+  }
+}

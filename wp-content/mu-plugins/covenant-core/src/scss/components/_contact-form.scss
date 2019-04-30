@@ -1,4 +1,12 @@
 .cpc-form {
+  &.gform_confirmation_wrapper {
+    @apply text-center text-white;
+  }
+
+  & .gform_ajax_spinner {
+    display: none;
+  }
+
   & .gform_body {
     & .cpc-form__input {
       @apply m-0 p-0 mb-3;

@@ -785,6 +785,15 @@ body {
   }
 }
 
+.cpc-form.gform_confirmation_wrapper {
+  text-align: center;
+  color: #fff;
+}
+
+.cpc-form .gform_ajax_spinner {
+  display: none;
+}
+
 .cpc-form .gform_body .cpc-form__input {
   margin: 0;
   padding: 0;
@@ -1201,6 +1210,18 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   .footer .menu-item--parent:nth-child(2n) {
     margin-left: .75rem;
     margin-right: .75rem;
+  }
+}
+
+.blog {
+  background-image: url("../images/blog-bg.png");
+  background-repeat: repeat;
+  background-size: 30%;
+}
+
+@media (min-width: 768px) {
+  .blog-item {
+    width: calc((100% / 2) - 2rem);
   }
 }
 

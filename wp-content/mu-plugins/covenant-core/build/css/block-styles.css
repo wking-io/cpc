@@ -20,13 +20,14 @@
 .page-header {
   position: relative;
   background-color: #f2f4f5;
+  margin-bottom: 2rem;
   position: relative;
 }
 
 .page-header::before {
   content: '';
   display: block;
-  padding-top: 33.33333%;
+  padding-top: 60%;
   width: 100%;
 }
 
@@ -40,7 +41,6 @@
 
 .page-header .page-header__img {
   position: absolute;
-  margin-bottom: 2rem;
   top: 0;
   left: 0;
   width: 100%;
@@ -67,13 +67,47 @@
   text-transform: uppercase;
   text-align: center;
   color: #fff;
-  font-size: 2.25rem;
+  font-size: 1.875rem;
   font-weight: 700;
+  width: 100%;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media (min-width: 640px) {
+  .page-header__heading {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-header {
+    position: relative;
+  }
+
+  .page-header::before {
+    content: '';
+    display: block;
+    padding-top: 33.33333%;
+    width: 100%;
+  }
+
+  .page-header > .content {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-header__heading {
+    font-size: 3rem;
+  }
 }
 
 .cpc-heading-base {

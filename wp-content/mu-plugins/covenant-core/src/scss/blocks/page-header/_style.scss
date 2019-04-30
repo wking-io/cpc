@@ -5,11 +5,11 @@
  */
 
 .page-header {
-  @apply relative bg-grey;
-  @include aspect-3-1();
+  @apply relative bg-grey mb-8;
+  @include aspect-5-3();
 
   & &__img {
-    @apply absolute mb-8 top-0 left-0 w-full h-full object-cover;
+    @apply absolute top-0 left-0 w-full h-full object-cover;
   }
 
   &__overlay {
@@ -22,7 +22,29 @@
   }
 
   &__heading {
-    @apply absolute font-sans uppercase text-center text-white text-4xl font-bold;
+    @apply absolute font-sans uppercase text-center text-white text-3xl font-bold w-full;
     @include pin-center();
+  }
+}
+
+@include media('>=#{$sm}') {
+  .page-header {
+    &__heading {
+      @apply text-4xl;
+    }
+  }
+}
+
+@include media('>=#{$md}') {
+  .page-header {
+    @include aspect-3-1();
+  }
+}
+
+@include media('>=#{$lg}') {
+  .page-header {
+    &__heading {
+      @apply text-5xl;
+    }
   }
 }

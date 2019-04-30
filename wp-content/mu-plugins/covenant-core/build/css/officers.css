@@ -785,6 +785,15 @@ body {
   }
 }
 
+.cpc-form.gform_confirmation_wrapper {
+  text-align: center;
+  color: #fff;
+}
+
+.cpc-form .gform_ajax_spinner {
+  display: none;
+}
+
 .cpc-form .gform_body .cpc-form__input {
   margin: 0;
   padding: 0;
@@ -1201,6 +1210,48 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   .footer .menu-item--parent:nth-child(2n) {
     margin-left: .75rem;
     margin-right: .75rem;
+  }
+}
+
+[data-active-tab="tab:elder"] .tab\:elder {
+  background-color: #5ba5bf;
+  color: #fff;
+  pointer-events: none;
+}
+
+[data-active-tab="tab:elder"] .panel\:elder {
+  display: block;
+}
+
+[data-active-tab="tab:deacon"] .tab\:deacon {
+  background-color: #5ba5bf;
+  color: #fff;
+  pointer-events: none;
+}
+
+[data-active-tab="tab:deacon"] .panel\:deacon {
+  display: block;
+}
+
+[data-active-tab="tab:trustee"] .tab\:trustee {
+  background-color: #5ba5bf;
+  color: #fff;
+  pointer-events: none;
+}
+
+[data-active-tab="tab:trustee"] .panel\:trustee {
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .officer-item {
+    width: calc((100% / 2) - 2rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .officer-item {
+    width: calc((100% / 3) - 2rem);
   }
 }
 
