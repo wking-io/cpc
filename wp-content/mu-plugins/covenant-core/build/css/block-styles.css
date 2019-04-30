@@ -371,6 +371,25 @@
   top: 0;
 }
 
+.aspect-3\:5 {
+  position: relative;
+}
+
+.aspect-3\:5::before {
+  content: '';
+  display: block;
+  padding-top: 166.66667%;
+  width: 100%;
+}
+
+.aspect-3\:5 > .content {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 @media (min-width: 640px) {
   .sm\:pin-center {
     left: 50%;
@@ -491,6 +510,25 @@
   }
 
   .aspect-3\:4 > .sm\:content {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .sm\:aspect-3\:5 {
+    position: relative;
+  }
+
+  .sm\:aspect-3\:5::before {
+    content: '';
+    display: block;
+    padding-top: 166.66667%;
+    width: 100%;
+  }
+
+  .aspect-3\:5 > .sm\:content {
     bottom: 0;
     left: 0;
     position: absolute;
@@ -625,6 +663,25 @@
     right: 0;
     top: 0;
   }
+
+  .md\:aspect-3\:5 {
+    position: relative;
+  }
+
+  .md\:aspect-3\:5::before {
+    content: '';
+    display: block;
+    padding-top: 166.66667%;
+    width: 100%;
+  }
+
+  .aspect-3\:5 > .md\:content {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -753,6 +810,25 @@
     right: 0;
     top: 0;
   }
+
+  .lg\:aspect-3\:5 {
+    position: relative;
+  }
+
+  .lg\:aspect-3\:5::before {
+    content: '';
+    display: block;
+    padding-top: 166.66667%;
+    width: 100%;
+  }
+
+  .aspect-3\:5 > .lg\:content {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -875,6 +951,25 @@
   }
 
   .aspect-3\:4 > .xl\:content {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .xl\:aspect-3\:5 {
+    position: relative;
+  }
+
+  .xl\:aspect-3\:5::before {
+    content: '';
+    display: block;
+    padding-top: 166.66667%;
+    width: 100%;
+  }
+
+  .aspect-3\:5 > .xl\:content {
     bottom: 0;
     left: 0;
     position: absolute;

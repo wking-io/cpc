@@ -1,0 +1,34 @@
+.diamond-one {
+  position: absolute;
+  top: -35vw;
+  left: 100%;
+  transform: translateX(-50%);
+  width: 90vw;
+  z-index: -1;
+}
+
+.diamond-two {
+  position: absolute;
+  top: 600px;
+  right: 100%;
+  transform: translateX(50%);
+  width: 160vw;
+  z-index: -1;
+}
+
+@include media('>=#{$md}') {
+  .staff-item {
+    width: calc( ( 100% / 3 ) - 1rem);
+  }
+
+  .diamond-two {
+    width: 110vw;
+    top: -10vw;
+  }
+}
+
+@include media('>=#{$xl}') {
+  .staff-item {
+    width: calc( ( 100% / 3 ) - 2rem);
+  }
+}

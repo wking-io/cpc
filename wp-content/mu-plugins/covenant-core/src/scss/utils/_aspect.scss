@@ -29,4 +29,8 @@
     @include aspect-ratio(3, 4);
   }
 
+  .aspect-3\:5 {
+    @include aspect-ratio(3, 5);
+  }
+
 }

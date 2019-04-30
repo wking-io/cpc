@@ -133,7 +133,7 @@ function add_taxonomies() {
 
 add_action( 'init', 'add_taxonomies', 0 );
 
-function cpc_offset_sermon_query ( $query ) {
+function cpc_offset_query ( $query ) {
 	if ( is_post_type_archive( 'cpc_sermon' ) && $query->is_main_query() ) :
 		$per_page = 30;
 		if ( ! $query->is_paged() ) :
@@ -144,9 +144,21 @@ function cpc_offset_sermon_query ( $query ) {
 
 		$query->set( 'posts_per_page', $per_page );
 	endif;
+
+	if ( is_post_type_archive( 'cpc_staff' ) && $query->is_main_query() ) :
+		$per_page = 200;
+		if ( ! $query->is_paged() ) :
+			$query->set( 'offset', '1' );
+		else :
+			$query->set( 'offset', ( ( get_query_var('paged') - 1 ) * $per_page) + 1);
+		endif;
+
+		$query->set( 'posts_per_page', $per_page );
+	endif;
+
 }
 
-add_action( 'pre_get_posts', 'cpc_offset_sermon_query' );
+add_action( 'pre_get_posts', 'cpc_offset_query' );
 
 function posts_link_attributes() {
     return 'class="cpc-button cpc-button--outline"';

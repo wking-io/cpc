@@ -1204,6 +1204,45 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   }
 }
 
+.diamond-one {
+  position: absolute;
+  top: -35vw;
+  left: 100%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 90vw;
+  z-index: -1;
+}
+
+.diamond-two {
+  position: absolute;
+  top: 600px;
+  right: 100%;
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+  width: 160vw;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .staff-item {
+    width: calc((100% / 3) - 1rem);
+  }
+
+  .diamond-two {
+    width: 110vw;
+    top: -10vw;
+  }
+}
+
+@media (min-width: 1280px) {
+  .staff-item {
+    width: calc((100% / 3) - 2rem);
+  }
+}
+
 .visually-hidden {
   border: 0 !important;
   clip: rect(1px 1px 1px 1px);
