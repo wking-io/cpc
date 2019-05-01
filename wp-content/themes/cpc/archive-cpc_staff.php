@@ -26,7 +26,7 @@ $first_query = new WP_Query( $args );
     <?php while ( $first_query->have_posts() ) : $first_query->the_post();
     ?>
       <div class="featured-staff flex flex-col md:flex-row md:space-between items-start py-16 mb-20">
-          <div class="aspect-3:4 w-full md:w-2/5 md:max-w-sm flex-no-shrink mb-6 md:mb-0">
+          <div class="aspect-3:4 w-full md:w-2/5 md:max-w-sm flex-shrink-0 mb-6 md:mb-0">
             <img class="w-full h-full object-cover absolute top-0 left-0" src="<?php echo the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title() . ' headshot'; ?>">
           </div>
           <div class="md:ml-16 flex-1">

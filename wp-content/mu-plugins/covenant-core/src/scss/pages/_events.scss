@@ -1,0 +1,12 @@
+.events-underlay {
+ z-index: -1;
+}
+
+.events-filler {
+  width: 409px;
+}
+
+.events-sidebar.events-sidebar--unstuck {
+  position: absolute;
+  bottom: 0;
+}

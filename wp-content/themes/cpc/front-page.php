@@ -38,7 +38,7 @@ $next_events = cpc_get_next_events();
     </div>
 </section>
 <section class="wrapper -mt-20 md:mt-20 relative z-20 mb-20 flex flex-col md:flex-row-reverse md:items-center">
-  <div class="cta-video w-full md:w-1/2 mb-12 md:mb-0 md:ml-8 overflow-hidden flex-no-shrink">
+  <div class="cta-video w-full md:w-1/2 mb-12 md:mb-0 md:ml-8 overflow-hidden flex-shrink-0">
     <?php 
       echo cl_video_tag( $cta['video'], 
         array(

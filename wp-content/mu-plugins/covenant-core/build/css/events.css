@@ -1213,6 +1213,19 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   }
 }
 
+.events-underlay {
+  z-index: -1;
+}
+
+.events-filler {
+  width: 409px;
+}
+
+.events-sidebar.events-sidebar--unstuck {
+  position: absolute;
+  bottom: 0;
+}
+
 .visually-hidden {
   border: 0 !important;
   clip: rect(1px 1px 1px 1px);

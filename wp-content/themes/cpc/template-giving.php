@@ -31,7 +31,7 @@ $planned = get_field( 'planned_giving' );
   <div class="flex flex-col md:flex-row md:space-between">
     <div class="general-content mb-8 md:w-3/5"><?php echo $planned['description']; ?></div>
     <?php if ( ! empty( $planned['docs_heading'] ) && ! empty( $planned['docs'] ) ) : ?>
-      <div class="flex-no-shrink md:ml-12">
+      <div class="flex-shrink-0 md:ml-12">
         <h4 class="text-base font-bold mb-8"><?php echo $planned['docs_heading']; ?></h4>
         <ul>
           <?php foreach ( $planned['docs'] as $doc ) : ?>

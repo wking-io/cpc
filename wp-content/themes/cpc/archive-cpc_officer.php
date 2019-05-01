@@ -47,7 +47,7 @@ endwhile; endif;
           <ul class="flex flex-wrap items-center justify-center sm:justify-between w--full sm:-mx-4">
             <?php foreach ( $data as $officer ) : ?>
               <li class="officer-item flex items-center sm:mx-4 mb-8">
-                <div class="aspect-3:4 w-20 flex-no-shrink"><img class="w-full h-full object-cover absolute top-0 left-0" src="<?php echo $officer['img']; ?>" alt="<?php echo $officer['name'] . ' Headshot'; ?>"></div>
+                <div class="aspect-3:4 w-20 flex-shrink-0"><img class="w-full h-full object-cover absolute top-0 left-0" src="<?php echo $officer['img']; ?>" alt="<?php echo $officer['name'] . ' Headshot'; ?>"></div>
                 <div class="flex-1 ml-6">
                   <h4 class="uppercase font-bold"><?php echo $officer['name']; ?></h4>
                   <div class="text-primary font-bold"><?php echo $officer['title']; ?></div>
