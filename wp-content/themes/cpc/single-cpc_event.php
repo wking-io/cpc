@@ -9,7 +9,7 @@ $date = get_field( 'event_date' );
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <section class="lg:h-screen relative pt-nav pb-20 lg:flex lg:items-center lg:justify-center">
     <div class="event-underlay bg-grey w-full h-64 lg:h-full lg:w-2/5 absolute top-0 left-0"></div>
-    <div class="relative flex flex-col lg:flex-row lg:justify-between lg:items-center wrapper max-w-2xl mx-auto md:max-w-auto">
+    <div class="relative flex flex-col lg:flex-row lg:justify-between lg:items-center wrapper max-w-2xl mx-auto md:max-w-full">
       <div class="mt-12 lg:mt-0 mb-8 lg:mb-0 aspect-5:3 w-full lg:w-3/5 lg:mr-12 flex-shrink-0">
         <img class="w-full h-full absolute top-0 left-0" src="<?php echo the_post_thumbnail_url('large');; ?>" alt="<?php echo get_the_title() . 'Preview'; ?>">
       </div>

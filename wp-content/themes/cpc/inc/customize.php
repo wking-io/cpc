@@ -23,12 +23,14 @@ function add_taxonomies() {
 		'hierarchical'      => true,
 		'labels'            => $ministry_labels,
 		'show_ui'           => true,
+		'show_in_rest'      => true,
+		'public'            => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
 		'rewrite'           => array( 'slug' => 'ministry' ),
 	);
 
-	register_taxonomy( 'ministry', array('cpc_event', 'cpc_group'), $ministry_args );
+	register_taxonomy( 'cpc_ministry', array('cpc_event', 'cpc_group'), $ministry_args );
 
 	$day_labels = array(
 		'name' => _x( 'Days', 'taxonomy general name', THEME_NAME ),
@@ -48,12 +50,14 @@ function add_taxonomies() {
 		'hierarchical'      => true,
 		'labels'            => $day_labels,
 		'show_ui'           => true,
+		'show_in_rest'      => true,
+		'public'            => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
 		'rewrite'           => array( 'slug' => 'day' ),
 	);
 
-	register_taxonomy( 'day', array('cpc_group'), $day_args );
+	register_taxonomy( 'cpc_day', array('cpc_group'), $day_args );
 
 	$group_type_labels = array(
 		'name' => _x( 'Group Types', 'taxonomy general name', THEME_NAME ),
@@ -73,12 +77,14 @@ function add_taxonomies() {
 		'hierarchical'      => true,
 		'labels'            => $group_type_labels,
 		'show_ui'           => true,
+		'show_in_rest'      => true,
+		'public'            => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
 		'rewrite'           => array( 'slug' => 'group-type' ),
 	);
 
-	register_taxonomy( 'group_type', array('cpc_group'), $group_type_args );
+	register_taxonomy( 'cpc_group_type', array('cpc_group'), $group_type_args );
 
 	$officer_title_labels = array(
 		'name' => _x( 'Officer Titles', 'taxonomy general name', THEME_NAME ),
@@ -98,6 +104,8 @@ function add_taxonomies() {
 		'hierarchical'      => true,
 		'labels'            => $officer_title_labels,
 		'show_ui'           => true,
+		'show_in_rest'      => true,
+		'public'            => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
 		'rewrite'           => array( 'slug' => 'officer-title' ),
