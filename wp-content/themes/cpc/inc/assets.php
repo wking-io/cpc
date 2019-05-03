@@ -61,6 +61,7 @@ if ( ! function_exists( 'cpc_styles' ) ) :
 				wp_enqueue_style( 'cpc_giving' );
 			elseif ( is_post_type_archive( 'cpc_group' ) ) :
 				wp_enqueue_style( 'cpc_groups' );
+				wp_localize_script( 'cpc_groups', 'cpc', array( 'ajaxUrl' => admin_url('admin-ajax.php'), 'filterNonce' => wp_create_nonce( 'filter-group' ), 'filterAction' => 'cpc_filter_groups' ) );
 			elseif ( is_singular( 'cpc_group' ) ) :
 				wp_enqueue_style( 'cpc_group' );
 			elseif ( is_front_page() ) :

@@ -169,6 +169,16 @@ function cpc_offset_query ( $query ) {
 		$query->set( 'posts_per_page', $per_page );
 	endif;
 
+	if ( is_post_type_archive( 'cpc_event' ) && $query->is_main_query() ) :
+		$per_page = 50;
+		$query->set( 'posts_per_page', $per_page );
+	endif;
+
+	if ( is_post_type_archive( 'cpc_group' ) && $query->is_main_query() ) :
+		$per_page = 500;
+		$query->set( 'posts_per_page', $per_page );
+	endif;
+
 }
 
 add_action( 'pre_get_posts', 'cpc_offset_query' );

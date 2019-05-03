@@ -196,11 +196,70 @@ function ui_icon( $opts = array() ) {
       <path d="M5.5 0C2.45929 0 0 2.504 0 5.6C0 9.8 5.5 16 5.5 16C5.5 16 11 9.8 11 5.6C11 2.504 8.54071 0 5.5 0ZM1.57143 5.6C1.57143 3.392 3.33143 1.6 5.5 1.6C7.66857 1.6 9.42857 3.392 9.42857 5.6C9.42857 7.904 7.16571 11.352 5.5 13.504C3.86571 11.368 1.57143 7.88 1.57143 5.6Z" class="<?php echo $options['color']; ?>" />
       <path d="M5.50335 7.60004C6.58819 7.60004 7.46763 6.70461 7.46763 5.60004C7.46763 4.49547 6.58819 3.60004 5.50335 3.60004C4.4185 3.60004 3.53906 4.49547 3.53906 5.60004C3.53906 6.70461 4.4185 7.60004 5.50335 7.60004Z" class="<?php echo $options['color']; ?>" />
     </svg>
+  <?php elseif ( 'search' === $options['icon'] ) : ?>
+    <svg class="<?php echo $options['classes']; ?>" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.8645 11.3208H12.0515L11.7633 11.0429C12.7719 9.86964 13.3791 8.34648 13.3791 6.68954C13.3791 2.99485 10.3842 0 6.68954 0C2.99485 0 0 2.99485 0 6.68954C0 10.3842 2.99485 13.3791 6.68954 13.3791C8.34648 13.3791 9.86964 12.7719 11.0429 11.7633L11.3208 12.0515V12.8645L16.4666 18L18 16.4666L12.8645 11.3208ZM6.68954 11.3208C4.12693 11.3208 2.05832 9.25214 2.05832 6.68954C2.05832 4.12693 4.12693 2.05832 6.68954 2.05832C9.25214 2.05832 11.3208 4.12693 11.3208 6.68954C11.3208 9.25214 9.25214 11.3208 6.68954 11.3208Z" class="<?php echo $options['color']; ?>" />
+    </svg>
   <?php else : ?>
     <svg class="<?php echo $options['classes']; ?>" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M9.27537 6.57204H6.11039V4.49628C6.11039 3.71673 6.62706 3.53499 6.99096 3.53499C7.35403 3.53499 9.22445 3.53499 9.22445 3.53499V0.107953L6.14848 0.0959473C2.73387 0.0959473 1.9568 2.65194 1.9568 4.28763V6.57204H-0.0179443V10.1034H1.9568C1.9568 14.6354 1.9568 20.0959 1.9568 20.0959H6.11039C6.11039 20.0959 6.11039 14.5816 6.11039 10.1034H8.91313L9.27537 6.57204Z" class="<?php echo $options['color']; ?>"/>
     </svg>
   <?php endif; return ob_get_clean();
+}
+
+function ui_group( $opts = array() ) {
+  if ( empty( $opts['post_id'] ) ) :
+    return '';
+  endif;
+ 
+  $ministry   = get_the_terms( $opts['post_id'], 'cpc_ministry' );
+  $day        = get_the_terms( $opts['post_id'], 'cpc_day' );
+  $group_type = get_the_terms( $opts['post_id'], 'cpc_group_type' );
+  $terms      = array();
+
+  if ( ! empty( $day ) ) :
+    foreach ( $day as $val ) :
+      $terms[] = $val->name;
+    endforeach;
+  endif;
+
+  if ( ! empty( $ministry ) ) :
+    foreach ( $ministry as $val ) :
+      $terms[] = $val->name;
+    endforeach;
+  endif;
+
+  if ( ! empty( $group_type ) ) :
+    foreach ( $group_type as $val ) :
+      $terms[] = $val->name;
+    endforeach;
+  endif;
+
+  ob_start(); ?>
+
+  <li class="border border-primary hover:border-black hover:bg-black hover:text-white mb-4">
+    <a class="flex flex-col sm:flex-row justify-between p-4 md:p-6" href="<?php echo get_the_permalink( $opts['post_id'] ); ?>">
+      <div class="mb-4 sm:mb-0">
+        <?php if ( ! empty( $terms ) ) : ?>
+          <div class="flex uppercase text-primary font-semibold text-xs sm:text-sm mb-0 sm:mb-2">
+            <?php foreach ( $terms as $key => $term ) : ?>
+              <?php if ( $key > 0 ) : ?>
+                <p class="mx-2">-</p>
+              <?php endif; ?>
+              <p class=""><?php echo $term; ?></p>
+            <?php endforeach; ?>
+          </div>
+        <?php endif; ?>
+        <h1 class="leading-tight md:leading-none mb-0 text-2xl sm:text-3xl sm:text-4xl font-bold"><?php echo get_the_title( $opts['post_id'] ); ?></h1>
+      </div>
+      <div class="flex flex-row sm:flex-col items-end justify-between">
+        <p class="font-semibold text-sm"><?php echo get_field( 'group_time', $opts['post_id'] ); ?></p>
+        <p class="font-semibold text-sm"><?php echo get_field( 'group_location', $opts['post_id'] ); ?></p>
+      </div>
+    </a>
+  </li>
+    
+  <?php return ob_get_clean();
 }
 
 ?>

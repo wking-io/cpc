@@ -17,6 +17,9 @@ include 'inc/customize.php';
 // Assets.
 include 'inc/assets.php';
 
+// AJAX
+include 'inc/ajax.php';
+
 // Disable Comments.
 include 'inc/remove-comments.php';
 

@@ -1,8 +1,8 @@
-.sc-select {
+.cpc-select {
   @apply relative font-sans;
 
   select {
-    @apply relative border-black appearance-none leading-none p-2 pr-6 h-auto;
+    @apply relative border border-primary appearance-none leading-none p-3 pr-6 h-full w-full;
   }
 
   &::after {
@@ -12,7 +12,7 @@
     border-right: 5px solid transparent;
     border-top: 5px solid $black;
     content: '';
-    right: 10px;
+    right: 18px;
     top: calc(50% + 4px);
     transform: translateY(-50%);
   }

@@ -8,8 +8,6 @@ $day        = get_the_terms( $post_id, 'cpc_day' );
 $group_type = get_the_terms( $post_id, 'cpc_group_type' );
 $terms      = array();
 
-error_log( print_r( $ministry, true ) );
-
 if ( ! empty( $day ) ) :
   foreach ( $day as $val ) :
     $terms[] = $val->name;

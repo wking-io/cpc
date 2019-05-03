@@ -30,6 +30,10 @@ get_header();
           </li>
         <?php endwhile; ?>
       </ul>
+      <div class="post-nav flex items-center justify-center m-0 p-0">
+        <?php next_posts_link( 'Next Groups' ); ?>
+        <?php previous_posts_link( 'Previous Groups' ); ?>
+      </div>
     </div>
     <?php else: ?>
       <p>Sorry, no posts matched your criteria.</p>
