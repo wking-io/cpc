@@ -6,6 +6,21 @@ const { __ } = wp.i18n;
 const { InspectorControls, InnerBlocks } = wp.editor;
 const { registerBlockType } = wp.blocks;
 
+const attrs = {
+  bgColor: {
+    type: 'string',
+    default: 'black',
+  },
+  bgValue: {
+    type: 'string',
+    default: colors.black,
+  },
+  align: {
+    type: 'string',
+    default: 'full',
+  },
+};
+
 registerBlockType('cpc/wrapper', {
   title: __('Wrapper'),
   icon: wrapperIcon,
@@ -15,20 +30,7 @@ registerBlockType('cpc/wrapper', {
     align: ['full', 'wide'],
     className: false,
   },
-  attributes: {
-    bgColor: {
-      type: 'string',
-      default: 'black',
-    },
-    bgValue: {
-      type: 'string',
-      default: colors.black,
-    },
-    align: {
-      type: 'string',
-      default: 'full',
-    },
-  },
+  attributes: attrs,
 
   getEditWrapperProps({ align }) {
     if (['wide', 'full'].indexOf(align) === -1) {
@@ -44,7 +46,7 @@ registerBlockType('cpc/wrapper', {
    *
    * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
    */
-  edit: function({ attributes, setAttributes }) {
+  edit({ attributes, setAttributes }) {
     return (
       <div className={`cpc-wrapper bg-${attributes.bgColor}`}>
         <InspectorControls>
@@ -71,10 +73,12 @@ registerBlockType('cpc/wrapper', {
    *
    * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
    */
-  save: function({ attributes }) {
+  save({ attributes }) {
     return (
       <div className={`cpc-wrapper bg-${attributes.bgColor}`}>
-        <InnerBlocks.Content />
+        <div className="cpc-wrapper__wrapper">
+          <InnerBlocks.Content />
+        </div>
       </div>
     );
   },

@@ -11,6 +11,11 @@
   margin: 0;
 }
 
+.general-content > p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
 /**
  * #.# Styles
  *
@@ -22,6 +27,12 @@
   background-color: #f2f4f5;
   margin-bottom: 2rem;
   position: relative;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .page-header::before {
@@ -142,6 +153,10 @@
   font-size: 1rem;
 }
 
+.cpc-quote__source cite {
+  font-style: normal;
+}
+
 @media (min-width: 768px) {
   .cpc-quote__content {
     font-size: 1.25rem;
@@ -160,7 +175,37 @@
 
 .cpc-wrapper {
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
+}
+
+.cpc-wrapper.alignfull {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.cpc-wrapper.alignwide {
+  width: 80vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -40vw;
+  margin-right: -40vw;
+}
+
+.cpc-wrapper__wrapper {
+  width: calc(100% - 4rem);
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.cpc-wrapper.bg-black,
+.cpc-wrapper.bg-primary,
+.cpc-wrapper.bg-primary-dark {
+  color: #fff;
 }
 
 .cpc-split-panel {

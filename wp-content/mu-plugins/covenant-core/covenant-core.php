@@ -150,6 +150,7 @@ class CovenantCore {
      * @access   private
      */
     public function register_admin_styles() {
+      wp_enqueue_style('cpc_admin', $this->get_asset_url( 'css/admin.css' ), array(), '1.0.0' );
     }
 
     /**

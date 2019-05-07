@@ -1,3 +1,23 @@
 .cpc-wrapper {
-  @apply py-8;
+  @apply pt-8 pb-12;
+
+  &.alignfull {
+    @include full-width();
+  }
+
+  &.alignwide {
+    @include wide-width();
+  }
+
+  &__wrapper {
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  &.bg-black,
+  &.bg-primary,
+  &.bg-primary-dark {
+    @apply text-white;
+  }
 }

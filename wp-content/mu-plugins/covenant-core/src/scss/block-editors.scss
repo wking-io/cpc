@@ -1,5 +1,6 @@
 @import './vendor/module';
 @import 'base/variables';
+@import 'base/mixins';
 
 @tailwind base;
 @tailwind utilities;
@@ -31,6 +32,11 @@
 .bg-primary-dark .editor-block-list__empty-block-inserter .editor-inserter__toggle:not(:hover) path {
   fill: $white;
 }
+
+.wp-block-paragraph {
+  @apply font-sans;
+}
+
 /* stylelint-enable */
 
 @import 'blocks/page-header/editor';

@@ -5,7 +5,6 @@ import { dom } from './modules/dom';
 import { getAttr } from './modules/attr';
 import { setupMenu } from './modules/menu';
 import { makeRequest } from './modules/request';
-import { trace } from './modules/utils';
 
 const menuToggle = dom('.menu-toggle');
 const menu = dom(`#${getAttr('aria-controls', menuToggle)}`);
@@ -24,8 +23,6 @@ function filterGroups(e) {
     ministry: form.elements['filter-ministry'].value,
     groupType: form.elements['filter-type'].value,
   };
-
-  console.log(data);
 
   makeRequest({
     method: 'GET',

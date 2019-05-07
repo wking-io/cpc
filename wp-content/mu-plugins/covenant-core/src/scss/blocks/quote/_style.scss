@@ -7,6 +7,10 @@
 
   &__source {
     @apply font-sans font-bold m-0 leading-tight text-base;
+
+    & cite {
+      @apply not-italic;
+    }
   }
 }
 

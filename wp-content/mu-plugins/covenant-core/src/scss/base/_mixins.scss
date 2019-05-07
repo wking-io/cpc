@@ -48,3 +48,21 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin full-width() {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+@mixin wide-width() {
+  width: 80vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -40vw;
+  margin-right: -40vw;
+}

@@ -1,7 +1,7 @@
 const { __ } = wp.i18n;
-const { MediaUpload, InspectorControls } = wp.editor;
+const { MediaUpload, InspectorControls, RichText } = wp.editor;
 const { registerBlockType } = wp.blocks;
-const { Button, TextControl } = wp.components;
+const { Button } = wp.components;
 
 registerBlockType('cpc/page-image-header', {
   title: __('Page Header - Image'),
@@ -57,14 +57,6 @@ registerBlockType('cpc/page-image-header', {
             value={attributes.imageID}
             render={({ open }) => getImageButton(open)}
           />
-          <TextControl
-            label="Heading"
-            id="page-header-title"
-            onChange={content => setAttributes({ title: content })}
-            value={attributes.title}
-            placeholder="Page Heading"
-            className="pb-3"
-          />
         </InspectorControls>
         <img
           className="page-header__img"
@@ -72,9 +64,14 @@ registerBlockType('cpc/page-image-header', {
           alt={attributes.imageAlt}
         />
         <div className="page-header__overlay" />
-        <h1 className="page-header__heading">
-          {attributes.title || 'Page Heading'}
-        </h1>
+        <RichText
+          tagName="h1"
+          formattingControls={[]}
+          value={attributes.title}
+          onChange={title => setAttributes({ title })}
+          placeholder="Page heading here…"
+          className="page-header__heading"
+        />
       </div>
     );
   },

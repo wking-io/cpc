@@ -131,6 +131,8 @@ function add_taxonomies() {
 		'hierarchical'      => true,
 		'labels'            => $page_nav_labels,
 		'show_ui'           => true,
+		'show_in_rest'      => true,
+		'public'            => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
 		'rewrite'           => array( 'slug' => 'nav-type' ),

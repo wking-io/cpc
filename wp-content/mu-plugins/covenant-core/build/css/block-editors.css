@@ -4429,11 +4429,44 @@ video {
   fill: #fff;
 }
 
+.block-editor .block-editor__container .wp-block-paragraph {
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
 /* stylelint-enable */
 
-img {
-  border: 0;
-  display: initial;
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.block-editor .block-editor__container .page-header .editor-rich-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  font-size: 1.875rem;
+  font-weight: 700;
+  width: 100%;
+}
+
+.block-editor .block-editor__container .page-header__heading {
+  position: static !important;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
 }
 
 .block-editor .block-editor__container .cpc-button {
