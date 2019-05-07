@@ -89,6 +89,12 @@ class CovenantCore {
          * The class responsible for orchestrating the actions and filters of the
          * core plugin.
          */
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'covenant-core/inc/covenant-core-dynamic-blocks.php';
+
+        /**
+         * The class responsible for orchestrating the actions and filters of the
+         * core plugin.
+         */
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'covenant-core/ui/ui.php';
 
         $this->loader = new CovenantCoreLoader();
@@ -134,10 +140,26 @@ class CovenantCore {
        * @link https://wordpress.org/gutenberg/handbook/blocks/writing-your-first-block-type#enqueuing-block-scripts
        */
       register_block_type(
-        'cpc/test-block', array(
+        'cpc/static-blocks', array(
           'style'         => 'cpc_blocks_css',
           'editor_script' => 'cpc_blocks_js',
           'editor_style'  => 'cpc_blocks_editor_css',
+          'render_callback' => '',
+        )
+      );
+
+      /**
+       * Register Gutenberg block on server-side.
+       *
+       * Register the block on server-side to ensure that the block
+       * scripts and styles for both frontend and backend are
+       * enqueued when the editor loads.
+       *
+       * @link https://wordpress.org/gutenberg/handbook/blocks/writing-your-first-block-type#enqueuing-block-scripts
+       */
+      register_block_type(
+        'cpc/upcoming-events', array(
+          'render_callback' => 'cpc_render_upcoming_events',
         )
       );
     }

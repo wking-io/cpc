@@ -22,14 +22,13 @@ function cpc_get_next_events( $filtered_events = array() ) {
     'timeMin'      => date( 'c', strtotime('now') ),
   );
   $results     = $service->events->listEvents($calendar_id, $params);
-  $events      = $results->getItems();
-
-
+  $events      = $results->getItems();  
+  
   if ( ! empty( $events ) ) :
     foreach ($events as $key => $event ) :
       $filtered_events[$key]['start'] = $event->start->dateTime;
       $filtered_events[$key]['title'] = $event->summary;
-      $filtered_events[$key]['url']   = '';
+      $filtered_events[$key]['url']   = $event->htmlLink;
     endforeach;
   endif;
 

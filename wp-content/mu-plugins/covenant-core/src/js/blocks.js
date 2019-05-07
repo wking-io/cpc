@@ -24,3 +24,4 @@ import './blocks/split-panel';
 import './blocks/drawer';
 import './blocks/drawer-list';
 import './blocks/link-button';
+import './blocks/upcoming-events';
