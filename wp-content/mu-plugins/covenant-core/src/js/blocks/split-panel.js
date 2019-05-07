@@ -54,7 +54,7 @@ registerBlockType('cpc/split-panel', {
           ? 'Replace Image'
           : 'Pick Image';
       return (
-        <div className="flex flex-col pt-6 pb-3">
+        <div className="flex flex-col py-6">
           <label className="mb-1" htmlFor="bg-image">
             Panel Image
           </label>
@@ -73,30 +73,37 @@ registerBlockType('cpc/split-panel', {
       <div
         className={`cpc-split-panel bg-${attributes.bgColor} ${
           attributes.flip
-            ? 'flex-col-reverse md:flex-row-reverse'
+            ? 'flex-col md:flex-row-reverse'
             : 'flex-col md:flex-row'
         }`}
       >
         <InspectorControls>
-          <ToggleControl
-            label="Flip Panels?"
-            checked={attributes.flip}
-            onChange={flip => setAttributes({ flip })}
-          />
-          <MediaUpload
-            onSelect={media => {
-              setAttributes({ imageAlt: media.alt, imageUrl: media.url });
-            }}
-            type="image"
-            value={attributes.imageID}
-            render={({ open }) => getImageButton(open)}
-          />
-          <CovenantColorPalette
-            color={attributes.bgValue || colors.black}
-            onChange={([bgColor, bgValue]) =>
-              setAttributes({ bgColor, bgValue })
-            }
-          />
+          <div className="pt-8 pb-12">
+            <ToggleControl
+              label="Flip Panels?"
+              checked={attributes.flip}
+              onChange={flip => setAttributes({ flip })}
+            />
+            <MediaUpload
+              onSelect={media => {
+                setAttributes({ imageAlt: media.alt, imageUrl: media.url });
+              }}
+              type="image"
+              value={attributes.imageID}
+              render={({ open }) => getImageButton(open)}
+            />
+            <div className="">
+              <label className="block pb-2" htmlFor="colorPalette">
+                Background Color
+              </label>
+              <CovenantColorPalette
+                color={attributes.bgValue || colors.black}
+                onChange={([bgColor, bgValue]) =>
+                  setAttributes({ bgColor, bgValue })
+                }
+              />
+            </div>
+          </div>
         </InspectorControls>
         <div className="cpc-split-panel__img-wrapper">
           <img
@@ -123,9 +130,9 @@ registerBlockType('cpc/split-panel', {
   save: function({ attributes }) {
     return (
       <div
-        className={`cpc-split-panel bg-${attributes.bgColor} ${
+        className={`alignfull cpc-split-panel bg-${attributes.bgColor} ${
           attributes.flip
-            ? 'flex-col-reverse md:flex-row-reverse'
+            ? 'flex-col md:flex-row-reverse'
             : 'flex-col md:flex-row'
         }`}
       >

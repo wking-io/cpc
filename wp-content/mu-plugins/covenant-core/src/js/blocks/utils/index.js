@@ -8,4 +8,9 @@ export const ALLOWED_BLOCKS = [
   'cpc/heading-six',
   'cpc/quote',
   'core/columns',
+  'cpc/link-button',
+  'cpc/split-panel',
+  'cpc/wrapper',
+  'cpc/drawer-list',
+  'cpc/drawer',
 ];

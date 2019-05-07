@@ -15,6 +15,7 @@ const convert = colorList =>
 
 export const CovenantColorPalette = ({ color, onChange }) => (
   <ColorPalette
+    id="colorPalette"
     colors={convert(colors)}
     value={color}
     onChange={pipe(getColor(colors), onChange)}

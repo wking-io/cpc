@@ -66,7 +66,37 @@
   }
 }
 
-.form--dark-button {
+.cpc-wrapper.bg-white {
+  .cpc-form {
+    &.gform_confirmation_wrapper {
+      @apply text-black;
+    }
+
+    & .gform_body {
+      & .cpc-form__input {  
+        & > label {
+          @apply text-black;
+        }
+  
+        &
+          .ginput_container
+          input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+          @apply border border-black text-black;
+        }
+  
+        & .ginput_container textarea {
+          @apply border-black text-black;
+        }
+      }
+    }
+
+    div.gform_footer {
+    }
+  }
+}
+
+.form--dark-button,
+.cpc-wrapper.bg-primary {
   .cpc-form div.gform_footer {
 
     & input[type='submit'] {

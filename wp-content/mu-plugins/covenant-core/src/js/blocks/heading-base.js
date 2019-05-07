@@ -52,12 +52,14 @@ export const HeadingBase = ({ title, tag, textSize }) => ({
           />
         </BlockControls>
         <InspectorControls>
-          <CovenantColorPalette
-            color={attributes.colorValue || colors.black}
-            onChange={([textColor, colorValue]) =>
-              setAttributes({ textColor, colorValue })
-            }
-          />
+          <div className="pt-4 pb-12">
+            <CovenantColorPalette
+              color={attributes.colorValue || colors.black}
+              onChange={([textColor, colorValue]) =>
+                setAttributes({ textColor, colorValue })
+              }
+            />
+          </div>
         </InspectorControls>
         <RichText
           tagName={tag}

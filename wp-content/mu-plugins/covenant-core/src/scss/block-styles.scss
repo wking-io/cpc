@@ -3,12 +3,63 @@
 @import 'base/mixins';
 @import 'components/drawer';
 @import 'components/general-content';
+@import 'components/contact-form';
+
+.alignfull {
+  @include full-width();
+}
+
+.alignwide {
+  @include wide-width();
+}
+
+.wp-block-paragraph {
+  @apply font-sans;
+}
+
+.wp-block-columns {
+  @apply flex justify-between -mx-4;
+
+  .wp-block-column {
+    @apply mx-4;
+    width: 100%;
+    flex-basis: auto;
+
+    & > p {
+      @apply mb-4;
+    }
+  }
+}
+
+@include media('>=#{$md}') {
+  .wp-block-columns {  
+    .wp-block-column {
+      width: calc( ( 100% / 2 ) - #{$s4} - #{$s4} );
+    }
+
+    &.has-3-columns .wp-block-column {
+      width: calc( ( 100% / 3 ) - #{$s4} - #{$s4} );
+    }
+
+    &.has-4-columns .wp-block-column {
+      width: calc( ( 100% / 4 ) - #{$s4} - #{$s4} );
+    }
+
+    &.has-5-columns .wp-block-column {
+      width: calc( ( 100% / 5 ) - #{$s4} - #{$s4} );
+    }
+
+    &.has-6-columns .wp-block-column {
+      width: calc( ( 100% / 6 ) - #{$s4} - #{$s4} );
+    }
+  }
+}
 
 @import 'blocks/page-header/style';
 @import 'blocks/heading-base/style';
 @import 'blocks/quote/style';
 @import 'blocks/wrapper/style';
-@import 'blocks/split-header/style';
+@import 'blocks/split-panel/style';
 @import 'blocks/drawer/style';
 @import 'blocks/link-button/style';
 

@@ -4429,8 +4429,14 @@ video {
   fill: #fff;
 }
 
-.block-editor .block-editor__container .wp-block-paragraph {
-  font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.block-editor .block-editor__container .alignfull {
+  width: auto;
+  position: static;
+}
+
+.block-editor .block-editor__container .alignwide {
+  width: auto;
+  position: static;
 }
 
 /* stylelint-enable */

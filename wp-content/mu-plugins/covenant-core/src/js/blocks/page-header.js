@@ -78,7 +78,7 @@ registerBlockType('cpc/page-image-header', {
 
   save: function({ attributes, className }) {
     return (
-      <div className={`page-header ${className}`}>
+      <div className={`alignfull page-header ${className}`}>
         <img
           className="page-header__img"
           src={attributes.imageUrl}

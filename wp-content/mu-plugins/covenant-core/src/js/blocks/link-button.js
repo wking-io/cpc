@@ -10,27 +10,29 @@ const {
 const { SelectControl, TextControl } = wp.components;
 const { registerBlockType } = wp.blocks;
 
+const attrs = {
+  content: {
+    type: 'string',
+  },
+  link: {
+    type: 'string',
+  },
+  buttonType: {
+    type: 'string',
+    default: 'primary',
+  },
+  alignment: {
+    type: 'string',
+    default: 'left',
+  },
+};
+
 registerBlockType('cpc/link-button', {
   title: 'Link Button',
   icon: buttonIcon,
   category: 'common',
   keywords: [__('test')],
-  attributes: {
-    content: {
-      type: 'string',
-    },
-    link: {
-      type: 'string',
-    },
-    buttonType: {
-      type: 'string',
-      default: 'primary',
-    },
-    alignment: {
-      type: 'string',
-      default: 'left',
-    },
-  },
+  attributes: attrs,
 
   /**
    * The edit function describes the structure of your block in the context of the editor.
@@ -92,7 +94,7 @@ registerBlockType('cpc/link-button', {
    */
   save: function({ attributes }) {
     return (
-      <div className={`text--${attributes.alignment}`}>
+      <div className={`text-${attributes.alignment}`}>
         <a
           href={attributes.link}
           className={`cpc-button cpc-button--${attributes.buttonType}`}

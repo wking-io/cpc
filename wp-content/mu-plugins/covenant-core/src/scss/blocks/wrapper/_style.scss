@@ -12,12 +12,20 @@
   &__wrapper {
     width: calc(100% - 4rem);
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 1200px;
+
+    & > p {
+      @apply mb-4;
+    }
   }
 
   &.bg-black,
   &.bg-primary,
   &.bg-primary-dark {
     @apply text-white;
+
+    .wp-block-shortcode {
+      @apply text-black;
+    }
   }
 }

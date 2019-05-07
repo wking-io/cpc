@@ -27,13 +27,13 @@ registerBlockType('cpc/wrapper', {
   category: 'common',
   keywords: [__('test')],
   supports: {
-    align: ['full', 'wide'],
+    align: ['full', 'wide', 'center'],
     className: false,
   },
   attributes: attrs,
 
   getEditWrapperProps({ align }) {
-    if (['wide', 'full'].indexOf(align) === -1) {
+    if (['wide', 'full', 'center'].indexOf(align) === -1) {
       return { 'data-align': 'full' };
     }
   },

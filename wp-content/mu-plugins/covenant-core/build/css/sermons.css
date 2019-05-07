@@ -882,17 +882,40 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   cursor: none;
 }
 
-.form--dark-button .cpc-form div.gform_footer input[type='submit'] {
+.cpc-wrapper.bg-white .cpc-form.gform_confirmation_wrapper {
+  color: #03293b;
+}
+
+.cpc-wrapper.bg-white .cpc-form .gform_body .cpc-form__input > label {
+  color: #03293b;
+}
+
+.cpc-wrapper.bg-white .cpc-form .gform_body .cpc-form__input .ginput_container
+input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+  border-width: 1px;
+  border-color: #03293b;
+  color: #03293b;
+}
+
+.cpc-wrapper.bg-white .cpc-form .gform_body .cpc-form__input .ginput_container textarea {
+  border-color: #03293b;
+  color: #03293b;
+}
+
+.form--dark-button .cpc-form div.gform_footer input[type='submit'],
+.cpc-wrapper.bg-primary .cpc-form div.gform_footer input[type='submit'] {
   background-color: #03293b;
   border-color: #03293b;
 }
 
-.form--dark-button .cpc-form div.gform_footer input[type='submit']:hover {
+.form--dark-button .cpc-form div.gform_footer input[type='submit']:hover,
+.cpc-wrapper.bg-primary .cpc-form div.gform_footer input[type='submit']:hover {
   background-color: #436979;
   border-color: #436979;
 }
 
-.form--dark-button .cpc-form div.gform_footer input[type='submit']:disabled {
+.form--dark-button .cpc-form div.gform_footer input[type='submit']:disabled,
+.cpc-wrapper.bg-primary .cpc-form div.gform_footer input[type='submit']:disabled {
   opacity: .5;
   pointer-events: none;
   cursor: none;

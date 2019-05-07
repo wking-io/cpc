@@ -33,8 +33,14 @@
   fill: $white;
 }
 
-.wp-block-paragraph {
-  @apply font-sans;
+.alignfull {
+  width: auto;
+  position: static;
+}
+
+.alignwide {
+  width: auto;
+  position: static;
 }
 
 /* stylelint-enable */
@@ -43,6 +49,6 @@
 @import 'blocks/heading-base/editor';
 @import 'blocks/quote/editor';
 @import 'blocks/wrapper/editor';
-@import 'blocks/split-header/editor';
+@import 'blocks/split-panel/editor';
 @import 'blocks/drawer/editor';
 @import 'blocks/link-button/editor';

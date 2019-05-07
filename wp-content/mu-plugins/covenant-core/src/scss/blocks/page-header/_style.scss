@@ -7,7 +7,10 @@
 .page-header {
   @apply relative bg-grey mb-8;
   @include aspect-5-3();
-  @include full-width();
+
+  &.alignfull {
+    @include full-width();
+  }
 
   & &__img {
     @apply absolute top-0 left-0 w-full h-full object-cover;
