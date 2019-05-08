@@ -1,0 +1,27 @@
+.upcoming-events {
+  @apply border-black;
+  h2 {
+    @apply text-black;
+  }
+}
+
+.bg-black .upcoming-events {
+  @apply border-primary;
+  h2 {
+    @apply text-white;
+  }
+}
+
+.bg-primary .upcoming-events {
+  @apply border-black;
+  h2 {
+    @apply text-white;
+  }
+}
+
+.bg-primary-dark .upcoming-events {
+  @apply border-white;
+  h2 {
+    @apply text-white;
+  }
+}

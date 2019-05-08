@@ -1,32 +1,20 @@
 const { registerBlockType } = wp.blocks;
-const { withSelect } = wp.data;
 
 registerBlockType('cpc/upcoming-events', {
   title: 'Upcoming Events',
   icon: 'calendar',
   category: 'common',
 
-  edit: withSelect(select => {
-    return {
-      posts: select('core').getEntityRecords('postType', 'post'),
-    };
-  })(({ posts, className }) => {
-    if (!posts) {
-      return 'Loading...';
-    }
-
-    if (posts && posts.length === 0) {
-      return 'No posts';
-    }
-
-    const post = posts[0];
-
+  edit: function() {
     return (
-      <a className={className} href={post.link}>
-        {post.title.rendered}
-      </a>
+      <div className="upcoming-events border p-6 my-6">
+        <h2 className="cpc-heading-base text-xl uppercase my-0">
+          This is where the events will go
+        </h2>
+      </div>
     );
-  }),
+  },
+
   save: function() {
     return <div>No one cares.</div>;
   },

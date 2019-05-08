@@ -66,7 +66,9 @@
   }
 }
 
-.cpc-wrapper.bg-white {
+.bg-white,
+.bg-grey,
+.bg-grey-md {
   .cpc-form {
     &.gform_confirmation_wrapper {
       @apply text-black;
@@ -96,7 +98,7 @@
 }
 
 .form--dark-button,
-.cpc-wrapper.bg-primary {
+.bg-primary {
   .cpc-form div.gform_footer {
 
     & input[type='submit'] {

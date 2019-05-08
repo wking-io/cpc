@@ -13,4 +13,5 @@ export const ALLOWED_BLOCKS = [
   'cpc/wrapper',
   'cpc/drawer-list',
   'cpc/drawer',
+  'cpc/upcoming-events',
 ];

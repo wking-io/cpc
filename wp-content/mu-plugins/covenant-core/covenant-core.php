@@ -148,15 +148,6 @@ class CovenantCore {
         )
       );
 
-      /**
-       * Register Gutenberg block on server-side.
-       *
-       * Register the block on server-side to ensure that the block
-       * scripts and styles for both frontend and backend are
-       * enqueued when the editor loads.
-       *
-       * @link https://wordpress.org/gutenberg/handbook/blocks/writing-your-first-block-type#enqueuing-block-scripts
-       */
       register_block_type(
         'cpc/upcoming-events', array(
           'render_callback' => 'cpc_render_upcoming_events',

@@ -1,0 +1,23 @@
+.bg-black .upcoming-event-item {
+  &__title {
+    @apply text-white;
+  }
+}
+
+.bg-primary .upcoming-event-item {
+  &__date,
+  &__time,
+  &__title {
+    @apply text-white;
+  }
+}
+
+.bg-primary-dark .upcoming-event-item {
+  @apply border-black;
+
+  &__date,
+  &__time,
+  &__title {
+    @apply text-white;
+  }
+}

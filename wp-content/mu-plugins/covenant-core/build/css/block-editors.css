@@ -4585,6 +4585,38 @@ video {
   }
 }
 
+.block-editor .block-editor__container .upcoming-events {
+  border-color: #03293b;
+}
+
+.block-editor .block-editor__container .upcoming-events h2 {
+  color: #03293b;
+}
+
+.block-editor .block-editor__container .bg-black .upcoming-events {
+  border-color: #5ba5bf;
+}
+
+.block-editor .block-editor__container .bg-black .upcoming-events h2 {
+  color: #fff;
+}
+
+.block-editor .block-editor__container .bg-primary .upcoming-events {
+  border-color: #03293b;
+}
+
+.block-editor .block-editor__container .bg-primary .upcoming-events h2 {
+  color: #fff;
+}
+
+.block-editor .block-editor__container .bg-primary-dark .upcoming-events {
+  border-color: #fff;
+}
+
+.block-editor .block-editor__container .bg-primary-dark .upcoming-events h2 {
+  color: #fff;
+}
+
 @media (min-width: 640px) {
   .block-editor .block-editor__container .sm\:appearance-none {
     -webkit-appearance: none;
