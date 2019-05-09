@@ -1,4 +1,4 @@
-.cpc-form {
+form.cpc-form {
   &.gform_confirmation_wrapper {
     @apply text-center text-white;
   }
@@ -7,8 +7,8 @@
     display: none;
   }
 
-  & .gform_body {
-    & .cpc-form__input {
+  & div.gform_body {
+    & li.cpc-form__input {
       @apply m-0 p-0 mb-3;
       width: 100%;
 

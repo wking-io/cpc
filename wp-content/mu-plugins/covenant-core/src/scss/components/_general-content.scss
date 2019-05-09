@@ -2,4 +2,30 @@
   & > p {
     @apply mb-4 leading-normal;
   }
+
+  & a:not(.cpc-button):not(.upcoming-event-item__title) {
+    @apply font-medium text-primary no-underline;
+
+    &:hover {
+      @apply text-primary underline;
+    }
+  }
+
+  ul:not(.wp-block-gallery):not(.cpc-drawer-list):not(.upcoming-events):not(.gform_fields) {
+    list-style-type: initial;
+    padding-left: 21px;
+
+    li {
+      padding-left: 12px;
+    }
+  }
+
+  ol:not(.wp-block-gallery):not(.cpc-drawer-list):not(.upcoming-events) {
+    list-style-type: decimal;
+    padding-left: 21px;
+
+    li {
+      padding-left: 12px;
+    }
+  }
 }

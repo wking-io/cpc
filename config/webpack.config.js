@@ -78,6 +78,7 @@ module.exports = (_, { mode }) => {
     ],
   });
   return {
+    stats: 'minimal',
     // Don't attempt to continue if there are any errors.
     bail: isProduction,
     // In production, we only want to load the polyfills and the app code.

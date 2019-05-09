@@ -35,6 +35,10 @@
   .wp-block-columns {  
     .wp-block-column {
       width: calc( ( 100% / 2 ) - #{$s4} - #{$s4} );
+
+      & > *:first-child {
+        @apply mt-0;
+      }
     }
 
     &.has-3-columns .wp-block-column {
