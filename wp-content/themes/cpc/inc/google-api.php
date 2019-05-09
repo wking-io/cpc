@@ -22,7 +22,7 @@ function cpc_get_next_events( $filtered_events = array() ) {
     'timeMin'      => date( 'c', strtotime('now') ),
   );
   $results     = $service->events->listEvents($calendar_id, $params);
-  $events      = $results->getItems();  
+  $events      = $results->getItems();
   
   if ( ! empty( $events ) ) :
     foreach ($events as $key => $event ) :

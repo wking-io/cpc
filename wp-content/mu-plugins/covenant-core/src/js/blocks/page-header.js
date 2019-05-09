@@ -3,8 +3,8 @@ const { MediaUpload, InspectorControls, RichText } = wp.editor;
 const { registerBlockType } = wp.blocks;
 const { Button } = wp.components;
 
-registerBlockType('cpc/page-image-header', {
-  title: __('Page Header - Image'),
+registerBlockType('cpc/page-header', {
+  title: __('Page Header'),
   icon: 'format-image',
   category: 'common',
   keywords: [__('test')],

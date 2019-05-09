@@ -1,13 +1,4 @@
-/**
- * Gutenberg Blocks
- *
- * All blocks related JavaScript files should be imported here.
- * You can create a new block folder in this dir and include code
- * for that block here as well.
- *
- * All blocks should be included here since this is the file that
- * Webpack is compiling as the input file.
- */
+import { ALLOWED_BLOCKS } from './blocks/utils';
 
 import '../scss/block-editors.scss';
 import '../scss/block-styles.scss';
@@ -25,3 +16,9 @@ import './blocks/drawer';
 import './blocks/drawer-list';
 import './blocks/link-button';
 import './blocks/upcoming-events';
+
+wp.blocks.getBlockTypes().forEach(blockType => {
+  if (ALLOWED_BLOCKS.indexOf(blockType.name) === -1) {
+    wp.blocks.unregisterBlockType(blockType.name);
+  }
+});

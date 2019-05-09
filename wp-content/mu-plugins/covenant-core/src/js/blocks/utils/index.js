@@ -1,5 +1,6 @@
 export const ALLOWED_BLOCKS = [
   'core/paragraph',
+  'cpc/page-header',
   'cpc/heading-one',
   'cpc/heading-two',
   'cpc/heading-three',

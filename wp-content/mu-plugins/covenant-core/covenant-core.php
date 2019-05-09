@@ -153,6 +153,7 @@ class CovenantCore {
           'render_callback' => 'cpc_render_upcoming_events',
         )
       );
+
     }
 
     /**
@@ -164,6 +165,26 @@ class CovenantCore {
      */
     public function register_admin_styles() {
       wp_enqueue_style('cpc_admin', $this->get_asset_url( 'css/admin.css' ), array(), '1.0.0' );
+    }
+
+    private function allowed_blocks() {
+      return array( 
+        'core/paragraph',
+        'cpc/heading-one',
+        'cpc/heading-two',
+        'cpc/heading-three',
+        'cpc/heading-four',
+        'cpc/heading-five',
+        'cpc/heading-six',
+        'cpc/quote',
+        'core/columns',
+        'cpc/link-button',
+        'cpc/split-panel',
+        'cpc/wrapper',
+        'cpc/drawer-list',
+        'cpc/drawer',
+        'cpc/upcoming-events',
+      );
     }
 
     /**
@@ -235,6 +256,7 @@ class CovenantCore {
       $this->loader->add_action( 'init', $this, 'register_blocks', 0 );
       $this->loader->add_action( 'admin_enqueue_scripts', $this, 'register_admin_styles', 0 );
       $this->loader->add_action( 'admin_enqueue_scripts', $this, 'register_admin_scripts', 0 );
+      $this->loader->add_filter( 'allowed_block_types', $this, 'allowed_blocks' );
     }
 
     /**
