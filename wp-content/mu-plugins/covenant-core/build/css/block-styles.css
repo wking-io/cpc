@@ -236,9 +236,16 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   }
 }
 
-.aligncenter iframe {
-  margin-left: auto;
-  margin-right: auto;
+.wp-block-embed.alignleft {
+  float: left;
+  margin: 0 2rem 2rem 0;
+  max-width: 500px;
+}
+
+.wp-block-embed.alignright {
+  float: right;
+  margin: 0 0 2rem 2rem;
+  max-width: 500px;
 }
 
 .wp-embed-aspect-16-9 {
