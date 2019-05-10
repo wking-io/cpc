@@ -59,10 +59,16 @@
 }
 
 @mixin wide-width() {
-  width: 80vw;
+  width: calc(100vw - 4rem);
+  max-width: 1400px;
   position: relative;
   left: 50%;
   right: 50%;
-  margin-left: -40vw;
-  margin-right: -40vw;
+  margin-left: calc((-100vw + 4rem) / 2);
+  margin-right: calc((-100vw + 4rem) / 2);
+}
+
+@mixin wide-width-max() {
+  margin-left: -700px;
+  margin-right: -700px;
 }

@@ -1,5 +1,3 @@
-import { ALLOWED_BLOCKS } from './blocks/utils';
-
 import '../scss/block-editors.scss';
 import '../scss/block-styles.scss';
 import './blocks/page-header';
@@ -16,9 +14,3 @@ import './blocks/drawer';
 import './blocks/drawer-list';
 import './blocks/link-button';
 import './blocks/upcoming-events';
-
-wp.blocks.getBlockTypes().forEach(blockType => {
-  if (ALLOWED_BLOCKS.indexOf(blockType.name) === -1) {
-    wp.blocks.unregisterBlockType(blockType.name);
-  }
-});

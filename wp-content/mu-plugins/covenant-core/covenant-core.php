@@ -167,7 +167,7 @@ class CovenantCore {
       wp_enqueue_style('cpc_admin', $this->get_asset_url( 'css/admin.css' ), array(), '1.0.0' );
     }
 
-    private function allowed_blocks() {
+    public function allowed_blocks() {
       return array( 
         'core/paragraph',
         'cpc/heading-one',
@@ -184,6 +184,13 @@ class CovenantCore {
         'cpc/drawer-list',
         'cpc/drawer',
         'cpc/upcoming-events',
+        'core/image',
+        'core/gallery',
+        'core/list',
+        'core/video',
+        'core/spacer',
+        'core-embed/youtube',
+        'core-embed/vimeo',
       );
     }
 
