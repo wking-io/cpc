@@ -104,21 +104,19 @@ registerBlockType('cpc/drawer', {
         id={attributes.clientId}
       >
         <div data-drawer-full>
-          <div
+          <button
             className={`cpc-drawer__title-wrapper bg-${attributes.bgColor}`}
             data-drawer-visible
+            data-drawer-action
+            aria-expanded="false"
+            aria-controls={attributes.clientId}
           >
             <p className="cpc-drawer__title">{attributes.title}</p>
-            <button
-              className="cpc-drawer__toggle"
-              data-drawer-action
-              aria-expanded="false"
-              aria-controls={attributes.clientId}
-            >
+            <div className="cpc-drawer__toggle">
               <span className="cpc-drawer__toggle-bar" />
               <span className="cpc-drawer__toggle-bar" />
-            </button>
-          </div>
+            </div>
+          </button>
           <div className="cpc-drawer__content">
             <InnerBlocks.Content />
           </div>

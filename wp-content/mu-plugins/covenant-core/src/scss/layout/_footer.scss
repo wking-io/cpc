@@ -19,6 +19,10 @@
   .menu-item-link--parent {
     border-bottom: 2px solid rgba( $black, 0.25 );
   }
+
+  .menu-item > a:hover {
+    @apply text-black;
+  }
 }
 
 @include media('>=#{$lg}') {

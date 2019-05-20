@@ -695,6 +695,7 @@ body {
 .cpc-button:hover {
   background-color: #436979;
   border-color: #436979;
+  cursor: pointer;
 }
 
 .cpc-button.cpc-button--sm {
@@ -1005,6 +1006,10 @@ body {
   border-bottom: 2px solid rgba(3, 41, 59, .25);
 }
 
+.footer .menu-item > a:hover {
+  color: #03293b;
+}
+
 @media (min-width: 1024px) {
   .footer .menu-item--parent {
     width: auto;
@@ -1021,6 +1026,24 @@ body {
   .footer .menu-item--parent:nth-child(2n) {
     margin-left: .75rem;
     margin-right: .75rem;
+  }
+}
+
+.mt-nav {
+  margin-top: 64px;
+}
+
+.pt-nav {
+  padding-top: 64px;
+}
+
+@media (min-width: 1024px) {
+  .mt-nav {
+    margin-top: 72px;
+  }
+
+  .pt-nav {
+    padding-top: 72px;
   }
 }
 

@@ -9,11 +9,9 @@ get_header();
 
 <section>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <h1><?php the_title(); ?></h1>
-    <div class="aspect-3:4 md:aspect-4:3">
-      <div class="content w-full h-full">
-        <?php the_content(); ?>
-      </div>
+    <h1 class="mt-nav pt-20 pb-12 text-center uppercase font-bold text-2xl md:text-3xl lg:text-4xl"><?php the_title(); ?></h1>
+    <div class="content w-full h-full">
+      <?php the_content(); ?>
     </div>
   <?php endwhile; else: ?>
     <p>Sorry, no posts matched your criteria.</p>

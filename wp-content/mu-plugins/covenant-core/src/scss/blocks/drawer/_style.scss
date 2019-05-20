@@ -10,11 +10,11 @@
   }
 
   &__title-wrapper {
-    @apply flex items-center justify-between py-3 px-4;
+    @apply flex items-center justify-between py-3 px-4 w-full;
   }
 
   &__title {
-    @apply flex-1 text-white font-sans font-bold;
+    @apply flex-1 text-white font-sans font-bold text-left;
   }
 
   .bg-grey &__title,

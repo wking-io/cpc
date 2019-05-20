@@ -695,6 +695,7 @@ body {
 .cpc-button:hover {
   background-color: #436979;
   border-color: #436979;
+  cursor: pointer;
 }
 
 .cpc-button.cpc-button--sm {
@@ -1254,6 +1255,10 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
 
 .footer .menu-item-link--parent {
   border-bottom: 2px solid rgba(3, 41, 59, .25);
+}
+
+.footer .menu-item > a:hover {
+  color: #03293b;
 }
 
 @media (min-width: 1024px) {

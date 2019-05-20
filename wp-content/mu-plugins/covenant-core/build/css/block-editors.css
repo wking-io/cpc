@@ -4495,6 +4495,7 @@ video {
 .block-editor .block-editor__container .cpc-button:hover {
   background-color: #436979;
   border-color: #436979;
+  cursor: pointer;
 }
 
 .block-editor .block-editor__container .cpc-button.cpc-button--sm {

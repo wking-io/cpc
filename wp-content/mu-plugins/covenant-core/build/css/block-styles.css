@@ -617,6 +617,7 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   padding-bottom: .75rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  width: 100%;
 }
 
 .cpc-drawer__title {
@@ -625,6 +626,7 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   color: #fff;
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 700;
+  text-align: left;
 }
 
 .bg-grey .cpc-drawer__title,
