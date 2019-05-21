@@ -513,7 +513,7 @@
                     "collapsed": "field_5ca3ce925da32",
                     "min": 0,
                     "max": 4,
-                    "layout": "table",
+                    "layout": "block",
                     "button_label": "Add Group",
                     "sub_fields": [
                         {
@@ -534,6 +534,25 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        },
+                        {
+                            "key": "field_5ce2a4b02bc68",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "page_link",
+                            "instructions": "Optional link for the title.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": "",
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "allow_archives": 1,
+                            "multiple": 0
                         },
                         {
                             "key": "field_5ca3ce9d5da33",
@@ -931,5 +950,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1556396602
+    "modified": 1558357263
 }

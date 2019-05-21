@@ -32,14 +32,15 @@ get_header();
       <p class="cpc-quote__source md:text-lg"><cite><?php echo $scripture['verse']; ?></cite></p>
     </blockquote>
     <div class="flex flex-col md:hidden flex-1">
-        <?php if ( ! empty( $mp3 ) ) : ?>
-          <a class="w-full cpc-button cpc-button--outline normal-case flex justify-center items-center mb-3" href="<?php echo $mp3; ?>"><?php echo ui_icon( array( 'icon' => 'mp3', 'classes' => 'h-3 w-auto' ) ); ?> <span class="ml-2">Download MP3</a>
-        <?php endif; ?>
-        <?php if ( ! empty ( $itunes ) ) : ?>
-          <a class="w-full cpc-button cpc-button--outline normal-case flex justify-center items-center mb-3" href="<?php echo $itunes; ?>"><?php echo ui_icon( array( 'icon' => 'itunes', 'classes' => 'h-3 w-auto' ) ); ?> <span class="ml-2">Listen On iTunes</a>
-        <?php endif; ?>
-        <a class="w-full cpc-button cpc-button--outline normal-case flex justify-center items-center mb-3" href="<?php echo 'https://www.facebook.com/sharer/sharer.php?u=' . get_permalink(); ?>"><?php echo ui_icon( array( 'icon' => 'facebook', 'classes' => 'h-3 w-auto' ) ); ?> <span class="ml-2"></span>Share On Facebook</a>
-      </div>
+      <?php if ( ! empty( $mp3 ) ) : ?>
+        <a class="w-full cpc-button cpc-button--outline normal-case flex justify-center items-center mb-3" href="<?php echo $mp3; ?>"><?php echo ui_icon( array( 'icon' => 'mp3', 'classes' => 'h-3 w-auto' ) ); ?> <span class="ml-2">Download MP3</a>
+      <?php endif; ?>
+      <?php if ( ! empty ( $itunes ) ) : ?>
+        <a class="w-full cpc-button cpc-button--outline normal-case flex justify-center items-center mb-3" href="<?php echo $itunes; ?>"><?php echo ui_icon( array( 'icon' => 'itunes', 'classes' => 'h-3 w-auto' ) ); ?> <span class="ml-2">Listen On iTunes</a>
+      <?php endif; ?>
+      <a class="w-full cpc-button cpc-button--outline normal-case flex justify-center items-center mb-3" href="<?php echo 'https://www.facebook.com/sharer/sharer.php?u=' . get_permalink(); ?>"><?php echo ui_icon( array( 'icon' => 'facebook', 'classes' => 'h-3 w-auto' ) ); ?> <span class="ml-2"></span>Share On Facebook</a>
+    </div>
+    <p><a class="cpc-button cpc-button--primary w-full md:w-auto" href="<?php echo home_url( '/sermons' ); ?>">Back to all Sermons</a></p>
   </section>
 <?php endwhile; else : ?>
   <p>Sorry no content for this post!</p>

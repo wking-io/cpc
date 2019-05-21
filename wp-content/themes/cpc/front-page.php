@@ -77,7 +77,10 @@ $next_events = cpc_get_next_events();
       <?php endforeach; ?>
     </ul>
   </div>
-  <p class="text-center"><a href="<?php echo home_url('calendar'); ?>" class="cpc-button cpc-button--outline w-full md:w-1/3"><?php echo $events['link_text']; ?></a></p>
+  <p class="text-center">
+    <a href="<?php echo home_url('/events'); ?>" class="cpc-button cpc-button--primary w-full md:w-1/3 mb-4 md:mb-4 md:mr-4">View Featured Events</a>
+    <a href="<?php echo home_url('/calendar'); ?>" class="cpc-button cpc-button--outline w-full md:w-1/3"><?php echo $events['link_text']; ?></a>
+  </p>
 </section>
 <section class="bg-black">
   <div class="arrow arrow-top"></div>

@@ -5,7 +5,7 @@
 
 .featured-sermon-image {
   width: 100%;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .sermon-item {
@@ -14,7 +14,7 @@
 
 .sermon-image {
   width: calc(100% - 1.5rem);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .featured-sermon:hover .featured-sermon-image,

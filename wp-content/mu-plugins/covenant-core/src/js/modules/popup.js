@@ -6,7 +6,6 @@ export function togglePopup(e) {
   );
 
   if (popup) {
-    console.log(popup);
     const isClosing = !attrToBool(popup, 'data-popup-hidden');
     popup.setAttribute('data-popup-hidden', isClosing);
     if (isClosing) {

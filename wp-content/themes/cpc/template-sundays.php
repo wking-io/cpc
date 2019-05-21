@@ -84,7 +84,15 @@ $questions = get_field( 'questions' );
   <ul class="list-reset flex flex-wrap lg:flex-no-wrap -mx-4">
     <?php foreach ( $kids['groups'] as $item ) : ?>
       <li class="sunday-group mx-4 mb-4 lg:mb-0">
-        <h3 class="md:text-lg font-bold mb-3"><?php echo $item['title']; ?></h3>
+        <h3 class="md:text-lg font-bold mb-3">
+          <?php if ( ! empty( $item['link'] ) ) : ?>
+            <a class="no-underline hover:underline" href="<?php echo $item['link']; ?>">
+          <?php endif; ?>
+          <?php echo $item['title']; ?>
+          <?php if ( ! empty( $item['link'] ) ) : ?>
+            </a>
+          <?php endif; ?>
+        </h3>
         <div class="general-content text-sm"><?php echo $item['description']; ?></div>
       </li>
     <?php endforeach; ?>

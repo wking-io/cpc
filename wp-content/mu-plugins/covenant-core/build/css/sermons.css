@@ -1189,6 +1189,17 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   top: 0;
 }
 
+.header[data-menu-open='true'] .nav:after {
+  background-color: #03293b;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+  content: '';
+}
+
 .header[data-menu-open='true'] .logo-fill--icon {
   fill: #5ba5bf;
 }
@@ -1287,9 +1298,9 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
 
 .featured-sermon-image {
   width: 100%;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 .sermon-item {
@@ -1298,9 +1309,9 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
 
 .sermon-image {
   width: calc(100% - 1.5rem);
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 .featured-sermon:hover .featured-sermon-image,

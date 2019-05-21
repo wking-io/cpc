@@ -15,7 +15,7 @@ get_header();
       <p><?php echo get_the_date( 'F j, Y' ); ?></p>
     </div>
     <div class="general-content mb-12"><?php the_content(); ?></div>
-    <p><a class="cpc-button cpc-button--outline px-12" href="<?php home_url('blog'); ?>">View Other Posts</a></p>
+    <p><a class="cpc-button cpc-button--outline px-12" href="<?php echo home_url('/blog'); ?>">View Other Posts</a></p>
   </section>
 <?php endwhile; else: ?>
   <p>Sorry, no posts matched your criteria.</p>
