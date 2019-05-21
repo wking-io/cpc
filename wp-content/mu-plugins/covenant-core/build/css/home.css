@@ -1297,6 +1297,12 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   line-height: 1;
 }
 
+.cta-video {
+  -webkit-transform: translateY(-45%);
+      -ms-transform: translateY(-45%);
+          transform: translateY(-45%);
+}
+
 .cta-video video {
   margin-left: auto;
   width: 100%;
