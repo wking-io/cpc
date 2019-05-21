@@ -18,7 +18,7 @@ function moveY(el) {
   const base = {
     start: window.innerHeight,
     goal: window.innerHeight / 2,
-    transform: 45,
+    transform: 160,
     parent: el.parentElement,
   };
   return function() {
@@ -31,9 +31,9 @@ function moveY(el) {
       if (isPast) {
         el.style.transform = `translateY(0)`;
       } else if (isAnimating) {
-        el.style.transform = `translateY(-${percent}%)`;
+        el.style.transform = `translateY(-${percent}px)`;
       } else {
-        el.style.transform = `transformY(-${base.transform}%)`;
+        el.style.transform = `transformY(-${base.transform}px)`;
       }
     });
 
@@ -41,7 +41,9 @@ function moveY(el) {
   };
 }
 
-const video = dom('.cta-video');
-const moveVideo = moveY(video);
-moveVideo();
-window.addEventListener('scroll', moveVideo);
+if (window.innerWidth >= 768) {
+  const video = dom('.cta-video');
+  const moveVideo = moveY(video);
+  moveVideo();
+  window.addEventListener('scroll', moveVideo);
+}

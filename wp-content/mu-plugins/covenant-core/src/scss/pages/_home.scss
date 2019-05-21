@@ -7,10 +7,6 @@
   line-height: 1;
 }
 
-.cta-video {
-  transform: translateY(-45%);
-}
-
 .cta-video video {
   margin-left: auto;
   width: 100%;
@@ -22,4 +18,10 @@
 
 .featured-event-content {
   background-image: linear-gradient(to bottom, rgba($black, 0), rgba($black, 0.75) 70%, rgba($black, 0.85) 100%)
+}
+
+@include media('>=#{$md}') {
+  .cta-video {
+    transform: translateY(-160px);
+  }
 }
