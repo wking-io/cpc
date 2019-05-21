@@ -111,11 +111,11 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5ca3a7f49fd65",
-                    "label": "Background Image",
-                    "name": "image",
-                    "type": "image",
-                    "instructions": "",
+                    "key": "field_5ce344c0541e7",
+                    "label": "Background Images",
+                    "name": "images",
+                    "type": "repeater",
+                    "instructions": "One of these photos will be chosen at random and loaded on the page on every refresh.",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -123,16 +123,37 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
-                    "preview_size": "medium_large",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
+                    "collapsed": "",
+                    "min": 1,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "Add Image",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ca3a7f49fd65",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium_large",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ]
                 }
             ]
         },
@@ -419,5 +440,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1556166775
+    "modified": 1558398228
 }

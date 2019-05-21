@@ -3,6 +3,7 @@
 get_header();
 
 $hero       = get_field( 'home_hero' );
+$image_key  = array_rand( $hero['images'] );
 $cta        = get_field( 'home_cta' );
 $events     = get_field( 'home_events' );
 $learn_more = get_field( 'learn_more' );
@@ -20,7 +21,7 @@ $next_events = cpc_get_next_events();
 <section class="h-hero bg-black relative">
     <div class="absolute inset-0">
       <div class="hero-overlay absolute inset-0"></div>
-      <img class="w-full h-full object-cover" src="<?php echo $hero['image']['url']; ?>" alt="Covenant Worship">
+      <img class="w-full h-full object-cover" src="<?php echo $hero['images'][$image_key]['image']['url']; ?>" alt="Covenant Worship">
     </div>
     <div class="wrapper flex flex-col-reverse md:flex-col items-end md:justify-end h-full pb-20 relative z-10">
       <div class="w-full pb-12 md:pb-8 up-1">
@@ -63,7 +64,7 @@ $next_events = cpc_get_next_events();
   <h2 class="uppercase text-2xl md:text-3xl xl:text-4xl font-bold text-center lg:pt-12 mb-8"><?php echo $events['title']; ?></h2>
   <div class="flex flex-col md:flex-row md:justify-between md:items-center md:mb-16">
     <div class="featured-event relative aspect-4:3 md:h-full w-full md:w-1/2 shadow-lg hover:shadow-xl mb-8 md:mb-0 md:mr-16">
-      <a class="content" href="<?php echo $featured_event['url']; ?>">
+      <a class="content" href="<?php echo $featured_event['link']; ?>">
         <img src="<?php echo $featured_event['img']; ?>" alt="Event Image" class="w-full h-full object-cover">
         <div class="featured-event-content absolute inset-0 p-6 flex flex-col justify-end">
           <p class="text-white text-sm ld:text-base"><?php echo date( 'm/d/Y - g:i A', strtotime( $featured_event['date'] ) ); ?></p>
