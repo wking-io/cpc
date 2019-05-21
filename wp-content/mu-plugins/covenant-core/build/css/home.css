@@ -1327,6 +1327,62 @@ input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type=
   width: 1px !important;
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
+  }
+
+  25% {
+    opacity: .4;
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
+  }
+
+  25% {
+    opacity: .4;
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.up-0 {
+  -webkit-animation: fadeIn 1000ms cubic-bezier(.215, .61, .355, 1) 0ms both;
+          animation: fadeIn 1000ms cubic-bezier(.215, .61, .355, 1) 0ms both;
+}
+
+.up-1 {
+  -webkit-animation: fadeIn 1000ms cubic-bezier(.215, .61, .355, 1) 250ms both;
+          animation: fadeIn 1000ms cubic-bezier(.215, .61, .355, 1) 250ms both;
+}
+
+.up-2 {
+  -webkit-animation: fadeIn 1000ms cubic-bezier(.215, .61, .355, 1) 500ms both;
+          animation: fadeIn 1000ms cubic-bezier(.215, .61, .355, 1) 500ms both;
+}
+
+.up-3 {
+  -webkit-animation: fadeIn 1000ms cubic-bezier(.215, .61, .355, 1) 750ms both;
+          animation: fadeIn 1000ms cubic-bezier(.215, .61, .355, 1) 750ms both;
+}
+
 .appearance-none {
   -webkit-appearance: none;
      -moz-appearance: none;

@@ -23,7 +23,7 @@ $next_events = cpc_get_next_events();
       <img class="w-full h-full object-cover" src="<?php echo $hero['image']['url']; ?>" alt="Covenant Worship">
     </div>
     <div class="wrapper flex flex-col-reverse md:flex-col items-end md:justify-end h-full pb-20 relative z-10">
-      <div class="w-full pb-12 md:pb-8">
+      <div class="w-full pb-12 md:pb-8 up-1">
         <p class="hero-sunday-heading uppercase text-sm font-bold text-white mb-2">Sunday Schedule:</p>
         <p class="h-1px w-12 mb-4 md:mb-0 bg-white md:hidden"></p>
         <ul class="list-reset flex flex-col md:flex-row md:items-center">
@@ -34,7 +34,7 @@ $next_events = cpc_get_next_events();
           <li class="text-white text-sm lg:text-base xl:text-lg mb-2 md:mb-0"><?php echo $hero['schedule']['traditional']; ?></li>
         </ul>
       </div>
-      <h2 class="w-full text-white uppercase font-bold text-3xl md:text-4xl xl:text-5xl leading-tight mb-8"><?php echo $hero['heading']; ?></h2>
+      <h2 class="w-full text-white uppercase font-bold text-3xl md:text-4xl xl:text-5xl leading-tight mb-8 up-0"><?php echo $hero['heading']; ?></h2>
     </div>
 </section>
 <section class="wrapper -mt-20 md:mt-20 relative z-20 mb-20 flex flex-col md:flex-row-reverse md:items-center">

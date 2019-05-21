@@ -79,6 +79,8 @@ if ( ! function_exists( 'cpc_styles' ) ) :
 			else :
 				wp_enqueue_style( 'cpc_main' );
 			endif;
+
+			wp_enqueue_style( 'sm-google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700&display=swap', false );
 	}
 
 endif;
