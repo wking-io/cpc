@@ -1,13 +1,24 @@
 import '../scss/home.scss';
 
-import { dom } from './modules/dom';
+import { dom, domAll } from './modules/dom';
 import { getAttr } from './modules/attr';
 import { setupMenu } from './modules/menu';
+import { togglePopup } from './modules/popup';
+import { pipe } from './modules/utils';
 
 const menuToggle = dom('.menu-toggle');
 const menu = dom(`#${getAttr('aria-controls', menuToggle)}`);
 
 setupMenu(menu, menuToggle);
+
+const handleVideo = video => isClosing =>
+  isClosing ? video.pause() : video.play();
+
+const popups = domAll('[data-popup-action]');
+const video = dom('.cpc-popup__video');
+popups.forEach(function(btn) {
+  btn.addEventListener('click', pipe(togglePopup, handleVideo(video)));
+});
 
 function getTop(el) {
   const { top } = el.getBoundingClientRect();

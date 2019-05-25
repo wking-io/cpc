@@ -39,20 +39,13 @@ $next_events = cpc_get_next_events();
     </div>
 </section>
 <section class="wrapper -mt-20 md:mt-20 relative z-20 mb-20 flex flex-col md:flex-row-reverse md:items-center">
-  <div class="cta-video w-full md:w-1/2 mb-12 md:mb-0 md:ml-8 overflow-hidden flex-shrink-0">
-    <?php 
-      echo cl_video_tag( $cta['video'], 
-        array(
-          "loop" => true,
-          "autoplay" => true,
-          "muted" => true,
-          "preload" => true,
-          "fallback_content" => "Your browser does not support HTML5 video tags",
-          "width" => 500,
-          "crop" => "fit",
-        )
-      ); 
-    ?>
+  <div class="cta-video relative aspect-16:9 w-full md:w-1/2 mb-12 md:mb-0 md:ml-8 overflow-hidden flex-shrink-0">
+    <img class="w-full h-full absolute inset-0 object-cover" src="<?php echo $featured_event['img']; ?>" alt="Video Thumbnail">
+    <button class="absolute inset-0 w-full h-full flex items-center justify-center" data-popup-action aria-controls="hero-video">
+    <svg class="opacity-75 w-16 sm:w-20 md:w-12 lg:w-16 xl:w-20 h-auto" viewBox="0 0 43 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M41 20.5359C43.6667 22.0755 43.6667 25.9245 41 27.4641L6.5 47.3827C3.83333 48.9223 0.5 46.9978 0.5 43.9186V4.08141C0.5 1.00221 3.83333 -0.922287 6.5 0.617313L41 20.5359Z" fill="white"/>
+    </svg>
+    </button>
   </div>
   <div class="lg:pr-12 max-w-xl">
     <h2 class="cta-heading text-black flex flex-col font-bold uppercase mb-3 text-xl md:text-2xl xl:text-3xl"><?php echo $cta['heading']; ?></h2>
@@ -95,5 +88,23 @@ $next_events = cpc_get_next_events();
   </div>
   <div class="arrow arrow-bottom"></div>
 </section>
+
+<aside class="cpc-popup" id="hero-video" data-popup-hidden="true">
+  <div class="cpc-popup__underlay" data-popup-action aria-controls="hero-video"></div>
+  <div class="cpc-popup__content bg-black p-0 overflow-hidden">
+    <?php 
+      echo cl_video_tag( $cta['video'], 
+        array(
+          "controls" => true,
+          "preload" => true,
+          "fallback_content" => "Your browser does not support HTML5 video tags",
+          "width" => 800,
+          "crop" => "fit",
+          "class" => "cpc-popup__video",
+        )
+      ); 
+    ?>
+  </div>
+</aside>
 
 <?php get_footer();

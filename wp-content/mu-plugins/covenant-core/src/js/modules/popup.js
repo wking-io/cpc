@@ -21,6 +21,7 @@ export function togglePopup(e) {
       document.body.style.marginTop = '-' + scrollPos + 'px';
       document.body.classList.add('sc-popup__open');
     }
+    return isClosing;
   }
 
   return e;
