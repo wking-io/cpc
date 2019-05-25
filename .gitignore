@@ -13,4 +13,4 @@ local-phpinfo.php
 
 # Build System
 node_modules
-wp-content/mu-plugins/skillcrush-core/build
+wp-content/mu-plugins/*/build
