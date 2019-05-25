@@ -19,16 +19,25 @@
   }
 }
 
-.wp-block-embed.alignleft {
-  float: left;
-  margin: 0 2rem 2rem 0;
-  max-width: 500px;
+.wp-block-embed.alignleft,
+.wp-block-embed.alignright {
+  margin: 0 0 2rem 0;
+  width: 100%;
+  max-width: 100%;
 }
 
-.wp-block-embed.alignright {
-  float: right;
-  margin: 0 0 2rem 2rem;
-  max-width: 500px;
+@include media('>=#{$md}') {
+  .wp-block-embed.alignleft {
+    float: left;
+    margin: 0 2rem 2rem 0;
+    max-width: 500px;
+  }
+  
+  .wp-block-embed.alignright {
+    float: right;
+    margin: 0 0 2rem 2rem;
+    max-width: 500px;
+  }
 }
 
 .wp-embed-aspect-16-9 {

@@ -53,8 +53,8 @@ function moveY(el) {
 }
 
 if (window.innerWidth >= 768) {
-  const video = dom('.cta-video');
-  const moveVideo = moveY(video);
+  const vid = dom('.cta-video');
+  const moveVideo = moveY(vid);
   moveVideo();
   window.addEventListener('scroll', moveVideo);
 }
