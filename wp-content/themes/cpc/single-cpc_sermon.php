@@ -2,16 +2,43 @@
 
 get_header();
 
+function embed($iframe) {
+  // use preg_match to find iframe src
+  preg_match('/src="(.+?)"/', $iframe, $matches);
+  $src = $matches[1];
+  error_log( print_r( $src, true ) );
+  // add extra params to iframe src
+  $params = array(
+      'autohide'    => 1,
+      'color'       => 'white',
+  );
+  
+  $new_src = add_query_arg($params, $src);
+  
+  $iframe = str_replace($src, $new_src, $iframe);
+  
+  
+  // add extra attributes to iframe html
+  $attributes = 'frameborder="0" class="w-full h-full top-0 absolute"';
+  
+  $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+  
+  
+  // echo $iframe
+  echo $iframe;
+}
+
 ?>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+  $video = get_field( 'sermon_video' );
   $mp3    = get_field( 'sermon_mp3' );
   $itunes = get_field( 'sermon_itunes');
   $scripture = get_field( 'sermon_scripture' );
 ?>
   <section class="wrapper md:mt-8 lg:mt-16 pt-nav pb-20">
-    <div class="aspect-5:3 w-wide md:relative md:left-0 md:top-0 md:mx-auto md:w-full mb-8">
-      <img class="absolute top-0 left-0 w-full h-full object-cover" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title() . 'Thumnail'; ?>">
+    <div class="aspect-16:9 w-wide md:relative md:left-0 md:top-0 md:mx-auto md:w-full mb-8">
+      <?php embed($video); ?>
     </div>
     <div class="flex items-end mb-4">
       <p class="text-sm md:text-base mr-4"><?php echo get_the_date( 'F j, Y' ); ?></p>

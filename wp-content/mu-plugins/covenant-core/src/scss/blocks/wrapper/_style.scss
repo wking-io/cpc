@@ -28,4 +28,11 @@
       @apply text-black;
     }
   }
+
+  @include media('>=1464px') {
+    &.alignwide {
+      margin-left: calc((-100vw + 1400px / 2) + ((100vw - 1400px)));
+      margin-right: calc((-100vw + 1400px / 2) + ((100vw - 1400px)));
+    }
+  }
 }

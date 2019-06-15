@@ -144,41 +144,43 @@ function add_taxonomies() {
 add_action( 'init', 'add_taxonomies', 0 );
 
 function cpc_offset_query ( $query ) {
-	if ( is_post_type_archive( 'cpc_sermon' ) && $query->is_main_query() ) :
-		$per_page = 30;
-		if ( ! $query->is_paged() ) :
-			$query->set( 'offset', '1' );
-		else :
-			$query->set( 'offset', ( ( get_query_var('paged') - 1 ) * $per_page) + 1);
+	if ( ! is_admin() ) :
+		if ( is_post_type_archive( 'cpc_sermon' ) && $query->is_main_query() ) :
+			$per_page = 30;
+			if ( ! $query->is_paged() ) :
+				$query->set( 'offset', '1' );
+			else :
+				$query->set( 'offset', ( ( get_query_var('paged') - 1 ) * $per_page) + 1);
+			endif;
+
+			$query->set( 'posts_per_page', $per_page );
 		endif;
 
-		$query->set( 'posts_per_page', $per_page );
-	endif;
+		if ( is_post_type_archive( 'cpc_staff' ) && $query->is_main_query() ) :
+			$per_page = 500;
+			if ( ! $query->is_paged() ) :
+				$query->set( 'offset', '1' );
+			else :
+				$query->set( 'offset', ( ( get_query_var('paged') - 1 ) * $per_page) + 1);
+			endif;
 
-	if ( is_post_type_archive( 'cpc_staff' ) && $query->is_main_query() ) :
-		$per_page = 500;
-		if ( ! $query->is_paged() ) :
-			$query->set( 'offset', '1' );
-		else :
-			$query->set( 'offset', ( ( get_query_var('paged') - 1 ) * $per_page) + 1);
+			$query->set( 'posts_per_page', $per_page );
 		endif;
 
-		$query->set( 'posts_per_page', $per_page );
-	endif;
+		if ( is_post_type_archive( 'cpc_officer' ) && $query->is_main_query() ) :
+			$per_page = 500;
+			$query->set( 'posts_per_page', $per_page );
+		endif;
 
-	if ( is_post_type_archive( 'cpc_officer' ) && $query->is_main_query() ) :
-		$per_page = 500;
-		$query->set( 'posts_per_page', $per_page );
-	endif;
+		if ( is_post_type_archive( 'cpc_event' ) && $query->is_main_query() ) :
+			$per_page = 50;
+			$query->set( 'posts_per_page', $per_page );
+		endif;
 
-	if ( is_post_type_archive( 'cpc_event' ) && $query->is_main_query() ) :
-		$per_page = 50;
-		$query->set( 'posts_per_page', $per_page );
-	endif;
-
-	if ( is_post_type_archive( 'cpc_group' ) && $query->is_main_query() ) :
-		$per_page = 500;
-		$query->set( 'posts_per_page', $per_page );
+		if ( is_post_type_archive( 'cpc_group' ) && $query->is_main_query() ) :
+			$per_page = 500;
+			$query->set( 'posts_per_page', $per_page );
+		endif;
 	endif;
 
 }

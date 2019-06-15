@@ -3,6 +3,22 @@
     "title": "SERMON \/\/ Single",
     "fields": [
         {
+            "key": "field_5ceea15aea1d6",
+            "label": "Video",
+            "name": "sermon_video",
+            "type": "oembed",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
+        },
+        {
             "key": "field_5cbe0b6155815",
             "label": "Scripture",
             "name": "sermon_scripture",
@@ -129,5 +145,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1555958712
+    "modified": 1559142811
 }
