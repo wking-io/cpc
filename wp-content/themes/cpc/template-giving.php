@@ -34,11 +34,11 @@ $planned = get_field( 'planned_giving' );
       <div class="flex-shrink-0 md:ml-12">
         <h4 class="text-base font-bold mb-8"><?php echo $planned['docs_heading']; ?></h4>
         <ul>
-          <?php foreach ( $planned['docs'] as $doc ) : ?>
+          <?php foreach ( $planned['docs'] as $doc ) : error_log( print_r( $doc, true ) );?>
             <li class="flex items-center mb-4">
               <div class="h-4 mr-4"><?php echo ui_icon( array( 'icon' => 'file', 'color' => 'fill-primary' ) ); ?></div>
               <p>
-              <a class="underline hover:no-underline" href="<?php echo $doc['file']; ?>"><?php echo $doc['name']; ?></a></p>
+              <a class="underline hover:no-underline" href="<?php echo $doc['file']['url']; ?>"><?php echo $doc['name']; ?></a></p>
             </li>
           <?php endforeach; ?>
         </ul>

@@ -20,12 +20,16 @@ get_header();
           $date = get_field( 'event_date' );
         ?> 
           <li class="event-item mx-4 mb-12">
-              <div class="flex justify-between">
+              <div class="flex justify-between mb-1">
                 <p><?php echo date('l - F j, Y', strtotime( $date ) ); ?></p>
                 <p><?php echo date('g:i A', strtotime( $date ) ); ?></p>
               </div>
-              <h3 class="text-2xl font-bold mb-2"></h3>
-              <div class="aspect-5:3 mb-4"><a class="w-full h-full absolute top-0 left-0" href="<?php the_permalink(); ?>"><img class="w-full h-full object-cover" src="<?php echo the_post_thumbnail_url('medium_large'); ?>" alt="Event Preview"></a></div>
+              <h3 class="text-2xl font-bold mb-4"><?php the_title(); ?></h3>
+              <div class="aspect-5:3 mb-4">
+                <a class="w-full h-full absolute top-0 left-0" href="<?php the_permalink(); ?>">
+                  <img class="w-full h-full object-cover" src="<?php echo the_post_thumbnail_url('medium_large'); ?>" alt="Event Preview">
+                </a>
+              </div>
               <p><a class="font-semibold text-black underline hover:no-underline" href="<?php the_permalink(); ?>">Learn More & Register</a></p>
           </li>
         <?php endwhile; ?>

@@ -149,8 +149,12 @@ function ui_event( $opts = array(), $add_top = false ) {
   ob_start(); if ( ! empty( $opts ) ) : ?>
     <li class="upcoming-event-item <?php echo $add_top ? 'border-t border-b' : 'border-b'; ?> border-grey-md my-0 py-2 lg:py-3">
       <div class="flex justify-between mb-1">
-        <p class="upcoming-event-item__date text-primary text-sm font-medium"><?php echo $opts['date']; ?></p>
-        <p class="upcoming-event-item__time text-primary text-sm font-medium"><?php echo $opts['time']; ?></p>
+        <?php if ( ! empty( $opts['date'] ) ) : ?>
+          <p class="upcoming-event-item__date text-primary text-sm font-medium"><?php echo $opts['date']; ?></p>
+        <?php endif; ?>
+        <?php if ( ! empty( $opts['time'] ) ) : ?>
+          <p class="upcoming-event-item__time text-primary text-sm font-medium"><?php echo $opts['time']; ?></p>
+        <?php endif; ?>
       </div>
       <h4 class="font-bold"><a class="upcoming-event-item__title text-black no-underline hover:underline" href="<?php echo $opts['url']; ?>"><?php echo $opts['title']; ?></a></h4>
     </li>

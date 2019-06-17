@@ -53,7 +53,7 @@ function cpc_get_next_events( $filtered_events = array() ) {
       endif;
 
       if ( ! empty( $startTime ) && ! empty( $endTime ) ) :
-        $filtered_events[$key]['endTime'] .= ' - ' . $endTime;
+        $filtered_events[$key]['time'] .= ' - ' . $endTime;
       endif;
 
       $filtered_events[$key]['title'] = $event->summary;
