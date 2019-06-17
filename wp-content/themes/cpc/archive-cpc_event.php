@@ -17,12 +17,14 @@ get_header();
     <div class="w-full">
       <ul class="mx-auto w-full px-8 md:pl-12 xl:pl-8 max-w-2xl py-20 flex flex-col">
         <?php while ( have_posts() ) : the_post(); 
-          $date = get_field( 'event_date' );
+          $start = get_field( 'event_start' );
+          $end = get_field( 'event_end' );
+          $schedule = get_event_schedule($start, $end);
         ?> 
           <li class="event-item mx-4 mb-12">
               <div class="flex justify-between mb-1">
-                <p><?php echo date('l - F j, Y', strtotime( $date ) ); ?></p>
-                <p><?php echo date('g:i A', strtotime( $date ) ); ?></p>
+                <p><?php echo $schedule['date']; ?></p>
+                <p><?php echo $schedule['time']; ?></p>
               </div>
               <h3 class="text-2xl font-bold mb-4"><?php the_title(); ?></h3>
               <div class="aspect-5:3 mb-4">

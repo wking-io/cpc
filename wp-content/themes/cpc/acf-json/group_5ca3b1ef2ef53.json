@@ -361,7 +361,7 @@
                     "key": "field_5cc4a75da7794",
                     "label": "Directions Link Url",
                     "name": "directions_link_url",
-                    "type": "page_link",
+                    "type": "url",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -370,13 +370,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": [
-                        "page"
-                    ],
-                    "taxonomy": "",
-                    "allow_null": 0,
-                    "allow_archives": 1,
-                    "multiple": 0
+                    "default_value": "",
+                    "placeholder": ""
                 },
                 {
                     "key": "field_5ca3c1df5da2d",
@@ -401,7 +396,7 @@
                     "key": "field_5cc4a7a2a7795",
                     "label": "Map Link Url",
                     "name": "map_link_url",
-                    "type": "page_link",
+                    "type": "url",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -410,13 +405,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": [
-                        "page"
-                    ],
-                    "taxonomy": "",
-                    "allow_null": 0,
-                    "allow_archives": 1,
-                    "multiple": 0
+                    "default_value": "",
+                    "placeholder": ""
                 }
             ]
         },
@@ -950,5 +940,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1558357263
+    "modified": 1560745288
 }

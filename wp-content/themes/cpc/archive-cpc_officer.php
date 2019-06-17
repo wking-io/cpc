@@ -44,10 +44,10 @@ endwhile; endif;
       <div class="hidden panel:<?php echo $title; ?>" role="tabpanel" aria-labelledby="tab:<?php echo $title; ?>" id="panel:<?php echo $title; ?>">
         <div class="wrapper pb-12">
           <h2 class="text-center sm:text-left uppercase font-bold lg:pt-4 mb-0 text-2xl md:text-3xl mb-6">The Board Of <?php echo $title; ?>s</h2>
-          <ul class="flex flex-wrap items-center justify-center sm:justify-between w--full sm:-mx-4">
+          <ul class="flex flex-col sm:flex-row flex-wrap sm:items-center justify-start sm:justify-between w--full sm:-mx-4">
             <?php foreach ( $data as $officer ) : ?>
               <li class="officer-item flex items-center sm:mx-4 mb-8">
-                <div class="aspect-3:4 w-20 flex-shrink-0"><img class="w-full h-full object-cover absolute top-0 left-0" src="<?php echo $officer['img']; ?>" alt="<?php echo $officer['name'] . ' Headshot'; ?>"></div>
+                <div class="aspect-3:4 w-24 flex-shrink-0"><img class="w-full h-full object-cover absolute top-0 left-0" src="<?php echo $officer['img']; ?>" alt="<?php echo $officer['name'] . ' Headshot'; ?>"></div>
                 <div class="flex-1 ml-6">
                   <h4 class="uppercase font-bold"><?php echo $officer['name']; ?></h4>
                   <div class="text-primary font-bold"><?php echo $officer['title']; ?></div>

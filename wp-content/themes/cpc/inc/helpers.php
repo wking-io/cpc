@@ -42,3 +42,35 @@ function cpc_get_nav_type ( $is_light = false ) {
 
   return $is_light;
 }
+
+function get_event_schedule( $start = '', $end = '' ) {
+  if ( empty( $start ) ) :
+    return '';
+  endif;
+
+  $start_date = date('m/d/Y', strtotime($start));
+  $start_time = date('g:i A', strtotime($start));
+
+  if ( ! empty( $end ) ) :
+    $end_date = date('m/d/Y', strtotime($end));
+    $end_time = date('g:i A', strtotime($end));
+  endif;
+
+  $date = $start_date;
+  $time = $start_time;
+
+  if ( ! empty( $end_date ) ) :
+    if ( $start_date !== $end_date ) :
+      $date = $start_date . ' - ' . $end_date;
+      $time = $start_time;
+    else :
+      $date = $start_date;
+      $time = $start_time . ' - ' . $end_time;
+    endif;
+  endif;
+
+  return array(
+    'date' => $date,
+    'time' => $time,
+  );
+}

@@ -146,9 +146,9 @@ add_action( 'init', 'add_taxonomies', 0 );
 function cpc_offset_query ( $query ) {
 
 	if ( ! empty( $query->query_vars['post_type'] ) && $query->query_vars['post_type'] == 'cpc_event' ) :
-		$query->set('orderby', 'meta_value');
-		$query->set('meta_key', 'event_date');
-		$query->set('order', 'ASC');
+		// $query->set('orderby', 'meta_value');
+		// $query->set('meta_key', 'event_start');
+		// $query->set('order', 'ASC');
 	endif;
 
 	if ( ! is_admin() ) :
@@ -182,8 +182,8 @@ function cpc_offset_query ( $query ) {
 		if ( is_post_type_archive( 'cpc_event' ) && $query->is_main_query() ) :
 			$per_page = 50;
 			$query->set( 'posts_per_page', $per_page );
-			$query->set('meta_value', date('Y-m-d H:i:s'));
-			$query->set('meta_compare', '>');
+			// $query->set('meta_value', date('Y-m-d H:i:s'));
+			// $query->set('meta_compare', '>');
 		endif;
 
 		if ( is_post_type_archive( 'cpc_group' ) && $query->is_main_query() ) :

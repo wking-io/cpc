@@ -4,11 +4,28 @@
     "fields": [
         {
             "key": "field_5cacfb3fc2172",
-            "label": "Date",
-            "name": "event_date",
+            "label": "Start Date\/Time",
+            "name": "event_start",
             "type": "date_time_picker",
             "instructions": "",
             "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y g:i a",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 0
+        },
+        {
+            "key": "field_5d070e1967e83",
+            "label": "End Date\/Time",
+            "name": "event_end",
+            "type": "date_time_picker",
+            "instructions": "",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -72,5 +89,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1554840515
+    "modified": 1560743536
 }

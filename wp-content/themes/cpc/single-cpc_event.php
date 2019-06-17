@@ -2,7 +2,9 @@
 
 get_header();
 
-$date = get_field( 'event_date' );
+$start = get_field( 'event_start' );
+$end = get_field( 'event_end' );
+$schedule = get_event_schedule($start, $end);
 $event_link_url = get_field( 'event_link_url' );
 $event_link_text = get_field( 'event_link_text' );
 
@@ -17,14 +19,17 @@ $event_link_text = get_field( 'event_link_text' );
       </div>
       <div class="w-full lg:max-w-md">
         <div class="flex justify-between mb-3 text-sm md:text-base">
-          <p><?php echo date('l - F j, Y', strtotime( $date ) ); ?></p>
-          <p><?php echo date('g:i A', strtotime( $date ) ); ?></p>
+          <p><?php echo $schedule['date']; ?></p>
+          <p><?php echo $schedule['time']; ?></p>
         </div>
         <h1 class="text-2xl sm:text-3xl font-bold leading-tight mb-4"><?php the_title(); ?></h1>
         <div class="general-content mb-6"><?php the_content(); ?></div>
-        <?php if ( ! empty( $event_link_url ) && ! empty( $event_link_text ) ) : ?>
-          <p><a class="cpc-button cpc-button--primary" href="<?php echo $event_link_url; ?>"><?php echo $event_link_text; ?></a></p>
-        <?php endif; ?>
+          <p>
+            <?php if ( ! empty( $event_link_url ) && ! empty( $event_link_text ) ) : ?>
+              <a class="cpc-button cpc-button--primary mr-4 mb-4 inline-block" href="<?php echo $event_link_url; ?>"><?php echo $event_link_text; ?></a>
+            <?php endif; ?>
+              <a class="cpc-button cpc-button--outline" href="<?php echo home_url('/events'); ?>">Back to events</a>
+          </p>
       </div>
     </div>
   </section>
