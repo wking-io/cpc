@@ -8,12 +8,20 @@ $cta        = get_field( 'home_cta' );
 $events     = get_field( 'home_events' );
 $learn_more = get_field( 'learn_more' );
 
+$featured_event_query = new WP_Query( array(
+  'post_type' => 'cpc_event',
+  'posts_per_page' => 1,
+  'meta_value' => date('Y-m-d H:i:s'),
+  'meta_compare' => '>',
+) );
+
 $featured_event = array(
-  'title' => get_the_title( $events['featured'] ),
-  'date'  => get_field( 'event_date', $events['featured'] ),
-  'img' => get_the_post_thumbnail_url( $events['featured'], 'medium_large' ),
-  'link' => get_the_permalink( $events['featured'] ),
+  'title' => $featured_event_query->post->post_title,
+  'date'  => get_field( 'event_date', $featured_event_query->post->ID ),
+  'img' => get_the_post_thumbnail_url( $featured_event_query->post->ID, 'medium_large' ),
+  'link' => get_the_permalink( $featured_event_query->post->ID ),
 );
+
 $next_events = cpc_get_next_events();
 
 ?>

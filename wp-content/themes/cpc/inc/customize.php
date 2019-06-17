@@ -145,7 +145,7 @@ add_action( 'init', 'add_taxonomies', 0 );
 
 function cpc_offset_query ( $query ) {
 
-	if ( $query->query_vars['post_type'] && $query->query_vars['post_type'] == 'cpc_event' ) :
+	if ( ! empty( $query->query_vars['post_type'] ) && $query->query_vars['post_type'] == 'cpc_event' ) :
 		$query->set('orderby', 'meta_value');
 		$query->set('meta_key', 'event_date');
 		$query->set('order', 'ASC');

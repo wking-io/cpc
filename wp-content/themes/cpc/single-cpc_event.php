@@ -3,6 +3,8 @@
 get_header();
 
 $date = get_field( 'event_date' );
+$event_link_url = get_field( 'event_link_url' );
+$event_link_text = get_field( 'event_link_text' );
 
 ?>
 
@@ -20,7 +22,9 @@ $date = get_field( 'event_date' );
         </div>
         <h1 class="text-2xl sm:text-3xl font-bold leading-tight mb-4"><?php the_title(); ?></h1>
         <div class="general-content mb-6"><?php the_content(); ?></div>
-        <p><a class="cpc-button cpc-button--primary" href="<?php the_field( 'event_link_url' ); ?>"><?php the_field( 'event_link_text' ); ?></a></p>
+        <?php if ( ! empty( $event_link_url ) && ! empty( $event_link_text ) ) : ?>
+          <p><a class="cpc-button cpc-button--primary" href="<?php echo $event_link_url; ?>"><?php echo $event_link_text; ?></a></p>
+        <?php endif; ?>
       </div>
     </div>
   </section>
