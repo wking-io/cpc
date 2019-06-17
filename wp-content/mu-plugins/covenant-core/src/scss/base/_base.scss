@@ -23,18 +23,28 @@ body {
 .wrapper {
   margin: 0 auto;
   max-width: 1200px;
-  width: calc(100% - 4rem);
+  width: calc(100% - 6rem);
 }
 
 .wrapper-sm {
   margin: 0 auto;
   max-width: 800px;
-  width: calc(100% - 4rem);
+  width: calc(100% - 6rem);
+}
+
+@include media('>=#{$md}') {
+  .wrapper {
+    width: calc(100% - 8rem);
+  }
+
+  .wrapper-sm {
+    width: calc(100% - 8rem);
+  }
 }
 
 @include media('>=#{$lg}') {
   .wrapper,
   .wrapper-sm {
-    width: 90vw;
+    width: 85vw;
   }
 }
