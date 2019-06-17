@@ -17,7 +17,7 @@ $featured_event_query = new WP_Query( array(
 
 $featured_event = array(
   'title' => $featured_event_query->post->post_title,
-  'date'  => get_field( 'event_date', $featured_event_query->post->ID ),
+  'date'  => get_field( 'event_start', $featured_event_query->post->ID ),
   'img' => get_the_post_thumbnail_url( $featured_event_query->post->ID, 'medium_large' ),
   'link' => get_the_permalink( $featured_event_query->post->ID ),
 );
