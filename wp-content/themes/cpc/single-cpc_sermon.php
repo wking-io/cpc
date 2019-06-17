@@ -45,7 +45,7 @@ function embed($iframe) {
       <p class="text-sm md:text-base"><?php echo get_field( 'sermon_preacher' ); ?></p>
       <div class="hidden md:flex items-center justify-end flex-1">
         <?php if ( ! empty( $mp3 ) ) : ?>
-          <a class="cpc-button cpc-button--sm cpc-button--outline normal-case flex items-center ml-3" href="<?php echo $mp3; ?>"><?php echo ui_icon( array( 'icon' => 'mp3', 'classes' => 'h-3 w-auto' ) ); ?> <span class="ml-2">Download MP3</a>
+          <a class="cpc-button cpc-button--sm cpc-button--outline normal-case flex items-center ml-3" href="<?php echo $mp3; ?>"><?php echo ui_icon( array( 'icon' => 'mp3', 'classes' => 'h-3 w-auto' ) ); ?> <span class="ml-2">Listen Now</a>
         <?php endif; ?>
         <?php if ( ! empty ( $itunes ) ) : ?>
           <a class="cpc-button cpc-button--sm cpc-button--outline normal-case flex items-center ml-3" href="<?php echo $itunes; ?>"><?php echo ui_icon( array( 'icon' => 'itunes', 'classes' => 'h-3 w-auto' ) ); ?> <span class="ml-2">Listen On iTunes</a>

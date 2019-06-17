@@ -48,10 +48,10 @@ $questions = get_field( 'questions' );
     </div>
   </div>
   <div class="w-full lg:max-w-xs p-8 py-12 text-white flex flex-col justify-end">
-    <h3 class="text-xl md:text-2xl xl:text-3xl uppercase text-white font-bold pb-0 xl:pb-6"><?php echo $hero['what_to_expect']['heading']; ?></h3>
+    <h3 class="text-xl md:text-2xl xl:text-3xl uppercase text-white font-bold pb-0 leading-tight"><?php echo $hero['what_to_expect']['heading']; ?></h3>
     <ul class="text-sm flex flex-col md:flex-row lg:flex-col mx-0 md:-mx-3 lg:mx-0">
       <?php foreach ( $hero['what_to_expect']['items'] as $expect ) : ?>
-        <li class="pt-8 lg:pt-12 mx-0 md:mx-3 lg:mx-0">
+        <li class="pt-8 lg:pt-8 xl:pt-12 mx-0 md:mx-3 lg:mx-0">
           <p class="mb-2 lg:mb-4"><strong><?php echo $expect['title']; ?></strong></p>
           <p><?php echo $expect['description']; ?></p>
         </li>
@@ -62,7 +62,7 @@ $questions = get_field( 'questions' );
 
 <section class="sundays-about flex flex-col md:flex-row items-center my-20 py-4">
   <h2 class="text-xl md:text-2xl xl:text-3xl uppercase font-bold max-w-sm mb-4 md:mb-0 mr-0 md:mr-12 w-full lg:w-48 xl:w-56 text-center lg:text-left"><?php echo $about['title']; ?></h2>
-  <div class="flex-1 text-center lg:text-left mx-8 lg:mx-0"><?php echo $about['description']; ?></div>
+  <div class="flex-1 text-center md:text-left mx-8 lg:mx-0"><?php echo $about['description']; ?></div>
 </section>
 
 <section class="cpc-split-panel flex-col md:flex-row-reverse bg-primary-dark">

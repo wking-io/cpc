@@ -52,7 +52,7 @@ $directions_url  = get_field( 'directions_link_text' );
       <div class="general-content mb-12"><?php the_content(); ?></div>
       <?php if ( ! empty( $directions_text ) && ! empty( $directions_url ) ) : ?>
         <p>
-          <a href="<?php echo home_url('/groups'); ?>" class="cpc-button cpc-button--primary w-full md:w-auto md:px-20 mb-4 md:mb-0 md:mr-4">Back to all Groups</a>
+          <a href="<?php echo home_url('/groups'); ?>" class="cpc-button cpc-button--primary w-full md:w-auto md:px-20 mb-4 md:mb-0 md:mr-4">See More Groups</a>
           <a href="<?php the_field( 'directions_link_url' ); ?>" class="cpc-button cpc-button--outline w-full md:w-auto md:px-20"><?php the_field( 'directions_link_text' ); ?></a>
         </p>
       <?php endif; ?>
