@@ -103,6 +103,20 @@
   }
 }
 
+.wp-block-table {
+  @apply w-full;
+}
+
+.wp-block-table tr:first-child {
+  @apply font-bold;
+}
+
+.wp-block-table td {
+  @apply py-2 px-3;
+}
+
+
+
 @import 'blocks/page-header/style';
 @import 'blocks/heading-base/style';
 @import 'blocks/quote/style';

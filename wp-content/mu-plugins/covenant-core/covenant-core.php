@@ -178,6 +178,7 @@ class CovenantCore {
         'cpc/heading-six',
         'cpc/page-header',
         'cpc/quote',
+        'core/table',
         'core/columns',
         'cpc/link-button',
         'cpc/split-panel',

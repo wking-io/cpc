@@ -9,6 +9,7 @@ export const ALLOWED_BLOCKS = [
   'cpc/heading-six',
   'cpc/quote',
   'core/shortcode',
+  'core/table',
   'core/columns',
   'cpc/link-button',
   'cpc/split-panel',
