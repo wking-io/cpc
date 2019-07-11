@@ -15,12 +15,14 @@ $featured_event_query = new WP_Query( array(
   'meta_compare' => '>',
 ) );
 
-$featured_event = array(
-  'title' => $featured_event_query->post->post_title,
-  'date'  => get_field( 'event_start', $featured_event_query->post->ID ),
-  'img' => get_the_post_thumbnail_url( $featured_event_query->post->ID, 'medium_large' ),
-  'link' => get_the_permalink( $featured_event_query->post->ID ),
-);
+if ( ! empty( $featured_event_query->post ) ) :
+  $featured_event = array(
+    'title' => $featured_event_query->post->post_title,
+    'date'  => get_field( 'event_start', $featured_event_query->post->ID ),
+    'img' => get_the_post_thumbnail_url( $featured_event_query->post->ID, 'medium_large' ),
+    'link' => get_the_permalink( $featured_event_query->post->ID ),
+  );
+endif;
 
 $next_events = cpc_get_next_events();
 
@@ -65,13 +67,19 @@ $next_events = cpc_get_next_events();
   <h2 class="uppercase text-2xl md:text-3xl xl:text-4xl font-bold text-center lg:pt-12 mb-8"><?php echo $events['title']; ?></h2>
   <div class="flex flex-col md:flex-row md:justify-between md:items-center md:mb-16">
     <div class="featured-event relative aspect-4:3 md:h-full w-full md:w-1/2 shadow-lg hover:shadow-xl mb-8 md:mb-0 md:mr-16">
-      <a class="content" href="<?php echo $featured_event['link']; ?>">
-        <img src="<?php echo $featured_event['img']; ?>" alt="Event Image" class="w-full h-full object-cover">
-        <div class="featured-event-content absolute inset-0 p-6 flex flex-col justify-end">
-          <p class="text-white text-sm ld:text-base"><?php echo date( 'm/d/Y - g:i A', strtotime( $featured_event['date'] ) ); ?></p>
-          <h3 class="text-white text-xl md:text-2xl xl:text-3xl font-bold uppercase"><?php echo $featured_event['title']; ?></h3>
+      <?php if ( empty( $featured_event ) ) : ?>
+        <div class="content flex items-center justify-center featured-event-content text-white p-6 leading-tight bg-primary">
+          <p class="font-display uppercase text-4xl text-center font-bold">More Events Coming Soon</p>
         </div>
-      </a>
+      <?php else: ?>
+        <a class="content" href="<?php echo $featured_event['link']; ?>">
+          <img src="<?php echo $featured_event['img']; ?>" alt="Event Image" class="w-full h-full object-cover">
+          <div class="featured-event-content absolute inset-0 p-6 flex flex-col justify-end">
+            <p class="text-white text-sm ld:text-base"><?php echo date( 'm/d/Y - g:i A', strtotime( $featured_event['date'] ) ); ?></p>
+            <h3 class="text-white text-xl md:text-2xl xl:text-3xl font-bold uppercase"><?php echo $featured_event['title']; ?></h3>
+          </div>
+        </a>
+      <?php endif; ?>
     </div>
     <ul id="upcoming-events" class="list-reset flex flex-col mb-8 md:mb-0 md:flex-1">
       <?php foreach ( $next_events as $key => $event ) : ?>

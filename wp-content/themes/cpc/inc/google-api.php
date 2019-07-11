@@ -27,33 +27,41 @@ function cpc_get_next_events( $filtered_events = array() ) {
   if ( ! empty( $events ) ) :
     foreach ($events as $key => $event ) :
       if ( ! empty( $event->start->dateTime ) ) :
-        $startDate = date( 'm/d/Y', strtotime( $event->start->dateTime ) );
-        $startTime = date( 'g:i A', strtotime( $event->start->dateTime ) );
+        $raw_start = new DateTime($event->start->dateTime, new DateTimeZone('UTC'));
+        $raw_start->setTimezone(new DateTimeZone('America/Chicago'));
+        $start_date = date_format( $raw_start, 'm/d/Y' );
+        $start_time = date_format( $raw_start, 'g:i A' );
       else :
-        $startDate = date( 'm/d/Y', strtotime( $event->start->date ) );
+        $raw_start = new DateTime($event->start->date, new DateTimeZone('UTC'));
+        $raw_start->setTimezone(new DateTimeZone('America/Chicago'));
+        $startDate = date_format( $raw_start, 'm/d/Y' );
       endif;
 
       if ( ! empty( $event->end->dateTime ) ) :
-        $endDate = date( 'm/d/Y', strtotime( $event->end->dateTime ) );
-        $endTime = date( 'g:i A', strtotime( $event->end->dateTime ) );
+        $raw_end = new DateTime($event->end->dateTime, new DateTimeZone('UTC'));
+        $raw_end->setTimezone(new DateTimeZone('America/Chicago'));
+        $end_date = date_format( $raw_end, 'm/d/Y' );
+        $end_time = date_format( $raw_end, 'g:i A' );
       else :
-        $endDate = date( 'm/d/Y', strtotime( $event->end->date ) );
+        $raw_end = new DateTime($event->end->date, new DateTimeZone('UTC'));
+        $raw_end->setTimezone(new DateTimeZone('America/Chicago'));
+        $end_date = date_format( $raw_end, 'm/d/Y' );
       endif;
 
-      if ( ! empty( $startDate ) ) :
-        $filtered_events[$key]['date'] = $startDate;
+      if ( ! empty( $start_date ) ) :
+        $filtered_events[$key]['date'] = $start_date;
       endif;
 
-      if ( !empty( $startDate ) && ! empty( $endDate ) && $endDate !== $startDate ) :
-        $filtered_events[$key]['date'] .= ' - ' . $endDate;
+      if ( !empty( $start_date ) && ! empty( $end_date ) && $end_date !== $start_date ) :
+        $filtered_events[$key]['date'] .= ' - ' . $end_date;
       endif;
 
-      if ( ! empty( $startTime ) ) :
-        $filtered_events[$key]['time'] = $startTime;
+      if ( ! empty( $start_time ) ) :
+        $filtered_events[$key]['time'] = $start_time;
       endif;
 
-      if ( ! empty( $startTime ) && ! empty( $endTime ) ) :
-        $filtered_events[$key]['time'] .= ' - ' . $endTime;
+      if ( ! empty( $start_time ) && ! empty( $end_time ) ) :
+        $filtered_events[$key]['time'] .= ' - ' . $end_time;
       endif;
 
       $filtered_events[$key]['title'] = $event->summary;

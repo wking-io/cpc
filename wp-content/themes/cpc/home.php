@@ -17,7 +17,11 @@ get_header();
           <a class="cursor-pointer p-8 block" href="<?php the_permalink(); ?>">
             <p class="text-primary uppercase text-sm font-bold mb-2"><?php echo implode( ', ', $categories ); ?></p>
             <h3 class="text-2xl font-bold mb-2"><?php the_title(); ?></h3>
-            <p class="text-sm mb-0"><?php echo get_the_date( 'F j, Y' ); ?></p>
+            <div class="flex items-center">
+              <p class="text-sm mb-0"><?php the_field( 'blog_author' ); ?></p>
+              <div class="h-px bg-black w-6 mx-2"></div>
+              <p class="text-sm mb-0"><?php echo get_the_date( 'F j, Y' ); ?></p>
+            </div>
           </a>
         </li>
       <?php endwhile; ?>
