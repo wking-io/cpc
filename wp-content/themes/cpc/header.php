@@ -55,11 +55,11 @@ $is_light = cpc_get_nav_type();
 				<span class="<?php echo $is_light ? 'bg-white' : 'bg-primary'?>"></span>
 			</button>
 		
-			<div class="menu-wrapper w-full h-screen fixed inset-0 bg-black p-6 text-white opacity-0 pt-20 overflow-scroll md:overflow-visible lg:flex lg:items-center">
+			<div class="menu-wrapper w-full h-screen fixed inset-0 bg-black p-6 text-white opacity-0 pt-20 overflow-auto lg:flex lg:items-center">
 				<?php wp_nav_menu( array(
 						'theme_location' => 'menu-main',
 						'menu_id' => 'primary-menu',
-						'menu_class' => 'list-reset flex flex-row flex-wrap lg:flex-no-wrap lg:justify-center w-full m-0 pt-4 lg:pt-0 max-w-5xl mx-auto',
+						'menu_class' => 'list-reset flex flex-row flex-wrap lg:flex-no-wrap lg:justify-center w-full m-0 pt-4 pb-16 lg:pb-0 lg:pt-0 max-w-5xl mx-auto',
 						'container' => false,
 						'walker' => new Primary_Menu()
 					) ); ?>

@@ -3,7 +3,7 @@
 get_header();
 
 $args = array(
-  'posts_per_page' => '1',
+  'posts_per_page' => '2',
   'post_type'      => 'cpc_staff',
   'offset'         => '0',
 );
@@ -25,7 +25,7 @@ $first_query = new WP_Query( $args );
   <section class="wrapper mt-nav mb-8 pt-4 lg:pt-12">
     <?php while ( $first_query->have_posts() ) : $first_query->the_post();
     ?>
-      <div class="featured-staff flex flex-col md:flex-row md:space-between items-start py-16 mb-20">
+      <div class="featured-staff flex flex-col md:flex-row md:space-between items-start py-16">
           <div class="aspect-3:4 w-full md:w-2/5 md:max-w-sm flex-shrink-0 mb-6 md:mb-0">
             <img class="w-full h-full object-cover absolute top-0 left-0" src="<?php echo the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title() . ' headshot'; ?>">
           </div>

@@ -166,9 +166,9 @@ function cpc_offset_query ( $query ) {
 		if ( is_post_type_archive( 'cpc_staff' ) && $query->is_main_query() ) :
 			$per_page = 500;
 			if ( ! $query->is_paged() ) :
-				$query->set( 'offset', '1' );
+				$query->set( 'offset', '2' );
 			else :
-				$query->set( 'offset', ( ( get_query_var('paged') - 1 ) * $per_page) + 1);
+				$query->set( 'offset', ( ( get_query_var('paged') - 1 ) * $per_page) + 2);
 			endif;
 
 			$query->set( 'posts_per_page', $per_page );

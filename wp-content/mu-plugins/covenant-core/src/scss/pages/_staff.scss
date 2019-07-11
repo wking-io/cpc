@@ -16,6 +16,10 @@
   z-index: -1;
 }
 
+.featured-staff:nth-child(2n) {
+  @apply flex-row-reverse  mb-20;
+}
+
 @include media('>=#{$md}') {
   .staff-item {
     width: calc( ( 100% / 3 ) - 1rem);
