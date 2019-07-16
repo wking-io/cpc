@@ -74,3 +74,7 @@ function get_event_schedule( $start = '', $end = '' ) {
     'time' => $time,
   );
 }
+
+function is_even( $i = 0 ) {
+  return $i % 2 === 0 ? true : false;
+}

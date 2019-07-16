@@ -23,20 +23,25 @@ $first_query = new WP_Query( $args );
 
 <?php if ( $first_query->have_posts() && ! is_paged() ) : ?>
   <section class="wrapper mt-nav mb-8 pt-4 lg:pt-12">
-    <?php while ( $first_query->have_posts() ) : $first_query->the_post();
+    <?php
+      $bio = 1;
+      while ( $first_query->have_posts() ) : $first_query->the_post();
     ?>
-      <div class="featured-staff flex flex-col md:flex-row md:space-between items-start py-16">
+      <div class="featured-staff flex flex-col <?php echo is_even($bio) ? 'md:flex-row-reverse mb-20' : 'md:flex-row'; ?> md:space-between items-start py-16">
           <div class="aspect-3:4 w-full md:w-2/5 md:max-w-sm flex-shrink-0 mb-6 md:mb-0">
             <img class="w-full h-full object-cover absolute top-0 left-0" src="<?php echo the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title() . ' headshot'; ?>">
           </div>
-          <div class="md:ml-16 flex-1">
+          <div class="<?php echo is_even($bio) ? 'md:mr-16' : 'md:ml-16'; ?> flex-1">
             <h3 class="uppercase font-bold lg:pt-4 mb-0 text-3xl md:text-4xl"><?php the_title(); ?></h3>
             <h4 class="text-primary font-bold text-lg md:text-xl mb-4"><?php the_field( 'staff_position' ); ?></h4>
             <div class="general-content"><?php the_content(); ?></div>
           </div>
         </a>
       </div>
-    <?php endwhile; ?>
+    <?php
+      $bio++;
+      endwhile;
+    ?>
   </section>
 <?php endif; ?>
 
