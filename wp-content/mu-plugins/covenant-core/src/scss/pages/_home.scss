@@ -20,6 +20,11 @@
   background-image: linear-gradient(to bottom, rgba($black, 0), rgba($black, 0.75) 70%, rgba($black, 0.85) 100%)
 }
 
+.cpc-popup__content {
+  width: 80vw;
+  height: 45vw;
+}
+
 @include media('>=#{$md}') {
   .cta-video {
     transform: translateY(-160px);

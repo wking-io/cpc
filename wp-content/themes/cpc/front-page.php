@@ -10,6 +10,12 @@ $learn_more = get_field( 'learn_more' );
 
 preg_match('/src="(.+?)"/', $cta['video'], $matches);
 $src = $matches[1];
+
+preg_match('/width="(.+?)"/', $cta['video'], $w_matches);
+$width = $w_matches[1];
+
+preg_match('/height="(.+?)"/', $cta['video'], $h_matches);
+$height = $h_matches[1];
 // add extra params to iframe src
 $params = array(
   'enablejsapi'    => 1,
@@ -18,6 +24,8 @@ $params = array(
 $new_src = add_query_arg($params, $src);
 
 $cta['video'] = str_replace($src, $new_src, $cta['video']);
+$cta['video'] = str_replace($width, '100%', $cta['video']);
+$cta['video'] = str_replace($height, '100%', $cta['video']);
 $attributes = 'id="yt-player"';
 $video = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $cta['video']);
 
