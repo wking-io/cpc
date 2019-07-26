@@ -176,8 +176,8 @@
                     "key": "field_5ca3a4b69fd60",
                     "label": "Video",
                     "name": "video",
-                    "type": "text",
-                    "instructions": "To fill out this field follow these steps:\r\n\r\n1. Go to the Cloudinary Media Library > Videos here: http:\/\/turnerbatson.test\/wp-admin\/admin.php?page=cloudinary-image-management-and-manipulation-in-the-cloud-cdn%2Flibrary.php\r\n2. Click into the edit page for the video you want to add\r\n3. Copy the name of the video in the top left\r\n4. Paste the name of the video below",
+                    "type": "oembed",
+                    "instructions": "Paste the link to the Youtube video here.",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -185,11 +185,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "width": "",
+                    "height": ""
                 },
                 {
                     "key": "field_5d0702cf2705d",
@@ -464,5 +461,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1560740598
+    "modified": 1564159864
 }

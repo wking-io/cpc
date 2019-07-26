@@ -11,14 +11,30 @@ const menu = dom(`#${getAttr('aria-controls', menuToggle)}`);
 
 setupMenu(menu, menuToggle);
 
-const handleVideo = video => isClosing =>
-  isClosing ? video.pause() : video.play();
+const handleVideo = player => isClosing =>
+  isClosing ? player.pauseVideo() : player.playVideo();
 
-const popups = domAll('[data-popup-action]');
-const video = dom('.cpc-popup__video');
-popups.forEach(function(btn) {
-  btn.addEventListener('click', pipe(togglePopup, handleVideo(video)));
-});
+const tag = document.createElement('script');
+tag.src = 'https://www.youtube.com/iframe_api';
+const firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+/* eslint-disable */
+window.onYouTubeIframeAPIReady = () => {
+  const player = new YT.Player('yt-player', {
+    events: {
+      onReady: onPlayerReady,
+    },
+  });
+
+  function onPlayerReady(e) {
+    const popups = domAll('[data-popup-action]');
+    popups.forEach(function(btn) {
+      btn.addEventListener('click', pipe(togglePopup, handleVideo(e.target)));
+    });
+  }
+};
+/* eslint-enable */
 
 function getTop(el) {
   const { top } = el.getBoundingClientRect();

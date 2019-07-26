@@ -8,6 +8,19 @@ $cta        = get_field( 'home_cta' );
 $events     = get_field( 'home_events' );
 $learn_more = get_field( 'learn_more' );
 
+preg_match('/src="(.+?)"/', $cta['video'], $matches);
+$src = $matches[1];
+// add extra params to iframe src
+$params = array(
+  'enablejsapi'    => 1,
+);
+
+$new_src = add_query_arg($params, $src);
+
+$cta['video'] = str_replace($src, $new_src, $cta['video']);
+$attributes = 'id="yt-player"';
+$video = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $cta['video']);
+
 $featured_event_query = new WP_Query( array(
   'post_type' => 'cpc_event',
   'posts_per_page' => 1,
@@ -108,18 +121,7 @@ $next_events = cpc_get_next_events();
 <aside class="cpc-popup" id="hero-video" data-popup-hidden="true">
   <div class="cpc-popup__underlay" data-popup-action aria-controls="hero-video"></div>
   <div class="cpc-popup__content bg-black p-0 overflow-hidden">
-    <?php 
-      echo cl_video_tag( $cta['video'], 
-        array(
-          "controls" => true,
-          "preload" => true,
-          "fallback_content" => "Your browser does not support HTML5 video tags",
-          "width" => 800,
-          "crop" => "fit",
-          "class" => "cpc-popup__video",
-        )
-      ); 
-    ?>
+    <?php echo $video; ?>
   </div>
 </aside>
 
