@@ -8,7 +8,7 @@
     "@wordpress/compose": "3.2.0",
     "clone-deep": "4.0.1",
     "data.task": "3.1.2",
-    "googleapis": "27.0.0",
+    "googleapis": "39.1.0",
     "jquery": "3.4.0",
     "tailwindcss": "1.0.1"
   },
